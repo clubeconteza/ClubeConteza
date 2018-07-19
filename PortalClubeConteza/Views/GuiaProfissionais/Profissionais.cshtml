@@ -1,0 +1,41 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Profissionais";
+}
+
+@model PortalClubeConteza.Models.UnidadeDetalhe
+
+<div id="corpo" class="corpo">
+    @Html.Partial("_BannerSection")
+    <div id="contentprofissionais">
+        <div id="contentleftprof">  
+            <div id="picprofs"><img src="@Url.Content(string.Concat("~/Images/Unidades/", Model.Id_T020, ".jpg"))" width="400" /></div>
+            <div id="dadosprofsws">
+                <p class="especialidadepfs">Especialidade:</p>
+                @foreach (var especialidade in Model.Areas)
+                {
+                    <p class="esparea">@especialidade.Area</p>
+                }
+                <p class="contatopfs">Contato:</p>
+                @foreach (var contato in Model.Contatos)
+                {
+                    <p class="contatosaude2">@contato.Descricao</p>
+                }
+            </div>
+        </div>
+        <div id="contentrightprof">
+            <div id="dadosbasicosprofs">
+                <div id="textoid2">@Model.RazaoSocial</div>
+                <div id="descriprofs2">@Model.CategoriaExibicao</div>
+                <div id="boxdescprof2"><p>@Model.TextoPortal</p></div>
+                <div>
+                </div><p class="gmaps">Mapa</p>
+                <div id="mapsgooglescript">
+                    <iframe width="500" height="315" frameborder="0" style="border:0" src='@("https://www.google.com/maps/embed/v1/place?q=" + Model.Logradouro + Model.Numero + ", Guarapuava&key=AIzaSyA6f3y-xHwZhGGZmO8hfOo-3JDnSuAqZOs")' allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>

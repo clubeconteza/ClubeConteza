@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Site Emissão de Boleto SICOOB WEB </title>
+</head>
+<body>
+    <FORM METHOD=POST ACTION="https://geraboleto.sicoobnet.com.br/geradorBoleto/GerarBoleto.do">
+        <table bgcolor="#cccccc" border="0" cellpadding="1" cellspacing="0" width="100%">
+            <tr>
+                <td bgcolor="#999999"><b><font color="#ffff00">GERA&Ccedil;&Atilde;O DO BOLETO</font></b></td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- INFORMAÇÕES DO SISTEMA (Dados de exemplo - específicos para cada Cliente) -->
+                    <INPUT NAME="dataEmissao" value="20080202" type="hidden">
+                    <INPUT NAME="codTipoVencimento" value="1" type="hidden">
+                    <INPUT NAME="dataVencimentoTit" value="20090505" type="hidden">
+                    <INPUT NAME="codEspDocumento" value="DM" type="hidden">
+                    <INPUT NAME="valorTitulo" value="200.05" type="hidden">
+                    <INPUT NAME="valorAbatimento" value="0.1" type="hidden">
+                    <INPUT NAME="valorIOF" value="0.2" type="hidden">
+                    <INPUT NAME="numContaCorrente" value="91707" type="hidden">
+                    <INPUT NAME="coopCartao" value="4368" type="hidden">
+                    <INPUT NAME="numCliente" value="412481" type="hidden">
+
+        
+                  
+                    <INPUT NAME="chaveAcessoWeb" value="C9E3D1FA-0CD9-4478-9F27-408582C7F528"
+                           type="hidden">
+                    <INPUT NAME="codMunicipio" value="3437" type="hidden">
+                    <BR>
+                    <!-- INFORMAÇÕES DO FORMULÁRIO -->
+
+                    <P>
+                        Nome:
+                        <INPUT TYPE=TEXT size="50" maxlength="50" NAME="nomeSacado">
+                    <P>
+                        CPF/CNPJ:
+                        <INPUT TYPE=TEXT size="14" maxlength="14" NAME="cpfCGC">
+                      
+                    <P>
+                        Endere&ccedil;o:
+                        <INPUT TYPE=TEXT size="40" maxlength="40" NAME="endereco">
+                    <P>
+                        Bairro:
+                        <INPUT TYPE=TEXT size="15" maxlength="15" NAME="bairro">
+                    <P>
+                        Cidade:
+                        <INPUT TYPE=TEXT size="15" maxlength="15" NAME="cidade">
+                    <P>
+                        CEP:
+                        <INPUT TYPE=TEXT size="8" maxlength="8" NAME="cep">
+                    <P>
+                        UF:
+                        <INPUT TYPE=TEXT value="PR" size="2" maxlength="2" NAME="uf">
+                    <P>
+                </td>
+            </tr>
+        </table>
+        <BR>
+        <INPUT TYPE=SUBMIT value="Gerar Boleto">
+    </FORM>
+</html>

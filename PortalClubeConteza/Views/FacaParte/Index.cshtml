@@ -1,0 +1,46 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Faça Parte";
+}
+
+<div id="corpo" class="corpo">
+    @Html.Partial("_BannerSection")
+    <div id="ctfacaparte">
+        <div id="titfaca">
+            <h2>Faça Parte!</h2><p>
+                Não importa o tamanho da sua família, nós temos um plano ideal para você.
+                Conheça nossos planos e descubra as vantagens de ser um associado do Clube Conteza.
+            </p>
+        </div>
+        <div id="engfaca">
+            <div id="engps">
+                <div id="promo1" class="promos"></div>
+                <div class="regulamentofaca">
+                    @Html.ActionLink("Leia o Regulamento", "Index", "Regulamento")<br/>
+                    <button class="facaparte" onclick="location.href='@Url.Action("Index", "Cadastre", new { @tipo = "1" })'">Quero fazer parte!</button>
+                </div>
+            </div>
+            <div id="engps">
+                <div id="promo2" class="promos"></div>
+                <div class="regulamentofaca">
+                    @Html.ActionLink("Leia o Regulamento", "Index", "Regulamento")<br/>
+                    <button class="facaparte2" onclick="location.href='@Url.Action("Index", "Cadastre", new { @tipo = "2" })'">Quero fazer parte!</button>
+                </div>
+            </div>
+            <div id="engps">
+                <div id="promo3" class="promos"></div>
+                <div class="regulamentofaca">
+                    @Html.ActionLink("Leia o Regulamento", "Index", "Regulamento")<br/>
+                    <button class="facaparte3" onclick="location.href='@Url.Action("Index", "Cadastre", new { @tipo = "3" })'">Quero fazer parte!</button>
+                </div>
+            </div>
+            <div id="engps">
+                <div id="promo4" class="promos"></div>
+                <div class="regulamentofaca">
+                    @Html.ActionLink("Leia o Regulamento", "Index", "Regulamento")<br/>
+                    <button class="facaparte4" onclick="location.href='@Url.Action("Index", "Cadastre", new { @tipo = "4" })'">Quero fazer parte!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

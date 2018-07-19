@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>@ViewBag.Title | Clube Conteza</title>
+        <link rel="icon" href="~/Content/img/ico.png">
+
+        <!-- Verificar os fonts da nova versao -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+        <!-- Depois que implementar a nova versao, apagar esses -->
+        <link rel="stylesheet" href="~/Content/Bootstrap/3.3.7/bootstrap.css" />
+        <link rel="stylesheet" href="~/Content/MaterialKit/1.1.1/material-kit.css" />
+
+        <!-- Implementar essa versao -->
+        <link rel="stylesheet" href="~/Content/MaterialKit/2.0.3/material-kit.css" />
+
+        <link rel="stylesheet" href="~/Content/OwlCarousel/2.2.1/owl.carousel.css" />
+        <link rel="stylesheet" href="~/Content/OwlCarousel/2.2.1/owl.theme.default.css" />
+
+        @Styles.Render("~/Bundles/styles")
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" />
+        <link rel="stylesheet" href="~/Content/Css/bootstrap-select.min.css" />
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-81356102-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-81356102-1');
+        </script>
+
+        <!-- Facebook Pixel Code -->
+        <script>
+            !function (f, b, e, v, n, t, s) {
+                if (f.fbq) return; n = f.fbq = function () {
+                    n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                };
+                if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+                n.queue = []; t = b.createElement(e); t.async = !0;
+                t.src = v; s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s)
+            }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+            fbq('init', '168969393922082');
+            fbq('track', 'PageView');
+        </script>
+        <noscript>
+            <img height="1" width="1" src="https://www.facebook.com/tr?id=168969393922082&ev=PageView&noscript=1" />
+        </noscript>
+        <!-- End Facebook Pixel Code -->
+    </head>
+    <body>
+        <div id="innercontent">
+            @Html.Partial("_Header")
+            @RenderBody()
+            @Html.Partial("_Footer")
+        </div>
+        <!-- Apagar depois -->
+        @*<script type="text/javascript" src="~/Scripts/jQuery/3.2.1/jquery-3.2.1.js"></script>*@
+
+        <script type="text/javascript" src="~/Scripts/jQuery/jquery.js"></script>
+        <script type="text/javascript" src="~/Scripts/Popper/popper.min.js"></script>
+
+        <!-- Depois que implementar a nova versao, apagar esses -->
+        <script type="text/javascript" src="~/Scripts/Bootstrap/3.3.7/bootstrap.js"></script>
+        <script type="text/javascript" src="~/Scripts/MaterialKit/1.1.1/material.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/MaterialKit/1.1.1/material-kit.js"></script>
+
+        <!-- Implementar essa versao -->
+        <script type="text/javascript" src="~/Scripts/BootstrapMaterial/2.0.3/bootstrap-material-design.js"></script>
+        @*<script type="text/javascript" src="~/Scripts/MaterialKit/2.0.3/material-kit.js"></script>*@
+
+        <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?hl=pt-BR"></script>
+
+        <script type="text/javascript" src="~/Scripts/OwlCarousel/2.2.1/owl.carousel.js"></script>
+
+        <script type="text/javascript" src="~/Scripts/principal.js"></script>
+
+        <script src="~/Content/Scripts/bootstrap-select.min.js"></script>
+
+        <script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/5fd8f90a-cb19-4a73-b538-db15cf648974-loader.js"></script>
+
+        @RenderSection("Scripts", required: false)
+    </body>
+</html>

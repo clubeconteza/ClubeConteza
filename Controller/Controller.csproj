@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{39771683-04EF-462C-A1C8-4755EECAD393}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Controller</RootNamespace>
+    <AssemblyName>Controller</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcessoController.cs" />
+    <Compile Include="AnotacoesController.cs" />
+    <Compile Include="BancoController.cs" />
+    <Compile Include="BannerController.cs" />
+    <Compile Include="CampanhaController.cs" />
+    <Compile Include="CategoriaController.cs" />
+    <Compile Include="CategoriaIdadeControler.cs" />
+    <Compile Include="CEPController.cs" />
+    <Compile Include="ClubeConteza_CarneDataSet.Dataset.Designer.cs" />
+    <Compile Include="ComissaoController.cs" />
+    <Compile Include="ContatoController.cs" />
+    <Compile Include="ContratoDocController.cs" />
+    <Compile Include="ContratosController.cs" />
+    <Compile Include="ContratosModelController.cs" />
+    <Compile Include="EmpresaController.cs" />
+    <Compile Include="Enums\ContratosStatus.cs" />
+    <Compile Include="Enums\ContratosTipoContrato.cs" />
+    <Compile Include="Enums\CorporativoFiltro.cs" />
+    <Compile Include="Enums\PessoasSexo.cs" />
+    <Compile Include="Enums\UnidadesStatus.cs" />
+    <Compile Include="EstadoController.cs" />
+    <Compile Include="EstadosModelController.cs" />
+    <Compile Include="LogController.cs" />
+    <Compile Include="MensagemController.cs" />
+    <Compile Include="mensalidadePremiadaController.cs" />
+    <Compile Include="MunicipioController.cs" />
+    <Compile Include="MunicipiosModelController.cs" />
+    <Compile Include="NegociacaoCondicaoController.cs" />
+    <Compile Include="PagamentosController.cs" />
+    <Compile Include="PaisController.cs" />
+    <Compile Include="PaisModelController.cs" />
+    <Compile Include="ParametrosBoletos.cs" />
+    <Compile Include="ParcelaController.cs" />
+    <Compile Include="ParcelaProdutosController.cs" />
+    <Compile Include="PessoaController.cs" />
+    <Compile Include="PessoasModelController.cs" />
+    <Compile Include="PlanoController.cs" />
+    <Compile Include="PontoDeVendaController.cs" />
+    <Compile Include="ProdutoController.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServicesClient\CuponsVouchersController.cs" />
+    <Compile Include="ServicesClient\QuantidadeCuponsVouchersController.cs" />
+    <Compile Include="UnidadeController.cs" />
+    <Compile Include="UnidadesModelController.cs" />
+    <Compile Include="UsuarioAPPController.cs" />
+    <Compile Include="UsuarioPortalController.cs" />
+    <Compile Include="wCategoriaController.cs" />
+    <Compile Include="wContatoController.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

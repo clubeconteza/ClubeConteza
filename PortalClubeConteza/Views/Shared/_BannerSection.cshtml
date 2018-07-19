@@ -1,0 +1,60 @@
+﻿<div> @*class="section"*@
+    <div id="banner-carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            @if (ViewBag.Banner != null && ViewBag.Banner.Count > 0)
+            {
+                foreach (var banner in ViewBag.Banner)
+                {
+                    var ativo = (ViewBag.Banner.IndexOf(banner) == 0) ? "active" : "";
+                    <li data-target="#banner-carousel" data-slide-to="@ViewBag.Banner.IndexOf(banner)" class="@ativo"></li>
+                }
+            }
+            else
+            {
+                <li data-target="#banner-carousel" data-slide-to="0" class="active"></li>
+            }
+        </ol>
+        <div class="carousel-inner">
+            @if (ViewBag.Banner != null && ViewBag.Banner.Count > 0)
+            {
+                foreach (var banner in ViewBag.Banner)
+                {
+                    var item = (ViewBag.Banner.IndexOf(banner) == 0) ? "carousel-item active" : "carousel-item";
+
+                    if (!string.IsNullOrEmpty(banner.Link) && Uri.IsWellFormedUriString(banner.Link, UriKind.Absolute))
+                    {
+                        <div class="@item">
+                            <a href="@banner.Link">
+                                <img class="d-block w-100" src="@Url.Content(string.Concat("~", banner.UrlImagem, banner.NomeArquivo))" alt="@banner.Titulo">
+                            </a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="@item">
+                            <img class="d-block w-100" src="@Url.Content(string.Concat("~", banner.UrlImagem, banner.NomeArquivo))" alt="@banner.Titulo">
+                        </div>
+                    }
+                }
+            }
+            else
+            {
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="~/Images/Banners/default.png" alt="Default">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Sem Imagens</h3>
+                        <p>Inclua os banners na pasta de imagens</p>
+                    </div>
+                </div>
+            }
+        </div>
+        <a class="carousel-control-prev" href="#banner-carousel" role="button" data-slide="prev">
+            <i class="material-icons">keyboard_arrow_left</i>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#banner-carousel" role="button" data-slide="next">
+            <i class="material-icons">keyboard_arrow_right</i>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,124 @@
+    public ParcelaController ParcelaInserirPagamentoCredParcela(ParcelaController Pagamento)
+        {
+            ParcelaController Retorno = new ParcelaController();
+          
+                SqlConnection   con = new SqlConnection(ParametrosDAO.StringConexao);
+
+                SqlCommand      cmdTB012 = con.CreateCommand();
+                
+                SqlCommand      cmdTB013 = con.CreateCommand();
+                SqlCommand      cmdTB016 = con.CreateCommand();
+               
+
+                StringBuilder sSQLTB012 = new StringBuilder();
+                sSQLTB012.Append("UPDATE TB012_Contratos SET ");
+                sSQLTB012.Append(",TB012_Status = 1");
+                sSQLTB012.Append(" where TB012_id");
+                sSQLTB012.Append(Pagamento.TB012_id);
+
+                
+
+                StringBuilder sSQLTB013 = new StringBuilder();
+                sSQLTB013.Append("SELECT dbo.TB012_Contratos.TB012_id, dbo.TB012_Contratos.TB012_Status, dbo.TB013_Pessoa.TB013_id, dbo.TB013_Pessoa.TB013_Cartao, dbo.TB006_Municipio.TB006_Codigo, ");
+                sSQLTB013.Append(" dbo.TB013_Pessoa.TB013_CarteirinhaStatus, dbo.TB013_Pessoa.TB013_CodigoDependente ");
+                sSQLTB013.Append(" FROM dbo.TB012_Contratos INNER JOIN ");
+                sSQLTB013.Append(" dbo.TB013_Pessoa ON dbo.TB012_Contratos.TB012_id = dbo.TB013_Pessoa.TB012_id INNER JOIN ");
+                sSQLTB013.Append(" dbo.TB006_Municipio ON dbo.TB013_Pessoa.TB006_id = dbo.TB006_Municipio.TB006_id ");
+                sSQLTB013.Append(" WHERE(NOT(dbo.TB006_Municipio.TB006_Codigo IS NULL)) AND (dbo.TB013_Pessoa.TB013_CarteirinhaStatus = 0) AND (dbo.TB013_Pessoa.TB013_Status = 0) AND ");
+                sSQLTB013.Append(" dbo.TB012_Contratos.TB012_id = ");
+                sSQLTB013.Append(Pagamento.TB012_id);
+                sSQLTB013.Append(" OR ");
+                sSQLTB013.Append(" dbo.TB013_Pessoa.TB013_Status = 1");
+
+                StringBuilder   sSQLTB016 = new StringBuilder();
+                sSQLTB016.Append("UPDATE TB016_Parcela SET ");
+                sSQLTB016.Append(",TB016_DataPagamento = ");
+                sSQLTB016.Append(Pagamento.TB016_DataPagamento.ToString("MM/dd/yyyy"));
+                sSQLTB016.Append(",TB016_FormaProcessamentoBaixa = ");
+                sSQLTB016.Append(Pagamento.TB016_FormaProcessamentoBaixa);
+                sSQLTB016.Append("TB016_CredNCartao, =");
+                sSQLTB016.Append("'");
+                sSQLTB016.Append(Pagamento.TB016_CredNCartao.Trim());
+                sSQLTB016.Append("'");
+                sSQLTB016.Append(",TB016_CredCPFTitularCartaoCartao =");
+                sSQLTB016.Append("'");
+                sSQLTB016.Append(Pagamento.TB016_CredCPFTitularCartaoCartao.Replace(".","").Replace(",", "").Replace("-", "").Replace("/", "").Trim());
+                sSQLTB016.Append("'");
+                sSQLTB016.Append(",TB016_CredNomeTitularCartaoCartao =");
+                sSQLTB016.Append("'");
+                sSQLTB016.Append(Pagamento.TB016_CredNomeTitularCartaoCartao.TrimEnd());
+                sSQLTB016.Append("'");
+                sSQLTB016.Append(",TB016_CredBandeira =");
+                sSQLTB016.Append(Pagamento.TB016_CredBandeira);
+                sSQLTB016.Append(",TB016_CredNParcelas =");
+                sSQLTB016.Append(Pagamento.TB016_CredNParcelas);
+                sSQLTB016.Append(",TB016_CredValorParcelas =");
+                sSQLTB016.Append(Pagamento.TB016_CredValorParcelas);
+                sSQLTB016.Append(",TB016_CredAutorizacao =");
+                sSQLTB016.Append("'");
+                sSQLTB016.Append(Pagamento.TB016_CredAutorizacao.Trim());
+                sSQLTB016.Append("'");
+                sSQLTB016.Append(",TB016_CredCodValidador =");
+                sSQLTB016.Append("'");
+                sSQLTB016.Append(Pagamento.TB016_CredCodValidador.Trim());
+                sSQLTB016.Append("'");
+                sSQLTB016.Append(",TB016_CredFormaParamentoId =");           
+                sSQLTB016.Append(Pagamento.TB016_CredFormaParamentoId);               
+                sSQLTB016.Append(",TB016_CredFormaParamentoDescricao =");
+                sSQLTB016.Append("'");
+                sSQLTB016.Append(Pagamento.TB016_CredFormaParamentoDescricao.TrimEnd().ToUpper());
+                sSQLTB016.Append("'");
+                sSQLTB016.Append(",TB016_AlteradoEm =");
+                sSQLTB016.Append("'");
+                sSQLTB016.Append(Pagamento.TB016_AlteradoEm.ToString("MM/dd/yyy hh:mm"));
+                sSQLTB016.Append("'");
+                sSQLTB016.Append(",TB016_AlteradoPor =");
+                sSQLTB016.Append(Pagamento.TB016_AlteradoPor);
+                sSQLTB016.Append(",TB016_CredBaixaFeitaEm =");
+                sSQLTB016.Append("'");
+                sSQLTB016.Append(Pagamento.TB016_CredBaixaFeitaEm.ToString("MM/dd/yyy hh:mm"));
+                sSQLTB016.Append("'");
+                sSQLTB016.Append(",TB016_CredBaixaFeitaPor =");
+                sSQLTB016.Append(Pagamento.TB016_CredBaixaFeitaPor);
+                sSQLTB016.Append(",TB016_Status =");
+                sSQLTB016.Append(Pagamento.TB016_StatusS);
+                sSQLTB016.Append(" where TB016_id");
+                sSQLTB016.Append(Pagamento.TB016_id);
+
+
+
+                cmdTB012.CommandText = sSQLTB012.ToString();
+                cmdTB013.CommandText = sSQLTB013.ToString(); 
+                cmdTB016.CommandText = sSQLTB016.ToString();
+               
+
+                con.Open();
+                SqlTransaction tran = con.BeginTransaction();
+                try
+                {
+                    cmdTB012.Transaction = tran;
+                    cmdTB012.ExecuteNonQuery();
+                    //Comando 1 executado com sucesso!
+
+                    cmdTB013.Transaction = tran;
+                    cmdTB013.ExecuteNonQuery();
+                    //Comando 2 executado com sucesso!
+
+                    cmdTB016.Transaction = tran;
+                    cmdTB016.ExecuteNonQuery();
+                    //Comando 3 executado com sucesso!
+
+                    tran.Commit();
+                }
+                catch (SqlException ex)
+                {
+                    tran.Rollback();
+                    throw ex;
+                }
+                finally
+                {
+                    con.Close();
+                }
+
+            return Retorno;
+        }

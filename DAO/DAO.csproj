@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1BDD9005-A10C-47E8-9960-676BB0BA7273}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAO</RootNamespace>
+    <AssemblyName>DAO</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcessoDAO.cs" />
+    <Compile Include="AnotacoesDAO.cs" />
+    <Compile Include="BancoDAO.cs" />
+    <Compile Include="CampanhaDAO.cs" />
+    <Compile Include="CategoriaDAO.cs" />
+    <Compile Include="ContatoDAO.cs" />
+    <Compile Include="ContratoCorporativoDAO.cs" />
+    <Compile Include="ContratoDocDAO.cs" />
+    <Compile Include="ContratoFamiliarDAO.cs" />
+    <Compile Include="ContratoParceiroDAO.cs" />
+    <Compile Include="ContratosDAO.cs" />
+    <Compile Include="ContratosModelDAO.cs" />
+    <Compile Include="CriptografiaDAO.cs" />
+    <Compile Include="EmpresaDAO.cs" />
+    <Compile Include="EnderecoDAO.cs" />
+    <Compile Include="EstadosModelDAO.cs" />
+    <Compile Include="HashManagerDAO.cs" />
+    <Compile Include="Infrastructure\ConexaoFabrica.cs" />
+    <Compile Include="Infrastructure\IUnidadeTrabalho.cs" />
+    <Compile Include="Infrastructure\UnidadeTrabalho.cs" />
+    <Compile Include="LogDAO.cs" />
+    <Compile Include="MensagemDAO.cs" />
+    <Compile Include="mensalidadePremiadaDAO.cs" />
+    <Compile Include="MunicipiosModelDAO.cs" />
+    <Compile Include="NegociacaoCondicaoDAO.cs" />
+    <Compile Include="PagamentoDAO.cs" />
+    <Compile Include="PaisModelDAO.cs" />
+    <Compile Include="ParametrosDAO.cs" />
+    <Compile Include="ParcelaDAO.cs" />
+    <Compile Include="PessoaDAO.cs" />
+    <Compile Include="PessoasModelDAO.cs" />
+    <Compile Include="PlanoDAO.cs" />
+    <Compile Include="PontoDeVendaDAO.cs" />
+    <Compile Include="ProdutoDAO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnidadeDAO.cs" />
+    <Compile Include="UnidadesModelDAO.cs" />
+    <Compile Include="UsuarioAPPDAO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Boleto\WSClubeConteza.csproj">
+      <Project>{25167334-8468-487A-8862-49AD22B95FAA}</Project>
+      <Name>WSClubeConteza</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Controller\Controller.csproj">
+      <Project>{39771683-04ef-462c-a1c8-4755eecad393}</Project>
+      <Name>Controller</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

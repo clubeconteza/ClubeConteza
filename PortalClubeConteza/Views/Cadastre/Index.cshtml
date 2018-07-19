@@ -1,0 +1,54 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Cadastre-se";
+}
+
+@model PortalClubeConteza.Models.Associacao
+
+<div id="engbcontato">
+    <div id="contentcontato">
+        <div id="divacontato">
+            <h2 class="tct"> Associe-se já! </h2>
+            @using (Html.BeginForm("Enviar", "Cadastre", FormMethod.Post, new { id = "cadastrocontezino" }))
+            {
+                @Html.ValidationMessage("FalhaEnvioEmail")
+
+                @Html.LabelFor(x => x.Nome, "Primeiro nome:")
+                @Html.TextBoxFor(x => x.Nome)
+                @Html.ValidationMessageFor(x => x.Nome)
+
+                @Html.LabelFor(x => x.Telefone, "Telefone:")
+                @Html.TextBoxFor(x => x.Telefone)
+                @Html.ValidationMessageFor(x => x.Telefone)
+
+                @Html.LabelFor(x => x.Email, "Email:")
+                @Html.TextBoxFor(x => x.Email)
+                @Html.ValidationMessageFor(x => x.Email)
+
+                @Html.LabelFor(x => x.Tipo, "Plano escolhido:")
+                <div id="englobplans">
+                    <div class="inputsradioplans">
+                        @Html.RadioButtonFor(x => x.Tipo, "1")
+                        Plano 1
+                    </div>
+                    <div class="inputsradioplans">
+                        @Html.RadioButtonFor(x => x.Tipo, "2")
+                        Plano 2
+                    </div>
+                    <div class="inputsradioplans">
+                        @Html.RadioButtonFor(x => x.Tipo, "3")
+                        Plano 3
+                    </div>
+                    <div class="inputsradioplans">
+                        @Html.RadioButtonFor(x => x.Tipo, "4")
+                        Plano 4
+                    </div>
+                </div>
+                @Html.ValidationMessageFor(x => x.Tipo)
+
+                <div id="btnsnd"><input class="btplansend" type="submit" value="Enviar" /></div>
+            }
+        </div>
+        <div id="divbcontato"></div>
+    </div>
+</div>

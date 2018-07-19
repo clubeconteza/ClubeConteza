@@ -1,0 +1,10 @@
+ALTER
+TABLE dbo.TB016_Parcela ADD CONSTRAINT
+PK_TB016_id_primary_key
+PRIMARY KEY CLUSTERED 
+(
+ TB016_id
+) WITH( STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+
+
+select 'drop table ' + name from sys.tables where name like 'TB%'

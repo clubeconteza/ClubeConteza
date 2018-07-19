@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="L0001" xml:space="preserve">
+    <value>Contrato $Contrato gerado.</value>
+  </data>
+  <data name="L0002" xml:space="preserve">
+    <value>Registro $NomeCompleto, Id $ID incluido.</value>
+  </data>
+  <data name="L0003" xml:space="preserve">
+    <value>Pessoa  $NomeCompleto, Id $ID, vinculada ao Contrato $Contrato, como titular</value>
+  </data>
+  <data name="L0004" xml:space="preserve">
+    <value>Pessoa  $NomeCompleto, Id $ID, vinculada ao Contrato $Contrato, como dependente</value>
+  </data>
+  <data name="L0005" xml:space="preserve">
+    <value>Contato $Contato, Id $ID, incluido.</value>
+  </data>
+  <data name="L0006" xml:space="preserve">
+    <value>Contato $Contato, Id $ID, excluido.</value>
+  </data>
+  <data name="L0007" xml:space="preserve">
+    <value>Pessoa  $NomeCompleto, Id $ID, canceladado  Contrato $Contrato.</value>
+  </data>
+  <data name="L0008" xml:space="preserve">
+    <value>Contato $Contrato, Id $ID, cancelado.</value>
+  </data>
+  <data name="L0009" xml:space="preserve">
+    <value>Gerada parcela $ID, em $DATAEMISSAO, com vencimento em $VENCIMENTO, no valor de R$ $VALOR.</value>
+  </data>
+  <data name="L0010" xml:space="preserve">
+    <value>Gerado boleto da parcela $ID.</value>
+  </data>
+  <data name="L0011" xml:space="preserve">
+    <value>Parcela  $ID, via importação.</value>
+  </data>
+  <data name="L0012" xml:space="preserve">
+    <value>Cartão $CARTAO gerado.</value>
+  </data>
+  <data name="L0013" xml:space="preserve">
+    <value>Contato $Conttato, Id $ID, Ativado</value>
+  </data>
+  <data name="L0014" xml:space="preserve">
+    <value>Parcela $ID Cancelada.</value>
+  </data>
+  <data name="L0015" xml:space="preserve">
+    <value>Contato $Contrato, Id $ID, ativado.</value>
+  </data>
+  <data name="L0016" xml:space="preserve">
+    <value>Pagamento do CPF [{0}] , no valor de [{1}] , com vencimento em [{2}] , importado.</value>
+  </data>
+  <data name="L0017" xml:space="preserve">
+    <value>Gerado cartões em massa.</value>
+  </data>
+  <data name="L0018" xml:space="preserve">
+    <value>Pagamento [{0}] , vinculado com a parcela [{1}] , contrato [{2}]  atualizado (Via Importação)</value>
+  </data>
+  <data name="L0019" xml:space="preserve">
+    <value>Status do dependente [{0}] , alterado para [{1}]  ( Validando Geração Status Cartão).</value>
+  </data>
+  <data name="L0020" xml:space="preserve">
+    <value>Unidade $Unidade cadastrada.</value>
+  </data>
+  <data name="L0021" xml:space="preserve">
+    <value>Cartão [{0}]  enviado para impressão.</value>
+  </data>
+  <data name="L0022" xml:space="preserve">
+    <value>Cartão [{0}] retornou da impressão.</value>
+  </data>
+  <data name="L0023" xml:space="preserve">
+    <value>Cartão [{0}]  entregue para [{1}]</value>
+  </data>
+  <data name="L0024" xml:space="preserve">
+    <value>Cartão [{0}]  gerado manualmente / Parcela confirmada pagamento manualmente.</value>
+  </data>
+  <data name="L0025" xml:space="preserve">
+    <value>Contato $Contrato alterado.</value>
+  </data>
+  <data name="L0026" xml:space="preserve">
+    <value>Unidade $Unidade atualizada</value>
+  </data>
+  <data name="L0027" xml:space="preserve">
+    <value>Cancelada(s) parcelas pendentes do contrato $Contrato</value>
+  </data>
+  <data name="L0028" xml:space="preserve">
+    <value>Baixa manual parcela '{0}'</value>
+  </data>
+  <data name="L0029" xml:space="preserve">
+    <value>Contrato Familiar Corporativo [{0}]  Cadastrado/Vinculado ao Contrato Corporativo [{1}]</value>
+  </data>
+  <data name="L0030" xml:space="preserve">
+    <value>Colaborador [{0}]  vinculado ao plano Corporativo [{1}]</value>
+  </data>
+  <data name="L0031" xml:space="preserve">
+    <value>Alterado ponto de venda para id [{0}] .</value>
+  </data>
+  <data name="L0032" xml:space="preserve">
+    <value>Contrato inicial gravado no historico.</value>
+  </data>
+  <data name="L0033" xml:space="preserve">
+    <value>Dependente [{0}]  inativado.</value>
+  </data>
+  <data name="L0034" xml:space="preserve">
+    <value>Vs do contrato atualizada [VS: {0} ]</value>
+  </data>
+  <data name="L0035" xml:space="preserve">
+    <value>Contrato  {0} esta sendo editado.</value>
+  </data>
+  <data name="L0036" xml:space="preserve">
+    <value>Usuario ID {0}  [{1}] alterou sua propria senha.</value>
+  </data>
+  <data name="L0037" xml:space="preserve">
+    <value>Pagamento via cartão vinculado a parcela  {0}</value>
+  </data>
+  <data name="L0038" xml:space="preserve">
+    <value>Ativado integrantes do contrato / (Gerado cartões)</value>
+  </data>
+  <data name="L0039" xml:space="preserve">
+    <value>Plano da parcela {0} alterado manualmente para {1}</value>
+  </data>
+  <data name="L0040" xml:space="preserve">
+    <value>Parcela {0} unida a parcela {1}.</value>
+  </data>
+  <data name="L0041" xml:space="preserve">
+    <value>Data Emissao alterada (parcela {0}).</value>
+  </data>
+  <data name="L0042" xml:space="preserve">
+    <value>Data Vencimenta altarada (parcela {0}).</value>
+  </data>
+  <data name="L0043" xml:space="preserve">
+    <value>Valor da adesão alterada (parcela {0}).</value>
+  </data>
+  <data name="L0044" xml:space="preserve">
+    <value>Data Pagamento alterada (parcela {0}).</value>
+  </data>
+  <data name="L0045" xml:space="preserve">
+    <value>Alterado forma de pagamento (parcela {0})</value>
+  </data>
+  <data name="L0046" xml:space="preserve">
+    <value>Descrição do produto ligada a parcela alterado (parcela {0})</value>
+  </data>
+  <data name="L0047" xml:space="preserve">
+    <value>Alterado valor de desconto do produto {0} referente parcela {1}</value>
+  </data>
+  <data name="L0048" xml:space="preserve">
+    <value>Alterado valor total da parcela  {0}</value>
+  </data>
+  <data name="L0049" xml:space="preserve">
+    <value>Parcela {0} baixa manual pelo financeiro.</value>
+  </data>
+  <data name="L0050" xml:space="preserve">
+    <value>Validade do contrato contrato {0}, alterada [Parcelas não pagas foram canceladas] </value>
+  </data>
+  <data name="L0051" xml:space="preserve">
+    <value>Parcela {0} cancelada.</value>
+  </data>
+  <data name="L0052" xml:space="preserve">
+    <value>Parcela {0} teve sua data de vencimento alterada para {1}.</value>
+  </data>
+  <data name="L0053" xml:space="preserve">
+    <value>Contrato Corporativo Familiar, desvinculado do plano Corporativo</value>
+  </data>
+  <data name="L0054" xml:space="preserve">
+    <value>Parcela {0} do corporativo {1} emitida.</value>
+  </data>
+  <data name="L0055" xml:space="preserve">
+    <value>Parcelas Geradas {0}</value>
+  </data>
+  <data name="L0056" xml:space="preserve">
+    <value>Forma de pagamento da parcela {0} alterada.</value>
+  </data>
+  <data name="L0057" xml:space="preserve">
+    <value>Assinatura vinculada ao contrato.</value>
+  </data>
+  <data name="L0058" xml:space="preserve">
+    <value>Contrato {0} cancelado. Motivo {1}, descrição {2}</value>
+  </data>
+  <data name="L0059" xml:space="preserve">
+    <value>Contrato cancelado via pagamento de parcela de cancelamento.</value>
+  </data>
+  <data name="L0060" xml:space="preserve">
+    <value>Produto {0} da parcela {1} teve desconto alterado para {2}</value>
+  </data>
+  <data name="L0061" xml:space="preserve">
+    <value>Anotação {0} incluida.</value>
+  </data>
+  <data name="L0062" xml:space="preserve">
+    <value>Status da parcela {0} foi alterado para {1}</value>
+  </data>
+  <data name="L0063" xml:space="preserve">
+    <value>Aterado ciclo da parcela {0}</value>
+  </data>
+  <data name="L0064" xml:space="preserve">
+    <value>Alterado ciclo do contrato {0}</value>
+  </data>
+  <data name="L0065" xml:space="preserve">
+    <value>Validade do contrato alterado {0} - {1}</value>
+  </data>
+  <data name="L0066" xml:space="preserve">
+    <value>Alterado data vencimento para {0} da parcela {0}</value>
+  </data>
+  <data name="L0067" xml:space="preserve">
+    <value>Parcela {0} foi abonada da adesão.</value>
+  </data>
+  <data name="L0068" xml:space="preserve">
+    <value>Local de cadastro alteado {0}</value>
+  </data>
+  <data name="L0069" xml:space="preserve">
+    <value>Usuário {0} foi bloqueado no ponto de venda {1}</value>
+  </data>
+  <data name="L0070" xml:space="preserve">
+    <value>Comissão da parcela {0} referente ao contrato {1} processada.</value>
+  </data>
+  <data name="L0071" xml:space="preserve">
+    <value>Comissão do ponto de venda {0} atualizado.</value>
+  </data>
+  <data name="L0072" xml:space="preserve">
+    <value>Dados pessoa fisica id {0} Nome {1} alterado, segue alterações {2}</value>
+  </data>
+  <data name="L0073" xml:space="preserve">
+    <value>Contrato {0} negociado. [Parcelas vencidas foram canceladas.]</value>
+  </data>
+  <data name="L0074" xml:space="preserve">
+    <value>Emitido boleto {0} via negociação.</value>
+  </data>
+  <data name="L0075" xml:space="preserve">
+    <value>Parcela {0} baixada via importação do arquivo de remessa.</value>
+  </data>
+  <data name="L0076" xml:space="preserve">
+    <value>Contezino {0} teve sua senha dadastrada via sistema interno.</value>
+  </data>
+  <data name="L0077" xml:space="preserve">
+    <value>Contezino {0} teve sua senha alterada via sistema interno.</value>
+  </data>
+  <data name="L0078" xml:space="preserve">
+    <value>Pessoa {0} liberada para acesso ao contrato {1} do parceiro</value>
+  </data>
+  <data name="L0079" xml:space="preserve">
+    <value>Edição do contrato {0}, foi finalizada pelo usuário {1}</value>
+  </data>
+  <data name="L0080" xml:space="preserve">
+    <value>Contrato {0} reativado.</value>
+  </data>
+  <data name="L0081" xml:space="preserve">
+    <value>Incluido produto {0} de forma manual na parcela {1}</value>
+  </data>
+  <data name="L0082" xml:space="preserve">
+    <value>Campanha {0} teve seu canal SMS atualizado.</value>
+  </data>
+  <data name="L0083" xml:space="preserve">
+    <value>Contrato foi contemplado com o premio {0}</value>
+  </data>
+  <data name="L0084" xml:space="preserve">
+    <value>Mensagem/campanha do contrato {0} foi excluida</value>
+  </data>
+</root>

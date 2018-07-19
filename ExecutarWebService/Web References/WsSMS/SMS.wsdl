@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ListarNovosSmsRecebidos">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListarNovosSmsRecebidosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListarNovosSmsRecebidosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnvioUnicoSms">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sms" type="tns:EnviaSmsController" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EnviaSmsController">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MensagemSms" type="tns:MensagemSmsController" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MensagemSmsController">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Remetente" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumeroCelular" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataMensagemEnvia" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mensagem" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdMensagem" nillable="true" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="EnvioUnicoSmsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnvioUnicoSmsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnvioVariosSms">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sms" type="tns:EnviaSmsMultiController" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EnviaSmsMultiController">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="EnviaSmsLista" type="tns:EnviaSmsListaController" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EnviaSmsListaController">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MensagemVariosSms" type="tns:ArrayOfMensagemVariosSmsController" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfMensagemVariosSmsController">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MensagemVariosSmsController" nillable="true" type="tns:MensagemVariosSmsController" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MensagemVariosSmsController">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Remetente" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumeroCelular" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DataMensagemEnvia" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mensagem" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IdMensagem" nillable="true" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="EnvioVariosSmsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnvioVariosSmsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarSmsRecebidosPorPeriodo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dataInicio" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dataFinal" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarSmsRecebidosPorPeriodoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarSmsRecebidosPorPeriodoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ListarNovosSmsRecebidosSoapIn">
+    <wsdl:part name="parameters" element="tns:ListarNovosSmsRecebidos" />
+  </wsdl:message>
+  <wsdl:message name="ListarNovosSmsRecebidosSoapOut">
+    <wsdl:part name="parameters" element="tns:ListarNovosSmsRecebidosResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnvioUnicoSmsSoapIn">
+    <wsdl:part name="parameters" element="tns:EnvioUnicoSms" />
+  </wsdl:message>
+  <wsdl:message name="EnvioUnicoSmsSoapOut">
+    <wsdl:part name="parameters" element="tns:EnvioUnicoSmsResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnvioVariosSmsSoapIn">
+    <wsdl:part name="parameters" element="tns:EnvioVariosSms" />
+  </wsdl:message>
+  <wsdl:message name="EnvioVariosSmsSoapOut">
+    <wsdl:part name="parameters" element="tns:EnvioVariosSmsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarSmsRecebidosPorPeriodoSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarSmsRecebidosPorPeriodo" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarSmsRecebidosPorPeriodoSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarSmsRecebidosPorPeriodoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListarNovosSmsRecebidosHttpGetIn" />
+  <wsdl:message name="ListarNovosSmsRecebidosHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarSmsRecebidosPorPeriodoHttpGetIn">
+    <wsdl:part name="dataInicio" type="s:string" />
+    <wsdl:part name="dataFinal" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarSmsRecebidosPorPeriodoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ListarNovosSmsRecebidosHttpPostIn" />
+  <wsdl:message name="ListarNovosSmsRecebidosHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarSmsRecebidosPorPeriodoHttpPostIn">
+    <wsdl:part name="dataInicio" type="s:string" />
+    <wsdl:part name="dataFinal" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarSmsRecebidosPorPeriodoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="SMSSoap">
+    <wsdl:operation name="ListarNovosSmsRecebidos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna a lista de novos SMSs recebidos. Uma vez cosultado, o SMS não irá mais ser retornado na chamada deste serviço.</wsdl:documentation>
+      <wsdl:input message="tns:ListarNovosSmsRecebidosSoapIn" />
+      <wsdl:output message="tns:ListarNovosSmsRecebidosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnvioUnicoSms">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Este serviço envia um SMS para o celular do destinatário. Com ele é possível enviar mensagens de texto curtas e longas.</wsdl:documentation>
+      <wsdl:input message="tns:EnvioUnicoSmsSoapIn" />
+      <wsdl:output message="tns:EnvioUnicoSmsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnvioVariosSms">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Este serviço envia vários SMS para o celular dos destinatários. Com ele é possível enviar mensagens de texto curtas e longas.</wsdl:documentation>
+      <wsdl:input message="tns:EnvioVariosSmsSoapIn" />
+      <wsdl:output message="tns:EnvioVariosSmsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSmsRecebidosPorPeriodo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna a lista de SMSs recebidos em um período definido.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarSmsRecebidosPorPeriodoSoapIn" />
+      <wsdl:output message="tns:ConsultarSmsRecebidosPorPeriodoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SMSHttpGet">
+    <wsdl:operation name="ListarNovosSmsRecebidos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna a lista de novos SMSs recebidos. Uma vez cosultado, o SMS não irá mais ser retornado na chamada deste serviço.</wsdl:documentation>
+      <wsdl:input message="tns:ListarNovosSmsRecebidosHttpGetIn" />
+      <wsdl:output message="tns:ListarNovosSmsRecebidosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSmsRecebidosPorPeriodo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna a lista de SMSs recebidos em um período definido.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarSmsRecebidosPorPeriodoHttpGetIn" />
+      <wsdl:output message="tns:ConsultarSmsRecebidosPorPeriodoHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SMSHttpPost">
+    <wsdl:operation name="ListarNovosSmsRecebidos">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna a lista de novos SMSs recebidos. Uma vez cosultado, o SMS não irá mais ser retornado na chamada deste serviço.</wsdl:documentation>
+      <wsdl:input message="tns:ListarNovosSmsRecebidosHttpPostIn" />
+      <wsdl:output message="tns:ListarNovosSmsRecebidosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSmsRecebidosPorPeriodo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retorna a lista de SMSs recebidos em um período definido.</wsdl:documentation>
+      <wsdl:input message="tns:ConsultarSmsRecebidosPorPeriodoHttpPostIn" />
+      <wsdl:output message="tns:ConsultarSmsRecebidosPorPeriodoHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SMSSoap" type="tns:SMSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListarNovosSmsRecebidos">
+      <soap:operation soapAction="http://tempuri.org/ListarNovosSmsRecebidos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnvioUnicoSms">
+      <soap:operation soapAction="http://tempuri.org/EnvioUnicoSms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnvioVariosSms">
+      <soap:operation soapAction="http://tempuri.org/EnvioVariosSms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSmsRecebidosPorPeriodo">
+      <soap:operation soapAction="http://tempuri.org/ConsultarSmsRecebidosPorPeriodo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SMSSoap12" type="tns:SMSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListarNovosSmsRecebidos">
+      <soap12:operation soapAction="http://tempuri.org/ListarNovosSmsRecebidos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnvioUnicoSms">
+      <soap12:operation soapAction="http://tempuri.org/EnvioUnicoSms" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnvioVariosSms">
+      <soap12:operation soapAction="http://tempuri.org/EnvioVariosSms" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSmsRecebidosPorPeriodo">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarSmsRecebidosPorPeriodo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SMSHttpGet" type="tns:SMSHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="ListarNovosSmsRecebidos">
+      <http:operation location="/ListarNovosSmsRecebidos" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSmsRecebidosPorPeriodo">
+      <http:operation location="/ConsultarSmsRecebidosPorPeriodo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SMSHttpPost" type="tns:SMSHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="ListarNovosSmsRecebidos">
+      <http:operation location="/ListarNovosSmsRecebidos" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarSmsRecebidosPorPeriodo">
+      <http:operation location="/ConsultarSmsRecebidosPorPeriodo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SMS">
+    <wsdl:port name="SMSSoap" binding="tns:SMSSoap">
+      <soap:address location="http://www.clubeconteza.com.br:81/SMS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SMSSoap12" binding="tns:SMSSoap12">
+      <soap12:address location="http://www.clubeconteza.com.br:81/SMS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SMSHttpGet" binding="tns:SMSHttpGet">
+      <http:address location="http://www.clubeconteza.com.br:81/SMS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SMSHttpPost" binding="tns:SMSHttpPost">
+      <http:address location="http://www.clubeconteza.com.br:81/SMS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

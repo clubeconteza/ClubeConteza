@@ -1,0 +1,145 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Seja um Parceiro";
+}
+
+<div id="corpo" class="corpo">
+    @Html.Partial("_BannerSection")
+    <div class="container demo">
+        <h4 style="text-align:center;">Seja um Parceiro do Clube!</h4>
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title CM">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Profissional do Comércio
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body cm">
+                        <div class="content-faca-parte">
+                            <div id="engl">
+                                <div id="esq-egl"><img class="aligncenter size-full wp-image-615" src="~/Content/img/comercio.png" alt="" width="689" height="764"></div>
+                                <div id="dir-egl">
+                                    <div class="eng">
+                                        <div class="number-egl">1</div>
+                                        <div class="texto-egl">
+                                            <strong class="egl-txt">Como conceder o desconto?</strong>
+                                            Peça ao seu cliente para que apresente o cartão de associado do Clube Conteza. Ao recebê-lo, confirme a identificação com um documento pessoal. Pronto, você já pode conceder o desconto ou condição especial.
+                                        </div>
+                                    </div>
+                                    <div class="eng2">
+                                        <div class="number-egl">2</div>
+                                        <div class="texto-egl">
+                                            <strong class="egl-txt">Como inserir as ofertas no site?</strong>
+                                            Através de uma plataforma bastante simples, você cadastra suas ofertas no site e, assim que elas forem aprovadas pela nossa equipe, aparecerão na sua vitrine online e estarão disponíveis para todos os associados.
+                                        </div>
+                                    </div>
+                                    <div class="eng3">
+                                        <div class="number-egl">3</div>
+                                        <div class="texto-egl">
+                                            <strong class="egl-txt">Como saberão que minha empresa é parceira do Clube Conteza?</strong>
+                                            No nosso site haverá uma área incluindo os dados e ofertas da sua empresa. Além disso, você receberá um kit com materiais para divulgação no ponto de venda, como displays e um adesivo “Aqui tem Clube Conteza”, assim, todos saberão que sua empresa é nossa parceira.
+                                        </div>
+                                    </div>
+                                    <div id="querofazerparte">
+                                        @Html.ActionLink("Quero Fazer Parte!", "Index", "Adesao", new { @tipo = "2" }, null)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingTwo">
+                    <h4 class="panel-title SD">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Profissional da Saúde
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                    <div class="panel-body sd">
+                        <div class="content-faca-parte">
+                            <div id="engl">
+                                <div id="esq-egl"><img class="aligncenter size-full wp-image-615" src="~/Content/img/saude.png" alt="" width="689" height="764"></div>
+                                <div id="dir-egl">
+                                    <div class="eng">
+                                        <div class="number-egl">1</div>
+                                        <div class="texto-egl">
+                                            <strong class="egl-txt">Como conceder o desconto?</strong>
+                                            Peça ao seu cliente para que apresente o cartão de associado do Clube Conteza. Ao recebê-lo, confirme a identificação com um documento pessoal. Pronto, você já pode conceder o desconto ou condição especial.
+                                        </div>
+                                    </div>
+                                    <div class="eng3">
+                                        <div class="number-egl">2</div>
+                                        <div class="texto-egl">
+                                            <strong class="egl-txt">Como saberão que minha empresa é parceira do Clube Conteza?</strong>
+                                            No nosso site haverá uma área incluindo os dados e ofertas da sua empresa. Além disso, você receberá um kit com materiais para divulgação no ponto de venda, como displays e um adesivo “Aqui tem Clube Conteza”, assim, todos saberão que sua empresa é nossa parceira.
+                                        </div>
+                                    </div>
+                                    <div class="eng">
+                                        <div class="number-egl">3</div>
+                                        <div class="texto-egl">
+                                            <strong class="egl-txt">Existe um valor obrigatório por consulta?</strong>
+                                            Não. Agora não existe um valor obrigatório. Ao tornar-se um parceiro do Clube Conteza, você estabelece o valor da consulta para associados de acordo com a sua tabela, sem repasses ou porcentagens ao Clube Conteza.
+                                        </div>
+                                    </div>
+                                    <div id="querofazerparte">
+                                        @Html.ActionLink("Quero Fazer Parte!", "Index", "Adesao", new { @tipo = "1" }, null)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading" role="tab" id="headingThree">
+                    <h4 class="panel-title PL">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Profissional Liberal
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                    <div class="panel-body pl">
+                        <div class="content-faca-parte">
+                            <div id="engl">
+                                <div id="esq-egl"><img class="aligncenter size-full wp-image-615" src="~/Content/img/pl.png" alt="" width="689" height="764"></div>
+                                <div id="dir-egl">
+                                    <div class="eng">
+                                        <div class="number-egl">1</div>
+                                        <div class="texto-egl">
+                                            <strong class="egl-txt">Como conceder o desconto?</strong>
+                                            Peça ao seu cliente para que apresente o cartão de associado do Clube Conteza. Ao recebê-lo, confirme a identificação com um documento pessoal. Pronto, você já pode conceder o desconto ou condição especial.
+                                        </div>
+                                    </div>
+                                    <div class="eng2">
+                                        <div class="number-egl">2</div>
+                                        <div class="texto-egl">
+                                            <strong class="egl-txt">Como inserir as ofertas no site?</strong>
+                                            Através de uma plataforma bastante simples, você cadastra suas ofertas no site e, assim que elas forem aprovadas pela nossa equipe, aparecerão na sua vitrine online e estarão disponíveis para todos os associados.
+                                        </div>
+                                    </div>
+                                    <div class="eng3">
+                                        <div class="number-egl">3</div>
+                                        <div class="texto-egl">
+                                            <strong class="egl-txt">Como saberão que minha empresa é parceira do Clube Conteza?</strong>
+                                            No nosso site haverá uma área incluindo os dados e ofertas da sua empresa. Além disso, você receberá um kit com materiais para divulgação no ponto de venda, como displays e um adesivo “Aqui tem Clube Conteza”, assim, todos saberão que sua empresa é nossa parceira.
+                                        </div>
+                                    </div>
+                                    <div id="querofazerparte">
+                                        @Html.ActionLink("Quero Fazer Parte!", "Index", "Adesao", new { @tipo = "3" }, null)
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- panel-group -->
+    </div><!-- container -->
+</div>

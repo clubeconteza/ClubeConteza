@@ -1,0 +1,187 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Guia Profissionais";
+}
+
+<div id="corpo" class="corpo">
+    @Html.Partial("_BannerSection")
+    <div id="searchbox">
+        <div id="engsearchn">
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title gs2">
+                            <a data-toggle="collapse" href="#collapse1" class="xx">Faça Sua Busca</a>
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse blue">
+                        <div class="panel-body">
+                            <div id="comboum" class="hidebusca">
+                                <p class="titsearch"> Categoria </p>
+                                <select id="done" class="selectpicker" multiple data-done-button="true">
+                                    @foreach (var categoria in ViewBag.NivelUm)
+                                    {
+                                        <option value="@categoria.Id">@categoria.Descricao</option>
+                                    }
+                                </select>
+                            </div>
+                            <div id="combodois" class="hidebusca" style="display: none;">
+                                <p class="titsearch"> Especialidade </p>
+                                <select id="done" class="selectpicker" multiple data-done-button="true"></select>
+                            </div>
+                            <div id="combotres" class="hidebusca" style="display: none;">
+                                <p class="titsearch"> Refine sua pesquisa </p>
+                                <select id="done" class="selectpicker" multiple data-done-button="true"></select>
+                            </div>
+                        </div>
+                        <div class="panel-footer blue">*Escolha uma ou mais categorias</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="resultadosws"></div>
+    <div id="paginacao">
+        <div id="paginacaocont"></div>
+    </div>
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        var clickUm = null;
+        var clickDois = null;
+        var clickTres = null;
+
+        var selectCidade = $("div#seletorcidadebusca select.selectpicker").val();
+
+        function parceiroSaude(municipio, numeroPagina, categoriaNivelUm, categoriaNivelDois, categoriaNivelTres) {
+            var url = "@Url.Action("ParceiroSaude", "GuiaProfissionais")";
+            var params = { cidade: municipio, pagina: numeroPagina, nivelUm: categoriaNivelUm, nivelDois: categoriaNivelDois, nivelTres: categoriaNivelTres };
+            $.post(url, params, atualiza);
+        }
+
+        function atualiza(resposta) {
+            var paginas = 0;
+            var htmlCard = "";
+            resposta.forEach(function (item) {
+                paginas = item.Paginas;
+                htmlCard += '<div id="cards">';
+                htmlCard += '<div id="fotocardws"><div id="exfoto"><img src="' + '@Url.Content(string.Concat("~/Images/Unidades/", "-imageParceiro-", ".jpg"))'.replace("-imageParceiro-", item.Id_T020) + '" width="150"></div></div>';
+                htmlCard += '<div id="desccardws2">';
+                htmlCard += '<p class="NomeCardWS2">' + item.NomeFantasia + '</p>';
+                htmlCard += '<p class="AtuacaoCardWS2">' + item.CategoriaExibicao + '</p>';
+                htmlCard += '<p class="EnderecoCardWS">' + item.Logradouro + ', ' + item.Numero + '</p>';
+                htmlCard += '<p class="TelefoneCardWS">Tel: ' + retornaContato(item.Contatos) + '</p>';
+                htmlCard += '</div>';
+                htmlCard += '<div id="botãocardws"><button class="cardbuttonws2">' + '@Html.ActionLink("Ver Mais +", "Profissionais", "GuiaProfissionais", new { id = "-idParceiro-" }, new { target = "_blank" })'.replace("-idParceiro-", item.Id_T020) + '</button></div>';
+                htmlCard += '</div>';
+            });
+            var elemento = $("#resultadosws");
+            elemento.html(htmlCard);
+
+            var htmlPagina = "";
+            for (var i = 1; i <= paginas; i++) {
+                htmlPagina += '<a href="#" data-page="' + i + '">' + i + '</a>';
+            }
+            var elementoPaginacao = $("#paginacaocont");
+            elementoPaginacao.html(htmlPagina);
+        }
+
+        function retornaContato(contatos) {
+            var contatoFixo = contatos.filter(function (contato) {
+                return contato.Tipo === 2;
+            });
+            var contatoCelular = contatos.filter(function (contato) {
+                return contato.Tipo === 1;
+            });
+
+            return contatoFixo.length > 0 ? contatoFixo[0].Descricao : (contatoCelular.length > 0 ? contatoCelular[0].Descricao : "Não informado");
+        }
+
+        function comboNivelDois(categoriaNivelUm) {
+            var url = "@Url.Action("ComboDois", "GuiaProfissionais")";
+            var params = { nivelUm: categoriaNivelUm };
+            $.post(url, params, atualizaComboDois);
+        }
+
+        function atualizaComboDois(resposta) {
+            var options = "";
+            resposta.forEach(function (item) {
+                options += '<option value="' + item.Id_T022 + '">' + item.Descricao + '</option>';
+            });
+            $("div#combodois select.selectpicker").html(options);
+            $("div#combodois select.selectpicker").selectpicker('refresh');
+            if (resposta.length > 0) {
+                $("div#combodois").show();
+            } else {
+                $("div#combodois").hide();
+            }
+        }
+
+        function comboNivelTres(categoriaNivelDois) {
+            var url = "@Url.Action("ComboTres", "GuiaProfissionais")";
+            var params = { nivelDois: categoriaNivelDois };
+            $.post(url, params, atualizaComboTres);
+        }
+
+        function atualizaComboTres(resposta) {
+            var options = "";
+            resposta.forEach(function (item) {
+                options += '<option value="' + item.Id_T023 + '">' + item.Descricao + '</option>';
+            });
+            $("div#combotres select.selectpicker").html(options);
+            $("div#combotres select.selectpicker").selectpicker('refresh');
+            if (resposta.length > 0) {
+                $("div#combotres").show();
+            } else {
+                $("div#combotres").hide();
+            }
+        }
+
+        $("#innercontent").on("click", "div#comboum div.bs-donebutton", function (event) {
+            clickUm = encodeURI($("div#comboum select.selectpicker").val());
+            clickDois = null;
+            clickTres = null;
+            comboNivelDois(clickUm);
+            comboNivelTres(clickDois);
+            parceiroSaude(selectCidade, 1, clickUm, clickDois, clickTres);
+        });
+
+        $("#innercontent").on("click", "div#combodois div.bs-donebutton", function (event) {
+            clickUm = encodeURI($("div#comboum select.selectpicker").val());
+            clickDois = encodeURI($("div#combodois select.selectpicker").val());
+            clickTres = null;
+            comboNivelTres(clickDois);
+            parceiroSaude(selectCidade, 1, clickUm, clickDois, clickTres);
+        });
+
+        $("#innercontent").on("click", "div#combotres div.bs-donebutton", function (event) {
+            clickUm = encodeURI($("div#comboum select.selectpicker").val());
+            clickDois = encodeURI($("div#combodois select.selectpicker").val());
+            clickTres = encodeURI($("div#combotres select.selectpicker").val());
+            parceiroSaude(selectCidade, 1, clickUm, clickDois, clickTres);
+        });
+
+        $("#innercontent").on("change", "div#seletorcidadebusca select.selectpicker", function (event) {
+            clickUm = null;
+            clickDois = null;
+            clickTres = null;
+            selectCidade = $("div#seletorcidadebusca select.selectpicker").val();
+            $("div#comboum select.selectpicker").val(null)
+            $("div#comboum select.selectpicker").selectpicker('refresh');
+            comboNivelDois(clickUm);
+            comboNivelTres(clickDois);
+            parceiroSaude(selectCidade, 1, clickUm, clickDois, clickTres);
+        });
+
+        $("#innercontent").on("click", "#paginacaocont a", function (e) {
+            e.preventDefault();
+            var page = $(this).attr("data-page");
+            parceiroSaude(selectCidade, page, clickUm, clickDois, clickTres);
+        });
+
+        parceiroSaude(selectCidade, 1, clickUm, clickDois, clickTres);
+    </script>
+}

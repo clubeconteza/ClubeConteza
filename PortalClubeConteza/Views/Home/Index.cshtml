@@ -1,0 +1,229 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Home";
+}
+
+<div id="corpo" class="corpo">
+    @Html.Partial("_BannerSection")
+    <div id="conteudoslidersws">
+        <section style="padding-right: 15px;padding-left: 15px; background:#e7e7e7; padding-bottom: 20px;">
+            <div id="titlesliders"></div>
+            <div id="parceiroshomews" class="owl-carousel owl-theme" style=" background:white; max-width:85%; margin:auto; padding:15px 0px; border-left: 6px solid white; border-right: 6px solid white; border-radius: 5px 5px 0px 0px">
+                @*<div class="item" style="width:150px; height: 80px; background-color: white"> <img src="~/Content/img/logos/1.jpg" /> </div>*@
+                <div class="item" style="width:150px; height: 80px; background-color: white"> <img src="~/Content/img/logos/16.jpg" /> </div>
+                <div class="item" style="width:150px; height: 80px; background-color: white"> <img src="~/Content/img/logos/2.jpg" /> </div>
+                <div class="item" style="width:150px; height: 80px; background-color: white"> <img src="~/Content/img/logos/3.jpg" /> </div>
+                <div class="item" style="width:150px; height: 80px; background-color: white"> <img src="~/Content/img/logos/4.jpg" /> </div>
+                <div class="item" style="width:150px; height: 80px; background-color: white"> <img src="~/Content/img/logos/5.jpg" /> </div>
+                <div class="item" style="width:150px; height: 80px; background-color: white"> <img src="~/Content/img/logos/6.jpg" /> </div>
+                <div class="item" style="width:150px; height: 80px; background-color: white"> <img src="~/Content/img/logos/7.jpg" /> </div>
+                
+            </div>
+
+            <div id="parceiroshomews2" class="owl-carousel owl-theme" style=" background:white; max-width:85%; margin:auto; padding:15px 0px; border-left: 6px solid white; border-right: 6px solid white; border-radius: 0px 0px 5px 5px">
+
+                <div class="item" style="width:150px; height: 80px; background-color: white"> <img src="~/Content/img/logos/8.jpg" /> </div>
+                <div class="item" style="width:150px; height: 80px; background-color: white"> <img src="~/Content/img/logos/9.jpg" /> </div>
+                <div class="item" style="width:150px; height: 80px; background-color: white"> <img src="~/Content/img/logos/10.jpg" /> </div>
+                <div class="item" style="width:150px; height: 80px; background-color: white"> <img src="~/Content/img/logos/11.jpg" /> </div>
+                <div class="item" style="width:150px; height: 80px; background-color: white"> <img src="~/Content/img/logos/12.jpg" /> </div>
+                <div class="item" style="width:150px; height: 80px; background-color: white"> <img src="~/Content/img/logos/13.jpg" /> </div>
+                <div class="item" style="width:150px; height: 80px; background-color: white"> <img src="~/Content/img/logos/14.jpg" /> </div>
+               
+            </div>
+        </section>
+
+
+       
+        @*<section style="padding-right: 15px;padding-left: 15px;">
+            <h2>Promoções</h2>
+            <div id="promoshomews" class="owl-carousel owl-theme">
+                <div class="item" style="width:240px; height: 340px; background-color: white"> <img src="~/Content/img/logos/t1.jpg" /> </div>
+                <div class="item" style="width:240px; height: 340px; background-color: white"> <img src="~/Content/img/logos/t2.jpg" /> </div>
+                <div class="item" style="width:240px; height: 340px; background-color: white"> <img src="~/Content/img/logos/t7.jpg" /> </div>
+                <div class="item" style="width:240px; height: 340px; background-color: white"> <img src="~/Content/img/logos/t4.jpg" /> </div>
+                <div class="item" style="width:240px; height: 340px; background-color: white"> <img src="~/Content/img/logos/t5.jpg" /> </div>
+                <div class="item" style="width:240px; height: 340px; background-color: white"> <img src="~/Content/img/logos/t6.jpg" /> </div>
+                <div class="item" style="width:240px; height: 340px; background-color: white"> <img src="~/Content/img/logos/t7.jpg" /> </div>
+            </div>
+        </section>*@
+   
+        <div id="ct" style="width:100%; background: #125c8b;">
+            <img src="~/Content/img/vantagens.png" style="width:100%; float: right;" />
+            <img src="~/Content/img/onde.png" style="width:100%; float: right;" />
+            <div id="ta"><div style="width:235px; margin:auto;">@Html.ActionLink("Torne-se um associado já!", "Index", "Cadastre")</div></div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <!--Start of Zendesk Chat Script-->
+    @*<script type="text/javascript">
+        window.$zopim || (function (d, s) {
+            var z = $zopim = function (c) { z._.push(c) }, $ = z.s =
+                d.createElement(s), e = d.getElementsByTagName(s)[0]; z.set = function (o) {
+                    z.set.
+                        _.push(o)
+                }; z._ = []; z.set._ = []; $.async = !0; $.setAttribute("charset", "utf-8");
+            $.src = "https://v2.zopim.com/?44VJdrqoLKMlniN3Jrts29Dd3UWrrSKf"; z.t = +new Date; $.
+                type = "text/javascript"; e.parentNode.insertBefore($, e)
+        })(document, "script");
+    </script>*@
+    <!--End of Zendesk Chat Script-->
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5b44e07d4af8e57442dc812a/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#parceiroshomews").owlCarousel({
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 1200,
+                dots: false,
+                nav: false,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    420: {
+                        items: 2
+                    },
+                    600: {
+                        items: 3
+                    },
+                    800: {
+                        items: 4
+                    },
+                    1000: {
+                        items: 5
+                    },
+                    1300: {
+                        items: 6
+                    },
+                    1400: {
+                        items: 7
+                    }
+                }
+            });
+
+            $('#promoshomews').owlCarousel({
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 3200,
+                dots: false,
+                nav: true,
+                navText: ['<', '>'],
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    420: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    800: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 3
+                    },
+                    1300: {
+                        items: 4
+                    },
+                    1400: {
+                        items: 5
+                    }
+                }
+            })
+        })
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#parceiroshomews2").owlCarousel({
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 1200,
+                dots: false,
+                nav: false,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    420: {
+                        items: 2
+                    },
+                    600: {
+                        items: 3
+                    },
+                    800: {
+                        items: 4
+                    },
+                    1000: {
+                        items: 5
+                    },
+                    1300: {
+                        items: 6
+                    },
+                    1400: {
+                        items: 7
+                    }
+                }
+            });
+
+            $('#promoshomews2').owlCarousel({
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 3200,
+                dots: false,
+                nav: true,
+                navText: ['<', '>'],
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    420: {
+                        items: 1
+                    },
+                    600: {
+                        items: 2
+                    },
+                    800: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 3
+                    },
+                    1300: {
+                        items: 4
+                    },
+                    1400: {
+                        items: 5
+                    }
+                }
+            })
+        })
+    </script>
+}

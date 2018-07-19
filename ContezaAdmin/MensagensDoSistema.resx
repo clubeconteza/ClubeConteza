@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="_0001" xml:space="preserve">
+    <value>Campo $Campo não pode ser nulo.</value>
+  </data>
+  <data name="_0002" xml:space="preserve">
+    <value>Nenhum usuário encontrado, verifique a digitação e tente novamente.</value>
+  </data>
+  <data name="_0003" xml:space="preserve">
+    <value>Login inativo no sistema.</value>
+  </data>
+  <data name="_0004" xml:space="preserve">
+    <value>Data informada não pode ser inferior a data atual.</value>
+  </data>
+  <data name="_0005" xml:space="preserve">
+    <value>CEP não encontrado.</value>
+  </data>
+  <data name="_0006" xml:space="preserve">
+    <value>Titúlar não pode ser menor de idade.</value>
+  </data>
+  <data name="_0007" xml:space="preserve">
+    <value>Nenhum plano encontrado para esta combinação, entre em contato com o comercial.</value>
+  </data>
+  <data name="_0008" xml:space="preserve">
+    <value>Não existe parcela anterior a selecionada.</value>
+  </data>
+  <data name="_0009" xml:space="preserve">
+    <value>As duas parcelas devem estar com status livre para vinculo.</value>
+  </data>
+  <data name="_0010" xml:space="preserve">
+    <value>Selecione uma parcela para aplicar o desconto.</value>
+  </data>
+  <data name="_0011" xml:space="preserve">
+    <value>Somente parcelas não emitidas podem sofrer desconto, procure o departamento financeiro.</value>
+  </data>
+  <data name="_0012" xml:space="preserve">
+    <value>Este CPF/CNPJ esta já esta vinculado a um contrato, deseja abrir o contrato?</value>
+  </data>
+  <data name="_0013" xml:space="preserve">
+    <value>Titular alterado com sucesso.</value>
+  </data>
+  <data name="_0014" xml:space="preserve">
+    <value>Não é permitido incluir dependentes em contratos inadimplentes.</value>
+  </data>
+  <data name="_0015" xml:space="preserve">
+    <value>Ative o contrato antes de poder incluir dependentes.</value>
+  </data>
+  <data name="_0016" xml:space="preserve">
+    <value>Contrato bloqueado, entre em contato com o financeiro.</value>
+  </data>
+  <data name="_0017" xml:space="preserve">
+    <value>Registro incluido com sucesso.</value>
+  </data>
+  <data name="_0018" xml:space="preserve">
+    <value>Registro atualizado com sucesso.</value>
+  </data>
+  <data name="_0019" xml:space="preserve">
+    <value>Deve ser selecionado um plano para geração das parcelas.</value>
+  </data>
+  <data name="_0020" xml:space="preserve">
+    <value>Parcelas já emitidas não podem ser alteradas.</value>
+  </data>
+  <data name="_0021" xml:space="preserve">
+    <value>Parcela já paga.</value>
+  </data>
+  <data name="_0022" xml:space="preserve">
+    <value>Parcela cancelada.</value>
+  </data>
+  <data name="_0023" xml:space="preserve">
+    <value>Data de pagamento não pode ser maior que data corrente.</value>
+  </data>
+  <data name="_0024" xml:space="preserve">
+    <value>Valor do pagamento não pode ser menor que o valor da parcela.</value>
+  </data>
+  <data name="_0025" xml:space="preserve">
+    <value>Parcela atualizada com sucesso.</value>
+  </data>
+  <data name="_0026" xml:space="preserve">
+    <value>Dependente cancelado.</value>
+  </data>
+  <data name="_0027" xml:space="preserve">
+    <value>Contrato cancelado, lembre-se de confirmar cancelamento dos boletos ha vencer.</value>
+  </data>
+  <data name="_0028" xml:space="preserve">
+    <value>Não existem parcelas com status de gerada para serem emitidas.</value>
+  </data>
+  <data name="_0029" xml:space="preserve">
+    <value>É necessario gerar o contrato antes de continuar.</value>
+  </data>
+  <data name="_0030" xml:space="preserve">
+    <value>O Status deste contrato impede mudanças no mesmo. </value>
+  </data>
+  <data name="_0031" xml:space="preserve">
+    <value>CPF informado é invalido.</value>
+  </data>
+  <data name="_0032" xml:space="preserve">
+    <value>CEP Invalido.</value>
+  </data>
+  <data name="_0034" xml:space="preserve">
+    <value>Dependente na lista para inativar. Favor gerar novas parcelas e emitir a alteração de contrato para finalizar o processo</value>
+  </data>
+  <data name="_0035" xml:space="preserve">
+    <value>Contrato cancelado, o mesmo deve ser ativado novamente.</value>
+  </data>
+  <data name="_0036" xml:space="preserve">
+    <value>Contrato ativo, incluir dependente ira acarretar na geração de novas parcelas.</value>
+  </data>
+  <data name="_0037" xml:space="preserve">
+    <value>Não existem documentos para serem exibidos</value>
+  </data>
+  <data name="_0038" xml:space="preserve">
+    <value>As parcelas devem ser salvas para constarem no termo.</value>
+  </data>
+  <data name="_0039" xml:space="preserve">
+    <value>Parcela selecionada já foi paga, deseja confirmar?</value>
+  </data>
+  <data name="_0040" xml:space="preserve">
+    <value>CPF já cadastrado.</value>
+  </data>
+  <data name="_0041" xml:space="preserve">
+    <value>Logo parceiro atualizado.</value>
+  </data>
+  <data name="_0042" xml:space="preserve">
+    <value>Este cartão já foi entregue</value>
+  </data>
+  <data name="_0043" xml:space="preserve">
+    <value>Contrato deve ser gerado antes de incluir o cartão.</value>
+  </data>
+  <data name="_0044" xml:space="preserve">
+    <value>Cartão já gerado não pode ser editado.</value>
+  </data>
+  <data name="_0045" xml:space="preserve">
+    <value>Cartão já cadastrado para $NOME, id $ID.</value>
+  </data>
+  <data name="_0046" xml:space="preserve">
+    <value>Cartão gerado com sucesso, favor enviar para impressão.</value>
+  </data>
+  <data name="_0047" xml:space="preserve">
+    <value>Cartão do titular deve ser cadastrado primeiro.</value>
+  </data>
+  <data name="_0048" xml:space="preserve">
+    <value>CNPJ Inválido</value>
+  </data>
+  <data name="_0049" xml:space="preserve">
+    <value>Erro ao cadastrar titular do contrato principal.</value>
+  </data>
+  <data name="_0050" xml:space="preserve">
+    <value>A versão instalada neste equipamento é '{0}' desatualizada com relação a versão '{1}' mais nova, não atualizar a versão acarreta em erros de dados, favor REINICIAR O GESTOR, se o problema continuar, entre em contato com a TI.</value>
+  </data>
+  <data name="_0051" xml:space="preserve">
+    <value>A versão do sistema foi atualizada, é necessario fechar e abrir o aplicativo novamente para atualização local.</value>
+  </data>
+  <data name="_0052" xml:space="preserve">
+    <value>Este CNPJ já esta cadastrado como sendo contrato corporativo</value>
+  </data>
+  <data name="_0053" xml:space="preserve">
+    <value>Somente cartões em status de gerados podem ser enviados para impressão.</value>
+  </data>
+  <data name="_0054" xml:space="preserve">
+    <value>CPF Vinculado a um plano familiar. Deseja abrir o arquivo de ajuda?</value>
+  </data>
+  <data name="_0055" xml:space="preserve">
+    <value>Favor verificar a quantidade de caracteres no telefone informado.</value>
+  </data>
+  <data name="_0056" xml:space="preserve">
+    <value>Conexão de rede caiu, tente novamente.</value>
+  </data>
+  <data name="_0057" xml:space="preserve">
+    <value>Nenhum arquivo de scanner encontrado.</value>
+  </data>
+  <data name="_0058" xml:space="preserve">
+    <value>Este contrato possui {0} parcelas em aberto, favor entrar em contato com a gerencia de atendimento.</value>
+  </data>
+  <data name="_0059" xml:space="preserve">
+    <value>"Senha" e "Confirmação da Nova Senha" não são iguais, favor verificar a digitação.</value>
+  </data>
+  <data name="_0060" xml:space="preserve">
+    <value>Senha alterada com sucesso.</value>
+  </data>
+  <data name="_0061" xml:space="preserve">
+    <value>Deseja desvincular o Nivel {0} da sessão {1} ?</value>
+  </data>
+  <data name="_0062" xml:space="preserve">
+    <value>Selecione um valor valido em {0}.</value>
+  </data>
+  <data name="_0063" xml:space="preserve">
+    <value>Valor da parcela é menor que o minimo liberado.</value>
+  </data>
+  <data name="_0064" xml:space="preserve">
+    <value>Erro não identificado, comando não foi executado.</value>
+  </data>
+  <data name="_0065" xml:space="preserve">
+    <value>Este CPF ja esta vinculado a este contrato corporativo</value>
+  </data>
+  <data name="_0066" xml:space="preserve">
+    <value>Este CPF ja esta vinculado a este contrato corporativo {0}.</value>
+  </data>
+  <data name="_0067" xml:space="preserve">
+    <value>Este contrato possui parcelas em aberto que devem ser quitadas antes de vincular ao plano corporativo. {0}</value>
+  </data>
+  <data name="_0068" xml:space="preserve">
+    <value>Este CPF esta vinculado a um plano familiar, deseja incorporar?</value>
+  </data>
+  <data name="_0069" xml:space="preserve">
+    <value>Data de validade do contrato alterada, todas as parcelas nãp pagas foram canceladas, necessario gerar novas parcelas.</value>
+  </data>
+  <data name="_0070" xml:space="preserve">
+    <value>Parcela cancelada.</value>
+  </data>
+  <data name="_0071" xml:space="preserve">
+    <value>Vencimento não pode ser menor que data de fechamento.</value>
+  </data>
+  <data name="_0072" xml:space="preserve">
+    <value>Status da parcela {0} impede que a mesma seja unida a outra parcela.</value>
+  </data>
+  <data name="_0073" xml:space="preserve">
+    <value>Já existe uma parcela para este vencimento.</value>
+  </data>
+  <data name="_0074" xml:space="preserve">
+    <value>Dependente já consta no fluxo de cancelamento.</value>
+  </data>
+  <data name="_0075" xml:space="preserve">
+    <value>Dependente já esta cancelado.</value>
+  </data>
+  <data name="_0076" xml:space="preserve">
+    <value>Data de vencimento deve ser maior que data atual.</value>
+  </data>
+  <data name="_0077" xml:space="preserve">
+    <value>Este contrato se encontra em edição, favor finalizar o processo para gerar as parcelas.</value>
+  </data>
+  <data name="_0078" xml:space="preserve">
+    <value>Contrato inativado.{0}A parcela foi Gerada, favor emitir a forma de pagamento.{1}Apos a baixa da parcela o contrato será efetivamente cancelado.</value>
+  </data>
+  <data name="_0079" xml:space="preserve">
+    <value>Contrato cancelado.</value>
+  </data>
+  <data name="_0080" xml:space="preserve">
+    <value>Parcela não pode mais ser editada.</value>
+  </data>
+  <data name="_0081" xml:space="preserve">
+    <value>Para alterar uma parcela para o status de paga é necessario efetuar a baixa da parcela</value>
+  </data>
+  <data name="_0082" xml:space="preserve">
+    <value>Informação invalida, campo {0}.</value>
+  </data>
+  <data name="_0083" xml:space="preserve">
+    <value>Valor informado menor que o valor devido.</value>
+  </data>
+  <data name="_0084" xml:space="preserve">
+    <value>Data nascimento {0} não pode ser maior que a data atual.</value>
+  </data>
+  <data name="_0085" xml:space="preserve">
+    <value>Data inicio do contrato não pode ser superior que data atual.</value>
+  </data>
+  <data name="_0086" xml:space="preserve">
+    <value>Data fim do contrato não pode ser inferior a data de inicio do contrato.</value>
+  </data>
+  <data name="_0087" xml:space="preserve">
+    <value>Valor da parcela é inferior ao valor minimo permitido para esta forma de negociação, tente em menos parcelas ou outra simulação.</value>
+  </data>
+  <data name="_0088" xml:space="preserve">
+    <value>Simulação só é liberada havendo parcelas vencidas.</value>
+  </data>
+  <data name="_0089" xml:space="preserve">
+    <value>Contratos cancelados só podem ser editados pelo departamento financeiro.</value>
+  </data>
+  <data name="_0090" xml:space="preserve">
+    <value>Senhas não conferem</value>
+  </data>
+  <data name="_0091" xml:space="preserve">
+    <value>Finalize a abertura do contrato antes de liberar acessos.</value>
+  </data>
+  <data name="_0092" xml:space="preserve">
+    <value>Email Atualizado com sucesso.</value>
+  </data>
+  <data name="_0093" xml:space="preserve">
+    <value>Email incluido com sucesso</value>
+  </data>
+  <data name="_0094" xml:space="preserve">
+    <value>Liberação de acesso Ok.</value>
+  </data>
+  <data name="_0095" xml:space="preserve">
+    <value>Titular já possui acesso ao contrato.</value>
+  </data>
+  <data name="_0096" xml:space="preserve">
+    <value>Contrato reativado com sucesso.</value>
+  </data>
+  <data name="_0097" xml:space="preserve">
+    <value>Selecione uma parcela antes de continuar.</value>
+  </data>
+  <data name="_0098" xml:space="preserve">
+    <value>Somente parcelas "Geradas" podem ter a lista de produtos editadas.</value>
+  </data>
+  <data name="_0099" xml:space="preserve">
+    <value>Selecione um produto antes de continuar.</value>
+  </data>
+  <data name="_0100" xml:space="preserve">
+    <value>Este contrato possui pendencias financeiras que impedem que ele seja reativado, favor verificar com o financeiro.</value>
+  </data>
+  <data name="_0101" xml:space="preserve">
+    <value>Este contrato é do tipo {0}, não pode ser editado por esta tela.</value>
+  </data>
+  <data name="_0102" xml:space="preserve">
+    <value>O Status do contrato é {0}, impossibilita de Emitir Boleto junto ao banco.</value>
+  </data>
+  <data name="_0103" xml:space="preserve">
+    <value>Verifique se digitou o contato {0} com DDD</value>
+  </data>
+  <data name="_0104" xml:space="preserve">
+    <value>Selecione uma parcela antes de continuar.</value>
+  </data>
+  <data name="_0105" xml:space="preserve">
+    <value>Usuário sem privilégio.</value>
+  </data>
+  <data name="_0106" xml:space="preserve">
+    <value>Somente o Clube Conteza pode oferecer desconto maior que o liberado de {0}.</value>
+  </data>
+  <data name="_0107" xml:space="preserve">
+    <value>Desconto maior que 100% não é permitido.</value>
+  </data>
+  <data name="_0108" xml:space="preserve">
+    <value>É necessario pelo menos {0} parcelas em atrazo para oferecer desconto a vista.</value>
+  </data>
+  <data name="_0109" xml:space="preserve">
+    <value>Campo {0} só pode conter numeros.</value>
+  </data>
+  <data name="_0110" xml:space="preserve">
+    <value>Campo {0} esta com a quantidade invalida de caracteres.</value>
+  </data>
+  <data name="_0111" xml:space="preserve">
+    <value>Premio já foi contemplado, não pode mais ser sorteado.</value>
+  </data>
+  <data name="_0112" xml:space="preserve">
+    <value>Premiação cancelada, não pode ser sorteado.</value>
+  </data>
+</root>

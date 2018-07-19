@@ -1,0 +1,38 @@
+﻿Para mostrar o idioma da sessão atual:
+Select @@langid, @@language
+
+Duas opções para mostrar os idiomas disponíveis:
+Select * From sys.syslanguages
+Exec sp_helplanguage
+
+Sintaxe para alterar o idioma somente da sessão atual:
+Set Language 'idioma'
+
+Exemplo:
+
+Declare @Data DateTime
+Set @Data = ’10/15/2011′
+
+Set Language ‘Italian’
+Select DateName(Month, @Data) as ‘Mês’
+
+Set Language ‘us_english’
+Select DateName(Month, @Data) as ‘Mês’
+go
+
+Para verificar o idioma definido para um login (no exemplo, sa):
+Select language From sys.syslogins Where sid = SUSER_ID('sa')
+
+Para mudar o idioma de um login (também pode ser feito pela interface gráfica: botão direito sobre o login e clicar em “Propriedades”):
+-- Mudando o idioma do login para português
+Exec sp_defaultlanguage 'sa', 'Português (Brasil)'
+Reconfigure -- "Atualiza" a modificação realizada
+
+-- Mudando novamente, para inglês
+Exec sp_defaultlanguage 'sa', 'us_english'
+Reconfigure
+
+Para mudar o idioma padrão dos novos logins (utilizando a procedure sp_Configure):
+-- Mudando o idioma padrão do servidor para 5 (espanhol)
+Exec sp_configure 'default language', 5
+Reconfigure

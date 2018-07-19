@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Vouchers";
+}
+
+<div id="corpo" class="corpo">
+    @Html.Partial("_BannerSection")
+    <div id="conteudoiframe">
+
+        @if (ViewBag.ErrorMessage != null)
+        {
+        <p>@ViewBag.ErrorMessage</p>
+        }
+
+        <iframe id="varejo" src="@ViewBag.LinkVouchers" border="no" scrolling="No" marginwidth="0" marginheight="0">
+            <style>
+                .container-fluid {
+                    margin-right: auto;
+                    margin-left: auto;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    max-height: 0px !important;
+                    overflow: hidden !important;
+                }
+            </style>
+        </iframe>
+
+    </div>
+</div>

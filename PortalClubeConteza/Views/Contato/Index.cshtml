@@ -1,0 +1,39 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Contato";
+}
+
+@model PortalClubeConteza.Models.ContatoFormulario
+
+<div id="engbcontato">
+    <div id="contentcontato">
+        <div id="divacontato">
+            <h2 class="tct"> Entre em contato agora mesmo! </h2>
+            @using (Html.BeginForm("Enviar", "Contato", FormMethod.Post, new { id = "cadastrocontezino" }))
+            {
+                @Html.ValidationMessage("FalhaEnvioEmail")
+
+                @Html.LabelFor(x => x.Nome, "Primeiro nome:")
+                @Html.TextBoxFor(x => x.Nome)
+                @Html.ValidationMessageFor(x => x.Nome)
+
+                @Html.LabelFor(x => x.Telefone, "Telefone:")
+                @Html.TextBoxFor(x => x.Telefone)
+                @Html.ValidationMessageFor(x => x.Telefone)
+
+                @Html.LabelFor(x => x.Email, "Email:")
+                @Html.TextBoxFor(x => x.Email)
+                @Html.ValidationMessageFor(x => x.Email)
+
+                @Html.LabelFor(x => x.Plano, "Plano escolhido:")
+                <div id="englobplans3">
+                    @Html.TextAreaFor(x => x.Plano, new { @class = "textplans", @rows = "4", @placeholder = "Escreva aqui sua mensagem" })
+                </div>
+                @Html.ValidationMessageFor(x => x.Plano)
+
+                <div id="btnsnd"><input class="btplansend" type="submit" value="Enviar" /></div>
+            }
+        </div>
+        <div id="divbcontato"></div>
+    </div>
+</div>

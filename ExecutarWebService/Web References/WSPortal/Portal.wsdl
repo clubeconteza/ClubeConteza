@@ -1,0 +1,1477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="BannerPorSessao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Sessao" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="StatusContrato" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="StatusBanner" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cidade" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BannerPorSessaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BannerPorSessaoResult" type="tns:ArrayOfBannerController" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBannerController">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BannerController" nillable="true" type="tns:BannerController" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BannerController">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TB019_Id" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB019_Sessao" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB019_URLImagem" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB019_NomeArquivo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB019_Titulo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB019_Link" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB019_LinkFormaAberturaLink" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB019_ToolTip" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB019_DataInicio" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB019_DataFim" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB019_CadastradoEm" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB019_CadastradoPor" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB019_AlteradoEm" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB019_AlteradoPor" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TTB019_StatusS" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ParceirosSessaoCidade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Sessao" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cidade" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="Linhas" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Pagina" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nivel1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nivel2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nivel3" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ParceirosSessaoCidadeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ParceirosSessaoCidadeResult" type="tns:ArrayOfUnidadeController" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfUnidadeController">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="UnidadeController" nillable="true" type="tns:UnidadeController" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UnidadeController">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TB020_id" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB021_id" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB020_Matriz" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB012_id" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB020_RazaoSocial" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB020_NomeFantasia" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB020_TipoPessoa" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB020_Documento" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB006_id" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB020_Cep" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB020_Logradouro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB020_Numero" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB020_Bairro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB020_Complemento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB020_TextoPortal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB020_logo" type="s:base64Binary" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB020_CadastradoEm" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB020_CadastradoPor" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB020_AlteradoEm" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB020_AlteradoPor" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB020_AlteradoPorNome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB020_Desconto" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Paginas" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB020_StatusS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Pais" type="tns:PaisController" />
+          <s:element minOccurs="0" maxOccurs="1" name="Estado" type="tns:EstadoController" />
+          <s:element minOccurs="0" maxOccurs="1" name="Municipio" type="tns:MunicipioController" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nivel1" type="tns:CategoriaController" />
+          <s:element minOccurs="0" maxOccurs="1" name="Neveis" type="tns:ArrayOfCategoriaController" />
+          <s:element minOccurs="0" maxOccurs="1" name="Contatos" type="tns:ArrayOfContatoController" />
+          <s:element minOccurs="0" maxOccurs="1" name="Contrato" type="tns:ContratosController" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContratosVinculados" type="tns:ArrayOfContratosController" />
+          <s:element minOccurs="0" maxOccurs="1" name="UnidadesVinculadas" type="tns:ArrayOfUnidadeController" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PaisController">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TB003_id" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB003_Pais" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB003_DDI" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EstadoController">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TB005_Id" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB005_Sigla" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB005_Estado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB005_Codigo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Pais" type="tns:PaisController" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MunicipioController">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TB006_id" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB006_Municipio" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB006_Capital" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB006_Codigo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB006_IBGE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Estado" type="tns:EstadoController" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CategoriaController">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TB021_id" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB021_Descricao" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB022_id" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB022_Descricao" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB023_id" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB023_Descricao" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB024_Id" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB024_Sessao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB024_StatusS" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCategoriaController">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CategoriaController" nillable="true" type="tns:CategoriaController" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfContatoController">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ContatoController" nillable="true" type="tns:ContatoController" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ContatoController">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TB009_id" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB009_Contato" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB009_ExibirPortal" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB012_ProximoCodDependente" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB009_Nota" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB009_TipoS" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB009_CadastradoEm" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB009_CadastradoPor" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB009_CadastradoPorNome" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB009_AlteradoEm" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB009_AlteradoPor" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB009_AlteradoPorNome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB004_Cep" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB009_Logradouro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB009_Numero" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB009_Bairro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB009_Complemento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Pessoa" type="tns:PessoaController" />
+          <s:element minOccurs="0" maxOccurs="1" name="Municipio" type="tns:MunicipioController" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB020_id" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PessoaController">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TB013_id" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB012_EraContezino" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB013_Matricula" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB013_IdProtheus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB013_CPFCNPJ" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB013_ListaNegra" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB013_NomeCompleto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB013_NomeExibicao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB013_RG" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB013_InformacoesPortal" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB013_RGOrgaoEmissor" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB013_DataNascimento" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB013_DeclaroSerMaiorCapaz" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB004_Cep" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB013_Logradouro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB013_Numero" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB013_Bairro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB013_Complemento" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB013_CadastradoEm" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB013_CadastradoPor" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB013_CadastradoPorNome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB013_AlteradoPorNome" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB013_AlteradoEm" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB013_AlteradoPor" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB013_CodigoDependente" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB013_Cartao" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB013_CartaoEntregueEm" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB013_CartaoLote" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB013_CartaoEntreguePara" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB013_SexoS" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB013_Idade" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB002_Ponto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB013_CancelamentoDescricao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Celular" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB012_ProximoCodDependente" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB013_TipoS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB013_StatusS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB013_CarteirinhaStatusS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB013_CancelamentoMotivoS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Contatos" type="tns:ArrayOfContatoController" />
+          <s:element minOccurs="0" maxOccurs="1" name="Contato" type="tns:ContatoController" />
+          <s:element minOccurs="0" maxOccurs="1" name="Contrato" type="tns:ContratosController" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB012_Id" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Municipio" type="tns:MunicipioController" />
+          <s:element minOccurs="0" maxOccurs="1" name="Pais" type="tns:PaisController" />
+          <s:element minOccurs="0" maxOccurs="1" name="Estado" type="tns:EstadoController" />
+          <s:element minOccurs="0" maxOccurs="1" name="PontoDeVenda" type="tns:PontoDeVendaController" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ContratosController">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TB012_id" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB012_Corporativo" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB012_Pai" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB012_Filho" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB012_CodCartao" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB012_TipoContrato" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB012_Inicio" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB012_Fim" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB012_CadastradoEm" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB012_CadastradorPor" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB012_AlteradoEm" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB012_AceiteContrato" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB012_DataAceiteContrato" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB012_AlteradoPor" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB004_Cep" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB006_id" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB012_Logradouro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB012_Numero" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB012_Bairro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB012_Complemento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB012_CicloContrato" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB012_StatusS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB020_RazaoSocial" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB020_NomeFantasia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB012_ContratoCancelarMotivoS" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB026_id" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB026_DataRelatorio" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB026_Relatorio" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB026_CadastradoEm" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB026_CadastradoPor" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB026_TipoS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB012_ContratoCancelarDescricao" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Titular" type="tns:PessoaController" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dependente" type="tns:PessoaController" />
+          <s:element minOccurs="0" maxOccurs="1" name="Dependentes" type="tns:ArrayOfPessoaController" />
+          <s:element minOccurs="0" maxOccurs="1" name="PontoDeVenda" type="tns:PontoDeVendaController" />
+          <s:element minOccurs="0" maxOccurs="1" name="Pais" type="tns:PaisController" />
+          <s:element minOccurs="0" maxOccurs="1" name="Estado" type="tns:EstadoController" />
+          <s:element minOccurs="0" maxOccurs="1" name="Municipio" type="tns:MunicipioController" />
+          <s:element minOccurs="0" maxOccurs="1" name="Unidade" type="tns:UnidadeController" />
+          <s:element minOccurs="0" maxOccurs="1" name="Plano" type="tns:PlanoController" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlanoAnterior" type="tns:PlanoController" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPessoaController">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PessoaController" nillable="true" type="tns:PessoaController" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PontoDeVendaController">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TB002_id" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB002_Ponto" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB002_Status" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Empresa" type="tns:EmpresaController" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EmpresaController">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TB001_id" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB001_EMatriz" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB001_Matriz" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB001_RazaoSocial" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB001_NomeFantasia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB001_CNPJ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB001_Cep" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB001_Logradouro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB001_Numero" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB001_Complemento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB001_Logo" type="s:base64Binary" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cidade" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UF" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PlanoController">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TB015_id" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB015_IOF" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB015_TipoVencimento" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB015_EspecieDocumento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB015_BoletoDesc1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB015_BoletoDesc2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB015_BoletoDesc3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB015_BoletoDesc4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB015_BoletoDesc5" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB015_LiberadoCPF" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB015_LiberadoCNPJ" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB015_Plano" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB015_Descricao" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB015_ValorAdesao" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValorTotalProdutos" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB015_PermiteAbonarAdesao" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB015_Ciclo" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB015_Contezinos" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB015_Parceiros" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB015_Corporativo" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB015_Maiores" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB015_Menores" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB015_Isentos" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB015_Inicio" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB015_Fim" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB015_StatusS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PontoDeVenda" type="tns:PontoDeVendaController" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlanoProduto_L" type="tns:ArrayOfProdutoController" />
+          <s:element minOccurs="0" maxOccurs="1" name="Parcela" type="tns:ParcelaController" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfProdutoController">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ProdutoController" nillable="true" type="tns:ProdutoController" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ProdutoController">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TB014_id" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB014_ValorMultiplo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB014_IdProtheus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB014_Produto" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB014_ValorUnitario" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValorTotal" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB014_Descricao" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB014_ValidoContezinos" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB014_ValidoParceiros" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB014_ValidoComporativo" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB014_Maiores" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB014_Menores" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB014_Isentos" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB014_StatusS" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ParcelaController">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TB016_id" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB016_Parcela" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB016_TotalParcelas" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB016_Entrada" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB016_EmitirBoleto" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_NBoleto" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_NossoNumero" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB016_Emissao" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB016_Vencimento" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_Pagador" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_CPFCNPJ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_PagadorCEP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_PagadorCidade" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_PagadorUF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_EnderecoPagador" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB016_Valor" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB016_ValorPago" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB016_IOF" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB016_TipoVencimento" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_EspecieDocumento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_BoletoDesc1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_BoletoDesc2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_BoletoDesc3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_BoletoDesc4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_BoletoDesc5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_Boleto" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB016_DataPagamento" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_Banco" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_Beneficiario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_BeneficiarioEndereco" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_BeneficiarioCPFCNPJ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_BeneficiarioCidade" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_BeneficiarioUF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_Agencia" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_ContaCorrente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_Carteira" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB012_CicloContrato" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_FormaPagamentoS" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB016_ValorAdesao" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Index" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="UnirParcela" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_StatusS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB016_TipoSacadoS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Plano" type="tns:PlanoController" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB015_id" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB015_Plano" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Empresa" type="tns:EmpresaController" />
+          <s:element minOccurs="0" maxOccurs="1" name="Pessoa" type="tns:PessoaController" />
+          <s:element minOccurs="0" maxOccurs="1" name="Contrato" type="tns:ContratosController" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB012_id" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Municipio" type="tns:MunicipioController" />
+          <s:element minOccurs="0" maxOccurs="1" name="Estado" type="tns:EstadoController" />
+          <s:element minOccurs="0" maxOccurs="1" name="Banco" type="tns:BancoController" />
+          <s:element minOccurs="0" maxOccurs="1" name="ParcelaProduto_L" type="tns:ArrayOfParcelaProdutosController" />
+          <s:element minOccurs="0" maxOccurs="1" name="Titular" type="tns:PessoaController" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BancoController">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TB018_id" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB018_Banco" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB018_Tipo" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB018_url" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB018_ContaCorrente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB018_Cartao" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB018_Cliente" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB018_chaveAcesso" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB018_CNB" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB018_EmpresaId" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfParcelaProdutosController">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ParcelaProdutosController" nillable="true" type="tns:ParcelaProdutosController" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ParcelaProdutosController">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TB017_id" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB017_IdProteus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TB017_Item" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB017_ValorUnitario" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB017_ValorDesconto" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB017_ValorFinal" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB016_Parcela" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB017_Maior" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB017_Menor" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB017_Isento" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TB016_id" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Titular" type="tns:PessoaController" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfContratosController">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ContratosController" nillable="true" type="tns:ContratosController" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DetalhesParceiroPF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Parceiro" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetalhesParceiroPFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DetalhesParceiroPFResult" type="tns:UnidadeController" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetalhesParceiroPJ">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Parceiro" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DetalhesParceiroPJResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DetalhesParceiroPJResult" type="tns:UnidadeController" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CategoriasNivel1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Sessao" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CategoriasNivel1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CategoriasNivel1Result" type="tns:ArrayOfCategoriaController" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CategoriasNivel2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Nivel1" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CategoriasNivel2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CategoriasNivel2Result" type="tns:ArrayOfCategoriaController" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CategoriasNivel3">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Nivel2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CategoriasNivel3Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CategoriasNivel3Result" type="tns:ArrayOfCategoriaController" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CartaoParaImpressaoFamiliar">
+        <s:complexType />
+      </s:element>
+      <s:element name="CartaoParaImpressaoFamiliarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CartaoParaImpressaoFamiliarResult" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CartaoParaImpressaoCorporativo">
+        <s:complexType />
+      </s:element>
+      <s:element name="CartaoParaImpressaoCorporativoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CartaoParaImpressaoCorporativoResult" type="s:short" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetarParcelasVencidas">
+        <s:complexType />
+      </s:element>
+      <s:element name="SetarParcelasVencidasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetarParcelasVencidasResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GravarLogoUnidade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Unidade" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GravarLogoUnidadeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GravarLogoUnidadeResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ParceirosBuscaSessaoCidade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Sessao" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="Cidade" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="Linhas" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Pagina" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Buscar" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ParceirosBuscaSessaoCidadeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ParceirosBuscaSessaoCidadeResult" type="tns:ArrayOfUnidadeController" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfBannerController" nillable="true" type="tns:ArrayOfBannerController" />
+      <s:element name="ArrayOfUnidadeController" nillable="true" type="tns:ArrayOfUnidadeController" />
+      <s:element name="UnidadeController" nillable="true" type="tns:UnidadeController" />
+      <s:element name="ArrayOfCategoriaController" nillable="true" type="tns:ArrayOfCategoriaController" />
+      <s:element name="short" type="s:short" />
+      <s:element name="boolean" type="s:boolean" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="BannerPorSessaoSoapIn">
+    <wsdl:part name="parameters" element="tns:BannerPorSessao" />
+  </wsdl:message>
+  <wsdl:message name="BannerPorSessaoSoapOut">
+    <wsdl:part name="parameters" element="tns:BannerPorSessaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ParceirosSessaoCidadeSoapIn">
+    <wsdl:part name="parameters" element="tns:ParceirosSessaoCidade" />
+  </wsdl:message>
+  <wsdl:message name="ParceirosSessaoCidadeSoapOut">
+    <wsdl:part name="parameters" element="tns:ParceirosSessaoCidadeResponse" />
+  </wsdl:message>
+  <wsdl:message name="DetalhesParceiroPFSoapIn">
+    <wsdl:part name="parameters" element="tns:DetalhesParceiroPF" />
+  </wsdl:message>
+  <wsdl:message name="DetalhesParceiroPFSoapOut">
+    <wsdl:part name="parameters" element="tns:DetalhesParceiroPFResponse" />
+  </wsdl:message>
+  <wsdl:message name="DetalhesParceiroPJSoapIn">
+    <wsdl:part name="parameters" element="tns:DetalhesParceiroPJ" />
+  </wsdl:message>
+  <wsdl:message name="DetalhesParceiroPJSoapOut">
+    <wsdl:part name="parameters" element="tns:DetalhesParceiroPJResponse" />
+  </wsdl:message>
+  <wsdl:message name="CategoriasNivel1SoapIn">
+    <wsdl:part name="parameters" element="tns:CategoriasNivel1" />
+  </wsdl:message>
+  <wsdl:message name="CategoriasNivel1SoapOut">
+    <wsdl:part name="parameters" element="tns:CategoriasNivel1Response" />
+  </wsdl:message>
+  <wsdl:message name="CategoriasNivel2SoapIn">
+    <wsdl:part name="parameters" element="tns:CategoriasNivel2" />
+  </wsdl:message>
+  <wsdl:message name="CategoriasNivel2SoapOut">
+    <wsdl:part name="parameters" element="tns:CategoriasNivel2Response" />
+  </wsdl:message>
+  <wsdl:message name="CategoriasNivel3SoapIn">
+    <wsdl:part name="parameters" element="tns:CategoriasNivel3" />
+  </wsdl:message>
+  <wsdl:message name="CategoriasNivel3SoapOut">
+    <wsdl:part name="parameters" element="tns:CategoriasNivel3Response" />
+  </wsdl:message>
+  <wsdl:message name="CartaoParaImpressaoFamiliarSoapIn">
+    <wsdl:part name="parameters" element="tns:CartaoParaImpressaoFamiliar" />
+  </wsdl:message>
+  <wsdl:message name="CartaoParaImpressaoFamiliarSoapOut">
+    <wsdl:part name="parameters" element="tns:CartaoParaImpressaoFamiliarResponse" />
+  </wsdl:message>
+  <wsdl:message name="CartaoParaImpressaoCorporativoSoapIn">
+    <wsdl:part name="parameters" element="tns:CartaoParaImpressaoCorporativo" />
+  </wsdl:message>
+  <wsdl:message name="CartaoParaImpressaoCorporativoSoapOut">
+    <wsdl:part name="parameters" element="tns:CartaoParaImpressaoCorporativoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetarParcelasVencidasSoapIn">
+    <wsdl:part name="parameters" element="tns:SetarParcelasVencidas" />
+  </wsdl:message>
+  <wsdl:message name="SetarParcelasVencidasSoapOut">
+    <wsdl:part name="parameters" element="tns:SetarParcelasVencidasResponse" />
+  </wsdl:message>
+  <wsdl:message name="GravarLogoUnidadeSoapIn">
+    <wsdl:part name="parameters" element="tns:GravarLogoUnidade" />
+  </wsdl:message>
+  <wsdl:message name="GravarLogoUnidadeSoapOut">
+    <wsdl:part name="parameters" element="tns:GravarLogoUnidadeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ParceirosBuscaSessaoCidadeSoapIn">
+    <wsdl:part name="parameters" element="tns:ParceirosBuscaSessaoCidade" />
+  </wsdl:message>
+  <wsdl:message name="ParceirosBuscaSessaoCidadeSoapOut">
+    <wsdl:part name="parameters" element="tns:ParceirosBuscaSessaoCidadeResponse" />
+  </wsdl:message>
+  <wsdl:message name="BannerPorSessaoHttpGetIn">
+    <wsdl:part name="Sessao" type="s:string" />
+    <wsdl:part name="StatusContrato" type="s:string" />
+    <wsdl:part name="StatusBanner" type="s:string" />
+    <wsdl:part name="Cidade" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BannerPorSessaoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfBannerController" />
+  </wsdl:message>
+  <wsdl:message name="ParceirosSessaoCidadeHttpGetIn">
+    <wsdl:part name="Sessao" type="s:string" />
+    <wsdl:part name="Cidade" type="s:string" />
+    <wsdl:part name="Linhas" type="s:string" />
+    <wsdl:part name="Pagina" type="s:string" />
+    <wsdl:part name="Nivel1" type="s:string" />
+    <wsdl:part name="Nivel2" type="s:string" />
+    <wsdl:part name="Nivel3" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ParceirosSessaoCidadeHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfUnidadeController" />
+  </wsdl:message>
+  <wsdl:message name="DetalhesParceiroPFHttpGetIn">
+    <wsdl:part name="Parceiro" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DetalhesParceiroPFHttpGetOut">
+    <wsdl:part name="Body" element="tns:UnidadeController" />
+  </wsdl:message>
+  <wsdl:message name="DetalhesParceiroPJHttpGetIn">
+    <wsdl:part name="Parceiro" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DetalhesParceiroPJHttpGetOut">
+    <wsdl:part name="Body" element="tns:UnidadeController" />
+  </wsdl:message>
+  <wsdl:message name="CategoriasNivel1HttpGetIn">
+    <wsdl:part name="Sessao" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CategoriasNivel1HttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCategoriaController" />
+  </wsdl:message>
+  <wsdl:message name="CategoriasNivel2HttpGetIn">
+    <wsdl:part name="Nivel1" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CategoriasNivel2HttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCategoriaController" />
+  </wsdl:message>
+  <wsdl:message name="CategoriasNivel3HttpGetIn">
+    <wsdl:part name="Nivel2" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CategoriasNivel3HttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCategoriaController" />
+  </wsdl:message>
+  <wsdl:message name="CartaoParaImpressaoFamiliarHttpGetIn" />
+  <wsdl:message name="CartaoParaImpressaoFamiliarHttpGetOut">
+    <wsdl:part name="Body" element="tns:short" />
+  </wsdl:message>
+  <wsdl:message name="CartaoParaImpressaoCorporativoHttpGetIn" />
+  <wsdl:message name="CartaoParaImpressaoCorporativoHttpGetOut">
+    <wsdl:part name="Body" element="tns:short" />
+  </wsdl:message>
+  <wsdl:message name="SetarParcelasVencidasHttpGetIn" />
+  <wsdl:message name="SetarParcelasVencidasHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GravarLogoUnidadeHttpGetIn">
+    <wsdl:part name="Unidade" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GravarLogoUnidadeHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ParceirosBuscaSessaoCidadeHttpGetIn">
+    <wsdl:part name="Sessao" type="s:string" />
+    <wsdl:part name="Cidade" type="s:string" />
+    <wsdl:part name="Linhas" type="s:string" />
+    <wsdl:part name="Pagina" type="s:string" />
+    <wsdl:part name="Buscar" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ParceirosBuscaSessaoCidadeHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfUnidadeController" />
+  </wsdl:message>
+  <wsdl:message name="BannerPorSessaoHttpPostIn">
+    <wsdl:part name="Sessao" type="s:string" />
+    <wsdl:part name="StatusContrato" type="s:string" />
+    <wsdl:part name="StatusBanner" type="s:string" />
+    <wsdl:part name="Cidade" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BannerPorSessaoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfBannerController" />
+  </wsdl:message>
+  <wsdl:message name="ParceirosSessaoCidadeHttpPostIn">
+    <wsdl:part name="Sessao" type="s:string" />
+    <wsdl:part name="Cidade" type="s:string" />
+    <wsdl:part name="Linhas" type="s:string" />
+    <wsdl:part name="Pagina" type="s:string" />
+    <wsdl:part name="Nivel1" type="s:string" />
+    <wsdl:part name="Nivel2" type="s:string" />
+    <wsdl:part name="Nivel3" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ParceirosSessaoCidadeHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfUnidadeController" />
+  </wsdl:message>
+  <wsdl:message name="DetalhesParceiroPFHttpPostIn">
+    <wsdl:part name="Parceiro" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DetalhesParceiroPFHttpPostOut">
+    <wsdl:part name="Body" element="tns:UnidadeController" />
+  </wsdl:message>
+  <wsdl:message name="DetalhesParceiroPJHttpPostIn">
+    <wsdl:part name="Parceiro" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DetalhesParceiroPJHttpPostOut">
+    <wsdl:part name="Body" element="tns:UnidadeController" />
+  </wsdl:message>
+  <wsdl:message name="CategoriasNivel1HttpPostIn">
+    <wsdl:part name="Sessao" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CategoriasNivel1HttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCategoriaController" />
+  </wsdl:message>
+  <wsdl:message name="CategoriasNivel2HttpPostIn">
+    <wsdl:part name="Nivel1" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CategoriasNivel2HttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCategoriaController" />
+  </wsdl:message>
+  <wsdl:message name="CategoriasNivel3HttpPostIn">
+    <wsdl:part name="Nivel2" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CategoriasNivel3HttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCategoriaController" />
+  </wsdl:message>
+  <wsdl:message name="CartaoParaImpressaoFamiliarHttpPostIn" />
+  <wsdl:message name="CartaoParaImpressaoFamiliarHttpPostOut">
+    <wsdl:part name="Body" element="tns:short" />
+  </wsdl:message>
+  <wsdl:message name="CartaoParaImpressaoCorporativoHttpPostIn" />
+  <wsdl:message name="CartaoParaImpressaoCorporativoHttpPostOut">
+    <wsdl:part name="Body" element="tns:short" />
+  </wsdl:message>
+  <wsdl:message name="SetarParcelasVencidasHttpPostIn" />
+  <wsdl:message name="SetarParcelasVencidasHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="GravarLogoUnidadeHttpPostIn">
+    <wsdl:part name="Unidade" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GravarLogoUnidadeHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ParceirosBuscaSessaoCidadeHttpPostIn">
+    <wsdl:part name="Sessao" type="s:string" />
+    <wsdl:part name="Cidade" type="s:string" />
+    <wsdl:part name="Linhas" type="s:string" />
+    <wsdl:part name="Pagina" type="s:string" />
+    <wsdl:part name="Buscar" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ParceirosBuscaSessaoCidadeHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfUnidadeController" />
+  </wsdl:message>
+  <wsdl:portType name="PortalSoap">
+    <wsdl:operation name="BannerPorSessao">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista Banners liberados para a Sessão</wsdl:documentation>
+      <wsdl:input message="tns:BannerPorSessaoSoapIn" />
+      <wsdl:output message="tns:BannerPorSessaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ParceirosSessaoCidade">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista parceiros por Sessao e Cidade (Somente parceiros Ativos)</wsdl:documentation>
+      <wsdl:input message="tns:ParceirosSessaoCidadeSoapIn" />
+      <wsdl:output message="tns:ParceirosSessaoCidadeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DetalhesParceiroPF">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Detalhes do parceiro (Pessoa Fisica)</wsdl:documentation>
+      <wsdl:input message="tns:DetalhesParceiroPFSoapIn" />
+      <wsdl:output message="tns:DetalhesParceiroPFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DetalhesParceiroPJ">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Detalhes do parceiro (Pessoa Juridica)</wsdl:documentation>
+      <wsdl:input message="tns:DetalhesParceiroPJSoapIn" />
+      <wsdl:output message="tns:DetalhesParceiroPJSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CategoriasNivel1">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista as categorias ligadas a sessão informada</wsdl:documentation>
+      <wsdl:input message="tns:CategoriasNivel1SoapIn" />
+      <wsdl:output message="tns:CategoriasNivel1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CategoriasNivel2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista as RetornoCategoriaNivel2 do nivel 2 ligadas ao nivel 1 [Separados por ';']</wsdl:documentation>
+      <wsdl:input message="tns:CategoriasNivel2SoapIn" />
+      <wsdl:output message="tns:CategoriasNivel2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CategoriasNivel3">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista as RetornoCategoriaNivel2 do nivel 3 ligadas ao nivel 2 [Separados por ';']</wsdl:documentation>
+      <wsdl:input message="tns:CategoriasNivel3SoapIn" />
+      <wsdl:output message="tns:CategoriasNivel3SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CartaoParaImpressaoFamiliar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Enviar cartões gerados para impressão (Plano Familiar)</wsdl:documentation>
+      <wsdl:input message="tns:CartaoParaImpressaoFamiliarSoapIn" />
+      <wsdl:output message="tns:CartaoParaImpressaoFamiliarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CartaoParaImpressaoCorporativo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Enviar cartões gerados para impressão (Plano Corporativo)</wsdl:documentation>
+      <wsdl:input message="tns:CartaoParaImpressaoCorporativoSoapIn" />
+      <wsdl:output message="tns:CartaoParaImpressaoCorporativoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetarParcelasVencidas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Seta parcelas vencidas</wsdl:documentation>
+      <wsdl:input message="tns:SetarParcelasVencidasSoapIn" />
+      <wsdl:output message="tns:SetarParcelasVencidasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GravarLogoUnidade">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Grava logo da unidade no servidor</wsdl:documentation>
+      <wsdl:input message="tns:GravarLogoUnidadeSoapIn" />
+      <wsdl:output message="tns:GravarLogoUnidadeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ParceirosBuscaSessaoCidade">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Busca por Sessao)</wsdl:documentation>
+      <wsdl:input message="tns:ParceirosBuscaSessaoCidadeSoapIn" />
+      <wsdl:output message="tns:ParceirosBuscaSessaoCidadeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="PortalHttpGet">
+    <wsdl:operation name="BannerPorSessao">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista Banners liberados para a Sessão</wsdl:documentation>
+      <wsdl:input message="tns:BannerPorSessaoHttpGetIn" />
+      <wsdl:output message="tns:BannerPorSessaoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ParceirosSessaoCidade">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista parceiros por Sessao e Cidade (Somente parceiros Ativos)</wsdl:documentation>
+      <wsdl:input message="tns:ParceirosSessaoCidadeHttpGetIn" />
+      <wsdl:output message="tns:ParceirosSessaoCidadeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DetalhesParceiroPF">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Detalhes do parceiro (Pessoa Fisica)</wsdl:documentation>
+      <wsdl:input message="tns:DetalhesParceiroPFHttpGetIn" />
+      <wsdl:output message="tns:DetalhesParceiroPFHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DetalhesParceiroPJ">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Detalhes do parceiro (Pessoa Juridica)</wsdl:documentation>
+      <wsdl:input message="tns:DetalhesParceiroPJHttpGetIn" />
+      <wsdl:output message="tns:DetalhesParceiroPJHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CategoriasNivel1">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista as categorias ligadas a sessão informada</wsdl:documentation>
+      <wsdl:input message="tns:CategoriasNivel1HttpGetIn" />
+      <wsdl:output message="tns:CategoriasNivel1HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CategoriasNivel2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista as RetornoCategoriaNivel2 do nivel 2 ligadas ao nivel 1 [Separados por ';']</wsdl:documentation>
+      <wsdl:input message="tns:CategoriasNivel2HttpGetIn" />
+      <wsdl:output message="tns:CategoriasNivel2HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CategoriasNivel3">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista as RetornoCategoriaNivel2 do nivel 3 ligadas ao nivel 2 [Separados por ';']</wsdl:documentation>
+      <wsdl:input message="tns:CategoriasNivel3HttpGetIn" />
+      <wsdl:output message="tns:CategoriasNivel3HttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CartaoParaImpressaoFamiliar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Enviar cartões gerados para impressão (Plano Familiar)</wsdl:documentation>
+      <wsdl:input message="tns:CartaoParaImpressaoFamiliarHttpGetIn" />
+      <wsdl:output message="tns:CartaoParaImpressaoFamiliarHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CartaoParaImpressaoCorporativo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Enviar cartões gerados para impressão (Plano Corporativo)</wsdl:documentation>
+      <wsdl:input message="tns:CartaoParaImpressaoCorporativoHttpGetIn" />
+      <wsdl:output message="tns:CartaoParaImpressaoCorporativoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetarParcelasVencidas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Seta parcelas vencidas</wsdl:documentation>
+      <wsdl:input message="tns:SetarParcelasVencidasHttpGetIn" />
+      <wsdl:output message="tns:SetarParcelasVencidasHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GravarLogoUnidade">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Grava logo da unidade no servidor</wsdl:documentation>
+      <wsdl:input message="tns:GravarLogoUnidadeHttpGetIn" />
+      <wsdl:output message="tns:GravarLogoUnidadeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ParceirosBuscaSessaoCidade">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Busca por Sessao)</wsdl:documentation>
+      <wsdl:input message="tns:ParceirosBuscaSessaoCidadeHttpGetIn" />
+      <wsdl:output message="tns:ParceirosBuscaSessaoCidadeHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="PortalHttpPost">
+    <wsdl:operation name="BannerPorSessao">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista Banners liberados para a Sessão</wsdl:documentation>
+      <wsdl:input message="tns:BannerPorSessaoHttpPostIn" />
+      <wsdl:output message="tns:BannerPorSessaoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ParceirosSessaoCidade">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista parceiros por Sessao e Cidade (Somente parceiros Ativos)</wsdl:documentation>
+      <wsdl:input message="tns:ParceirosSessaoCidadeHttpPostIn" />
+      <wsdl:output message="tns:ParceirosSessaoCidadeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DetalhesParceiroPF">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Detalhes do parceiro (Pessoa Fisica)</wsdl:documentation>
+      <wsdl:input message="tns:DetalhesParceiroPFHttpPostIn" />
+      <wsdl:output message="tns:DetalhesParceiroPFHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DetalhesParceiroPJ">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Detalhes do parceiro (Pessoa Juridica)</wsdl:documentation>
+      <wsdl:input message="tns:DetalhesParceiroPJHttpPostIn" />
+      <wsdl:output message="tns:DetalhesParceiroPJHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CategoriasNivel1">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista as categorias ligadas a sessão informada</wsdl:documentation>
+      <wsdl:input message="tns:CategoriasNivel1HttpPostIn" />
+      <wsdl:output message="tns:CategoriasNivel1HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CategoriasNivel2">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista as RetornoCategoriaNivel2 do nivel 2 ligadas ao nivel 1 [Separados por ';']</wsdl:documentation>
+      <wsdl:input message="tns:CategoriasNivel2HttpPostIn" />
+      <wsdl:output message="tns:CategoriasNivel2HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CategoriasNivel3">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lista as RetornoCategoriaNivel2 do nivel 3 ligadas ao nivel 2 [Separados por ';']</wsdl:documentation>
+      <wsdl:input message="tns:CategoriasNivel3HttpPostIn" />
+      <wsdl:output message="tns:CategoriasNivel3HttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CartaoParaImpressaoFamiliar">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Enviar cartões gerados para impressão (Plano Familiar)</wsdl:documentation>
+      <wsdl:input message="tns:CartaoParaImpressaoFamiliarHttpPostIn" />
+      <wsdl:output message="tns:CartaoParaImpressaoFamiliarHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CartaoParaImpressaoCorporativo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Enviar cartões gerados para impressão (Plano Corporativo)</wsdl:documentation>
+      <wsdl:input message="tns:CartaoParaImpressaoCorporativoHttpPostIn" />
+      <wsdl:output message="tns:CartaoParaImpressaoCorporativoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetarParcelasVencidas">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Seta parcelas vencidas</wsdl:documentation>
+      <wsdl:input message="tns:SetarParcelasVencidasHttpPostIn" />
+      <wsdl:output message="tns:SetarParcelasVencidasHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GravarLogoUnidade">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Grava logo da unidade no servidor</wsdl:documentation>
+      <wsdl:input message="tns:GravarLogoUnidadeHttpPostIn" />
+      <wsdl:output message="tns:GravarLogoUnidadeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ParceirosBuscaSessaoCidade">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Busca por Sessao)</wsdl:documentation>
+      <wsdl:input message="tns:ParceirosBuscaSessaoCidadeHttpPostIn" />
+      <wsdl:output message="tns:ParceirosBuscaSessaoCidadeHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PortalSoap" type="tns:PortalSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BannerPorSessao">
+      <soap:operation soapAction="http://tempuri.org/BannerPorSessao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParceirosSessaoCidade">
+      <soap:operation soapAction="http://tempuri.org/ParceirosSessaoCidade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetalhesParceiroPF">
+      <soap:operation soapAction="http://tempuri.org/DetalhesParceiroPF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetalhesParceiroPJ">
+      <soap:operation soapAction="http://tempuri.org/DetalhesParceiroPJ" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CategoriasNivel1">
+      <soap:operation soapAction="http://tempuri.org/CategoriasNivel1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CategoriasNivel2">
+      <soap:operation soapAction="http://tempuri.org/CategoriasNivel2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CategoriasNivel3">
+      <soap:operation soapAction="http://tempuri.org/CategoriasNivel3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CartaoParaImpressaoFamiliar">
+      <soap:operation soapAction="http://tempuri.org/CartaoParaImpressaoFamiliar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CartaoParaImpressaoCorporativo">
+      <soap:operation soapAction="http://tempuri.org/CartaoParaImpressaoCorporativo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetarParcelasVencidas">
+      <soap:operation soapAction="http://tempuri.org/SetarParcelasVencidas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GravarLogoUnidade">
+      <soap:operation soapAction="http://tempuri.org/GravarLogoUnidade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParceirosBuscaSessaoCidade">
+      <soap:operation soapAction="http://tempuri.org/ParceirosBuscaSessaoCidade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PortalSoap12" type="tns:PortalSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BannerPorSessao">
+      <soap12:operation soapAction="http://tempuri.org/BannerPorSessao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParceirosSessaoCidade">
+      <soap12:operation soapAction="http://tempuri.org/ParceirosSessaoCidade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetalhesParceiroPF">
+      <soap12:operation soapAction="http://tempuri.org/DetalhesParceiroPF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetalhesParceiroPJ">
+      <soap12:operation soapAction="http://tempuri.org/DetalhesParceiroPJ" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CategoriasNivel1">
+      <soap12:operation soapAction="http://tempuri.org/CategoriasNivel1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CategoriasNivel2">
+      <soap12:operation soapAction="http://tempuri.org/CategoriasNivel2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CategoriasNivel3">
+      <soap12:operation soapAction="http://tempuri.org/CategoriasNivel3" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CartaoParaImpressaoFamiliar">
+      <soap12:operation soapAction="http://tempuri.org/CartaoParaImpressaoFamiliar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CartaoParaImpressaoCorporativo">
+      <soap12:operation soapAction="http://tempuri.org/CartaoParaImpressaoCorporativo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetarParcelasVencidas">
+      <soap12:operation soapAction="http://tempuri.org/SetarParcelasVencidas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GravarLogoUnidade">
+      <soap12:operation soapAction="http://tempuri.org/GravarLogoUnidade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParceirosBuscaSessaoCidade">
+      <soap12:operation soapAction="http://tempuri.org/ParceirosBuscaSessaoCidade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PortalHttpGet" type="tns:PortalHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="BannerPorSessao">
+      <http:operation location="/BannerPorSessao" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParceirosSessaoCidade">
+      <http:operation location="/ParceirosSessaoCidade" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetalhesParceiroPF">
+      <http:operation location="/DetalhesParceiroPF" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetalhesParceiroPJ">
+      <http:operation location="/DetalhesParceiroPJ" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CategoriasNivel1">
+      <http:operation location="/CategoriasNivel1" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CategoriasNivel2">
+      <http:operation location="/CategoriasNivel2" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CategoriasNivel3">
+      <http:operation location="/CategoriasNivel3" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CartaoParaImpressaoFamiliar">
+      <http:operation location="/CartaoParaImpressaoFamiliar" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CartaoParaImpressaoCorporativo">
+      <http:operation location="/CartaoParaImpressaoCorporativo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetarParcelasVencidas">
+      <http:operation location="/SetarParcelasVencidas" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GravarLogoUnidade">
+      <http:operation location="/GravarLogoUnidade" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParceirosBuscaSessaoCidade">
+      <http:operation location="/ParceirosBuscaSessaoCidade" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PortalHttpPost" type="tns:PortalHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="BannerPorSessao">
+      <http:operation location="/BannerPorSessao" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParceirosSessaoCidade">
+      <http:operation location="/ParceirosSessaoCidade" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetalhesParceiroPF">
+      <http:operation location="/DetalhesParceiroPF" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DetalhesParceiroPJ">
+      <http:operation location="/DetalhesParceiroPJ" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CategoriasNivel1">
+      <http:operation location="/CategoriasNivel1" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CategoriasNivel2">
+      <http:operation location="/CategoriasNivel2" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CategoriasNivel3">
+      <http:operation location="/CategoriasNivel3" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CartaoParaImpressaoFamiliar">
+      <http:operation location="/CartaoParaImpressaoFamiliar" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CartaoParaImpressaoCorporativo">
+      <http:operation location="/CartaoParaImpressaoCorporativo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetarParcelasVencidas">
+      <http:operation location="/SetarParcelasVencidas" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GravarLogoUnidade">
+      <http:operation location="/GravarLogoUnidade" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ParceirosBuscaSessaoCidade">
+      <http:operation location="/ParceirosBuscaSessaoCidade" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Portal">
+    <wsdl:port name="PortalSoap" binding="tns:PortalSoap">
+      <soap:address location="http://www.clubeconteza.com.br:81/Portal.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PortalSoap12" binding="tns:PortalSoap12">
+      <soap12:address location="http://www.clubeconteza.com.br:81/Portal.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PortalHttpGet" binding="tns:PortalHttpGet">
+      <http:address location="http://www.clubeconteza.com.br:81/Portal.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PortalHttpPost" binding="tns:PortalHttpPost">
+      <http:address location="http://www.clubeconteza.com.br:81/Portal.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

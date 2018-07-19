@@ -1,0 +1,2902 @@
+﻿/* Css Header */
+
+#divacontato {
+    padding: 20px;
+    max-width: 650px;
+}
+
+#contentlog {
+    background: #dedede;
+    padding: 20px;
+    margin: 20px;
+    font-size: 14px;
+    line-height: 40px;
+}
+
+h4.panel-title.PL a:hover {
+    color: white;
+    font-size: initial !important;
+    text-decoration: none;
+    line-height: 35px;
+    text-decoration: none !important;
+    font-size: 21px !important;
+}
+
+p.NomeCardWS {
+    max-height: 21px;
+    overflow: hidden;
+}
+
+#querofazerparte a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+    #querofazerparte a:hover {
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+        text-align: center;
+        font-size: 18px;
+        text-shadow: 0px 0px 10px white;
+        transition: 0.5s;
+    }
+
+button.cardbuttonws2:hover {
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    width: 100px;
+    height: 30px;
+    background: #2196F3;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+button.cardbuttonws2 a {
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+    button.cardbuttonws2 a:hover {
+        color: white;
+        text-decoration: none;
+        text-shadow: 0px 0px 10px white;
+        transition: 0.5s;
+    }
+
+button.cardbuttonws2 {
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    width: 100px;
+    height: 30px;
+    background: #0068a2;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+p.NomeCardWS2 {
+    color: #345490;
+    font-size: 14px;
+    width: 100%;
+    font-weight: 600;
+    margin: 5px 0px 5px 0px;
+}
+
+p.AtuacaoCardWS2 {
+    color: #2196F3;
+    font-size: 14px;
+    width: 100%;
+    font-weight: 600;
+    margin: 5px 0px 5px 0px;
+}
+
+#desccardws2 {
+    background: url('../content/img/endtelprof.png') no-repeat 0px 68px;
+    padding: 15px;
+}
+
+#engsearchn button.btn.dropdown-toggle.btn-default {
+    background: rgb(182, 243, 228);
+}
+
+.dropdown-menu.inner {
+    max-height: 225px !important;
+}
+
+.dropup .dropdown-menu, .navbar-fixed-bottom .dropdown .dropdown-menu {
+    top: none;
+    bottom: 100%;
+    margin-bottom: 2px;
+}
+
+#headertopo {
+    background-color: rgb(7, 86, 140) !important;
+    height: 35px;
+    color: white;
+    background-image: url('../content/img/bg-menu-conteza.png');
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: right -107px;
+    background-size: 365px;
+}
+
+
+
+#headerclube {
+    height: 94px;
+    background-image: url('../content/img/bg-menu-conteza.png');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-color: rgba(255, 255, 255, 0.19);
+    background-blend-mode: color;
+    background-size: 365px;
+    background-position-y: -140px;
+}
+
+textarea.textplans {
+    width: 100%;
+    margin-left: 15px;
+    border: 1px solid rgba(128, 128, 128, 0.45);
+    box-shadow: inset -3px 3px 20px rgba(0, 0, 0, 0.14);
+    transition: 0.5s;
+    margin-bottom: 15px;
+    padding: 5px 5px 5px 5px;
+}
+
+#contentlog {
+    background: #dedede;
+    padding: 20px;
+    margin: 20px;
+    font-size: 14px;
+    line-height: 40px;
+}
+
+#promoshomews .owl-stage-outer {
+    max-width: 1360px;
+    margin: auto;
+    padding: 0px 25px;
+}
+
+.owl-carousel {
+    display: none;
+    width: 100%;
+    z-index: 1;
+}
+
+div#ta {
+    width: 100%;
+    height: 50px;
+    background: #125c8b;
+    float: left;
+}
+
+#ct a {
+    background: #ec3689;
+    padding: 12px;
+    font-size: 17px;
+    font-weight: bolder;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+    #ct a:hover {
+        background: #ff81cc;
+        padding: 12px;
+        font-size: 17px;
+        font-weight: bolder;
+        transition: 0.5s;
+        border-radius: 5px;
+    }
+
+div#titlesliders {
+    height: 165px;
+    width: 100%;
+    background: url('../Content/img/clubeconteza.png') no-repeat;
+    background-size: contain;
+}
+
+#englobplans3 {
+    width: 90%;
+    margin: 0px 0px 0px 2%;
+}
+
+#englobplans2 {
+    width: 75%;
+    margin: 0px 0px 0px 2%;
+}
+
+ul.menuitem {
+    list-style: none;
+}
+
+li.itens {
+    display: inline;
+    padding: 15px;
+    line-height: 40px;
+}
+
+#header {
+    width: 100%;
+}
+
+#divacontato {
+    border: 1px solid #d6d6d6;
+    width: 50%;
+    float: left;
+    min-height: 400px;
+    margin-top: 50px;
+    background: rgba(208, 208, 208, 0.25);
+    box-shadow: -2px 2px 10px rgba(62, 62, 62, 0.13);
+    border-radius: 4px;
+}
+
+h2.tct {
+    font-size: 21px;
+    padding: 15px !important;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.27);
+    max-width: 95%;
+    margin: auto;
+}
+
+input.btplansend {
+    position: relative;
+    right: 5%;
+    float: right;
+    bottom: 0px;
+    width: 120px;
+    background: #eb3689;
+    border: none;
+    padding: 5px 0px 5px 0px;
+    color: white;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+    input.btplansend:hover {
+        position: relative;
+        right: 5%;
+        float: right;
+        bottom: 0px;
+        width: 120px;
+        background: #ec69a5;
+        border: none;
+        padding: 5px 0px 5px 0px;
+        color: white;
+        font-weight: 600;
+        border-radius: 50px;
+        transition: 0.5s;
+        box-shadow: 0px 0px 30px white;
+    }
+
+#btnsnd {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#divacontato p {
+    font-size: 15px;
+    padding: 15px !important;
+    max-width: 95%;
+    margin: auto;
+    font-weight: 400;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.19);
+}
+
+#divacontato input[type="text"] {
+    font-size: 15px;
+    padding: 3px !important;
+    width: 90%;
+    margin: auto;
+    margin-left: 4%;
+    border: 1px solid rgba(128, 128, 128, 0.45);
+    box-shadow: inset -3px 3px 20px rgba(0, 0, 0, 0.14);
+    transition: 0.5s;
+}
+
+#englobplans {
+    width: 50%;
+    margin: 0px 0px 0px 2%;
+}
+
+.inputsradioplans {
+    float: left;
+    width: 35%;
+    margin-bottom: 15px;
+    margin-left: 5%;
+}
+
+#menu {
+    height: 40px;
+    margin: auto;
+    background-image: url('../content/img/bg-menu-conteza.png');
+    background-repeat: no-repeat;
+    background-position: right -235px;
+    background-size: 365px;
+    background-color: rgba(236, 236, 236, 0.85);
+    background-blend-mode: hue;
+}
+
+#menusmart {
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+}
+
+ul.menuitem {
+    width: 890px;
+    margin: auto;
+}
+
+#logincontent {
+    width: 100%;
+    min-height: 500px;
+    padding: 50px 0px 50px 0px;
+    background: rgba(255, 255, 255, 0.10);
+}
+
+#logoclube {
+    width: 250px;
+    float: left;
+    padding: 20px 40px 5px 60px;
+}
+
+#barrabusca {
+    width: 570px;
+    border: none;
+    border-radius: 5px;
+    height: 28px;
+    margin-top: 30px;
+    line-height: 30px;
+    padding: 38px 0px 2px 5px;
+    margin: 0px auto;
+}
+
+.menuitem li a {
+    text-decoration: none;
+    color: #616161;
+    transition: 0.5s;
+    font-size: 15px;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+    .menuitem li a:hover {
+        text-decoration: none;
+        color: #03A9F4;
+        transition: 0.5s;
+    }
+
+input#buscar {
+    border: 1px solid #8080804d;
+    background: rgba(255, 255, 255, 0);
+    width: 485px;
+    padding: 10px 10px 7px 10px;
+    margin-top: -61px;
+    margin-left: -2px;
+    border-radius: 5px;
+    height: 30px;
+}
+
+button.btn-sm.btn-default {
+    background: #00a27a !important;
+}
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    max-width: 260px !important;
+    width: 100% !important;
+} 
+
+span.filter-option.pull-left {
+    color: black !important;
+}
+
+.dropdown-menu li a:hover, .dropdown-menu li a:focus, .dropdown-menu li a:active {
+    background-color: #00a27a !important;
+    color: #FFFFFF;
+}
+
+iframe#varejo {
+    margin: auto;
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2500px;
+    border: none;
+    overflow: auto;
+}
+
+a.xx {
+    position: relative;
+    font-size: 21px;
+    line-height: 45px;
+    left: 20px;
+}
+
+#conteudoiframe {
+    width: 100%;
+    min-height: 500px;
+    float: left;
+    padding-top: 25px;
+    background: white;
+}
+
+#engsearchn .panel-group {
+    margin-bottom: 0px !important;
+}
+
+#conteudoslidersws {
+    float: left;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.owl-theme .owl-nav {
+    top: 50% !important;
+    position: absolute !important;
+    z-index: 1 !important;
+    margin-top: 0px !important;
+    width: 100%;
+}
+
+.owl-prev {
+    position: absolute;
+    left: 5px;
+    background: rgb(255, 255, 255) !important;
+    border-radius: 50px !important;
+    padding: 5px 10px !important;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    font-size: 21px !important;
+    color: rgb(162, 162, 162) !important;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.27);
+}
+
+.owl-next {
+    position: absolute;
+    right: 5px;
+    background: rgb(255, 255, 255) !important;
+    border-radius: 50px !important;
+    padding: 5px 10px !important;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    font-size: 21px !important;
+    color: rgb(162, 162, 162) !important;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.27);
+}
+
+
+.owl-dots {
+    position: absolute !important;
+    z-index: 99 !important;
+    bottom: 0px;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+/*.btn, .btn:hover, .btn:focus, .btn:active, .btn.active, .btn:active:focus, .btn:active:hover, .btn.active:focus, .btn.active:hover, .open > .btn.dropdown-toggle, .open > .btn.dropdown-toggle:focus, .open > .btn.dropdown-toggle:hover, .btn.btn-default, .btn.btn-default:hover, .btn.btn-default:focus, .btn.btn-default:active, .btn.btn-default.active, .btn.btn-default:active:focus, .btn.btn-default:active:hover, .btn.btn-default.active:focus, .btn.btn-default.active:hover, .open > .btn.btn-default.dropdown-toggle, .open > .btn.btn-default.dropdown-toggle:focus, .open > .btn.btn-default.dropdown-toggle:hover, .navbar .navbar-nav > li > a.btn, .navbar .navbar-nav > li > a.btn:hover, .navbar .navbar-nav > li > a.btn:focus, .navbar .navbar-nav > li > a.btn:active, .navbar .navbar-nav > li > a.btn.active, .navbar .navbar-nav > li > a.btn:active:focus, .navbar .navbar-nav > li > a.btn:active:hover, .navbar .navbar-nav > li > a.btn.active:focus, .navbar .navbar-nav > li > a.btn.active:hover, .open > .navbar .navbar-nav > li > a.btn.dropdown-toggle, .open > .navbar .navbar-nav > li > a.btn.dropdown-toggle:focus, .open > .navbar .navbar-nav > li > a.btn.dropdown-toggle:hover, .navbar .navbar-nav > li > a.btn.btn-default, .navbar .navbar-nav > li > a.btn.btn-default:hover, .navbar .navbar-nav > li > a.btn.btn-default:focus, .navbar .navbar-nav > li > a.btn.btn-default:active, .navbar .navbar-nav > li > a.btn.btn-default.active, .navbar .navbar-nav > li > a.btn.btn-default:active:focus, .navbar .navbar-nav > li > a.btn.btn-default:active:hover, .navbar .navbar-nav > li > a.btn.btn-default.active:focus, .navbar .navbar-nav > li > a.btn.btn-default.active:hover, .open > .navbar .navbar-nav > li > a.btn.btn-default.dropdown-toggle, .open > .navbar .navbar-nav > li > a.btn.btn-default.dropdown-toggle:focus, .open > .navbar .navbar-nav > li > a.btn.btn-default.dropdown-toggle:hover {
+    background-color: #afefde !important;
+    color: #FFFFFF;
+}*/
+p.titsearch {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+button#btnBuscar {
+    float: right;
+    background: #00558f;
+    color: white;
+    padding: 0px 20px 0px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: -4.5px;
+    transition: 0.5s;
+}
+
+
+    button#btnBuscar:hover {
+        background: #03A9F4;
+        transition: 0.5s;
+    }
+
+.navbar, .navbar.navbar-default {
+    background-color: #d8d8d8 !important;
+    color: #6f6f6f !important;
+}
+
+.navbar {
+    border: 0;
+    border-radius: 3px;
+    box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    padding: 0px 0px !important;
+}
+
+
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 925px;
+}
+
+a.xx {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+h4.panel-title.gs {
+    background-color: #00a27a;
+    background-image: url('../content/img/iconemore.png');
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-position-y: 5px;
+    background-blend-mode: hard-light;
+}
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: rgba(0, 162, 122, 0) !important;
+}
+
+#collapse1.blue {
+    background: #0478b9 !important;
+}
+
+.panel-footer.blue {
+    background: #0068a2 !important;
+}
+
+.blue .hidebusca {
+    background: rgba(3, 169, 244, 0.38) !important;
+}
+
+.blue button.btn.dropdown-toggle.btn-default {
+    background: rgb(195, 233, 255) !important;
+}
+
+#textoid2 {
+    color: #0068a2;
+    font-size: 28px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+#descriprofs2 {
+    font-size: 21px;
+    font-weight: bolder;
+    color: #0068a2;
+}
+
+p.especialidadespfs {
+    color: #0068a2;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+p.contatopfs {
+    color: #0068a2;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-top: 25px;
+}
+
+p.gmaps2 {
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: bolder;
+    color: #2196F3;
+    margin-bottom: 20px;
+}
+
+#boxdescprof {
+    width: 90%;
+    background: rgba(128, 128, 128, 0.28);
+    border: 1px solid #00a27a;
+    min-height: 280px;
+    margin-top: 35px;
+    padding: 20px;
+    border-radius: 10px;
+    float: left;
+}
+
+
+
+
+.blue #engsearchn button.btn.dropdown-toggle.btn-default {
+    background: rgb(196, 222, 255) !important;
+}
+
+.blue .dropdown-menu li a:hover, .dropdown-menu li a:focus, .dropdown-menu li a:active {
+    background-color: #0068a2 !important;
+    color: #FFFFFF;
+}
+
+.blue button.btn.btn-sm.btn-default {
+    background: #0068a2 !important;
+}
+
+
+
+.panel {
+    border-radius: 2px;
+    border: 0;
+    box-shadow: none !important;
+}
+
+#collapse1 {
+    background: #00a27a !important;
+}
+
+.panel-footer {
+    background-color: #009470 !important;
+}
+
+button.btn.dropdown-toggle.bs-placeholder.btn-default {
+    background: white !important;
+}
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 100%;
+}
+
+.navbar .navbar-nav > li > a {
+    color: inherit;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    text-transform: none !important;
+    border-radius: 3px;
+}
+
+.navbar .dropdown-menu li > a:hover, .navbar .dropdown-menu li > a:focus, .navbar.navbar-default .dropdown-menu li > a:hover, .navbar.navbar-default .dropdown-menu li > a:focus {
+    color: #03A9F4 !important;
+    background-color: rgba(216, 216, 216, 0.34) !important;
+    box-shadow: none !important;
+}
+
+.navbar .navbar-nav > li > a:hover, .navbar .navbar-nav > li > a:focus {
+    color: #03A9F4 !important;
+    background-color: transparent;
+    transition: 0.5s;
+}
+
+.navbar .navbar-nav > li > a, .navbar .navbar-nav > li > a {
+    transition: 0.5s;
+}
+
+#descriprofs {
+    font-size: 21px;
+    font-weight: bolder;
+    color: #06daa6;
+    margin-top: 0px;
+    float: left;
+    width: 100%;
+    height: 35px;
+}
+
+
+
+#textoid {
+    font-size: 28px;
+    margin-top: 35px;
+    font-weight: bolder;
+    color: #00a27a;
+    height: 30px;
+    float: left;
+    width: 100%;
+}
+
+#botaovoucher {
+    float: right;
+    width: 215px;
+    background: #00558f;
+    height: 45px;
+    border-radius: 50px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    line-height: 45px;
+    margin-bottom: 10px;
+    text-decoration: none !important;
+    transition: 0.5s;
+    margin-right: 10%;
+}
+
+
+/* Css Header Mobile*/
+
+@media screen and (max-width: 480px) {
+
+    #contentprofissionais {
+        width: 80% !important;
+        min-height: 600px;
+        clear: both;
+        margin: auto !important;
+        float: none !important;
+    }
+
+    #logoclube {
+        width: 185px;
+        padding: 20px !important;
+        margin: auto;
+        float: none;
+    }
+
+
+    #seletorcidadebusca {
+        float: left !important;
+        width: 235px !important;
+    }
+
+    #engconttopo {
+        width: 360px !important;
+        clear: both;
+        max-height: 35px;
+        float: none !important;
+        min-width: 320px;
+        margin: auto;
+        height: 35px !important;
+        min-width: 360px !important;
+    }
+
+    #logincontent {
+        width: 100%;
+        min-height: 500px;
+        padding: 50px 0 50px 0;
+        background: rgba(255,255,255,.1);
+        float: left;
+    }
+
+    img.welcomeimg {
+        width: 0px;
+    }
+
+    #headertopo {
+        background-color: #07568c !important;
+        height: 35px;
+        color: #fff;
+        background-image: url(../content/img/bg-menu-conteza.png);
+        background-blend-mode: multiply;
+        background-repeat: no-repeat;
+        background-position: right -107px;
+        background-size: 365px;
+        width: 100%;
+        float: left;
+    }
+
+    #menu {
+        height: 40px;
+        margin: auto;
+        background-image: url(../content/img/bg-menu-conteza.png);
+        background-repeat: no-repeat;
+        background-position: right -235px;
+        background-size: 365px;
+        background-color: rgba(236,236,236,.85);
+        background-blend-mode: hue;
+        max-width: 1023px;
+        float: left;
+        width: 100%;
+    }
+
+    #headerclube {
+        height: 94px;
+        background-image: url(../content/img/bg-menu-conteza.png);
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-color: rgba(255,255,255,.19);
+        background-blend-mode: color;
+        background-size: 365px;
+        background-position-y: -140px;
+        float: left;
+        width: 100%;
+    }
+
+    a.cadastresetopows {
+        width: 0px;
+        overflow: hidden;
+        height: 0px !important;
+        font-size: 0px !important;
+        padding: 0px !important;
+    }
+
+    #engconttopo a.tt2 {
+        color: #fff;
+        transition: .5s;
+        text-decoration: none;
+        line-height: 32px;
+        margin-left: 5px;
+        font-weight: 400;
+        transition: .5s;
+        float: right;
+    }
+
+    p.seltopo {
+        float: left;
+        line-height: 32px;
+        overflow: hidden;
+        max-width: 0px;
+    }
+
+    #engconttopo a.tt {
+        color: #fff;
+        transition: .5s;
+        text-decoration: none;
+        line-height: 32px;
+        margin-left: 5px;
+        font-weight: 400;
+        transition: .5s;
+        float: right;
+        overflow: hidden;
+        max-width: 0px;
+    }
+
+
+    #menusmart {
+        width: 100%;
+        height: 400px;
+        background: #eeeeee;
+        z-index: 9;
+        position: relative;
+        text-decoration: none;
+        clear: both;
+    }
+
+    .panel-group a.collapsed {
+        padding: 5px 0px 8px 0px;
+        padding-right: 70% !important;
+        font-size: 18px !important;
+    }
+}
+
+/*css Header Tablet */
+
+@media screen and (max-width: 1023px) {
+    .panel-group a.collapsed {
+        padding: 5px 0px 8px 0px;
+        padding-right: 70% !important;
+        font-size: 18px !important;
+        z-index: 99999;
+        position: relative;
+    }
+
+    #dir-egl {
+        width: 100% !important;
+        float: left;
+    }
+
+    #menu {
+        height: 40px;
+        margin: auto;
+        background-image: url('../content/img/bg-menu-conteza.png');
+        background-repeat: no-repeat;
+        background-position: right -235px;
+        background-size: 365px;
+        background-color: rgba(236, 236, 236, 0.85);
+        background-blend-mode: hue;
+        max-width: 1023px;
+    }
+
+    #corpo {
+        float: left;
+        background: rgba(255, 255, 255, 0.5);
+    }
+
+    #menusmart {
+        width: 100%;
+        height: 400px;
+        background: #eeeeee;
+        z-index: 9;
+        position: relative;
+        text-decoration: none;
+        clear: both;
+    }
+
+    ul.menuitem {
+        width: 0px;
+        height: 0px;
+        overflow: hidden;
+        margin: auto;
+        clear: both;
+    }
+
+    #corpo {
+        float: left !important;
+        background: rgba(255, 255, 255, 0.51);
+    }
+
+    button.cardbuttonws a {
+        color: white;
+        font-size: 14px !important;
+    }
+
+    #logoclube {
+        width: 185px;
+        padding: 20px !important;
+        margin: auto;
+        float: none;
+    }
+}
+
+#engsearchn.panel-group {
+    margin-bottom: 0px !important;
+}
+
+/* Fim css Header */
+
+#corpo {
+    float: left !important;
+    background: rgba(255, 255, 255, 0.51);
+    width: 100%;
+}
+
+
+.cardbuttonws a {
+    color: white !important;
+}
+
+
+.panel > .panel-heading, .panel.panel-default > .panel-heading.saude {
+    background-color: #00a27a;
+}
+
+
+/* Css Footer */
+
+#footer {
+    height: 60px;
+    background-color: #065284;
+    background-image: url('../content/img/bgie.jpg');
+    background-size: 600px;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    float: left;
+    width: 100%;
+}
+
+#widgetsfooter {
+    min-height: 265px;
+    background-color: rgb(243, 243, 243);
+    background-image: url('../content/img/bg-footer-conteza.jpg');
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: none;
+    background-size: 600px;
+    padding-top: 10px;
+    float: left;
+    width: 100%;
+}
+
+
+
+.wids {
+    color: #005f89;
+    font-size: 14px;
+    text-align: justify;
+    float: left;
+}
+
+#engbtree img {
+    margin: 5px 5px 10px 105px;
+    width: 80px;
+}
+
+p.titssobre {
+    font-size: 24px;
+    text-align: center;
+}
+
+#widsobre {
+    width: 275px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+p.tituloswd {
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 1px solid #005f89;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.wids img {
+    float: left;
+    width: 70px;
+    margin-right: 15px;
+}
+
+#wdmenu1 {
+    max-width: 200px;
+    margin-right: 30px;
+    min-width: 175px;
+}
+
+#wdmenu2 {
+    max-width: 200px;
+    margin-right: 30px;
+    min-width: 175px;
+}
+
+#wdmenu3 {
+    max-width: 200px;
+    min-width: 175px;
+}
+
+#wdmenu3 {
+    background: rgba(243, 243, 243, 0.7);
+    box-shadow: 0px 30px 45px rgba(243, 243, 243, 0.74);
+}
+
+#wdmenu2 {
+    background: rgba(243, 243, 243, 0.7);
+    box-shadow: 25px 30px 45px rgba(243, 243, 243, 0.74);
+}
+
+ul.menuwidsitens {
+    list-style: none;
+}
+
+.menuwidsitens a {
+    text-decoration: none;
+    line-height: 30px;
+    color: #005f89;
+    transition: 0.5s;
+}
+
+    .menuwidsitens a:hover {
+        text-decoration: none;
+        line-height: 30px;
+        color: #03A9F4;
+        transition: 0.5s;
+    }
+
+h2.footer {
+    font-size: 13px;
+    padding: 22px 20px 20px 45px;
+    margin: 0px !important;
+    color: white;
+}
+
+/* Fim CSS Footer */
+
+/* Css Principal */
+
+body {
+    background: url('../content/img/bg.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed !important;
+    -webkit-font-smoothing: antialiased !important;
+    font-family: 'Open Sans' !important;
+    margin: 0px;
+}
+
+#innercontent {
+    width: 80%;
+    min-width: 1024px;
+    margin: auto;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    max-width: 1440px;
+    background: rgba(255, 255, 255, 0.45);
+}
+
+#welcomebox {
+    max-width: 185px;
+    margin: auto;
+    text-align: center;
+    color: #005f89;
+    margin-bottom: 35px;
+    line-height: 5px;
+}
+
+#inner {
+    width: 100%;
+}
+
+#loginbox {
+    width: 350px;
+    height: 300px;
+    background: white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.16);
+    margin: auto;
+}
+
+#selecioneseuperfil {
+    color: gray;
+    font-size: 14px;
+    width: 215px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#perfis {
+    width: 800px;
+    margin: auto;
+    height: 50px;
+}
+
+.perfis {
+    width: 250px;
+    height: 45px;
+    float: left;
+    margin: 5px;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+#perfil1 {
+    background: rgba(128, 128, 128, 0.59);
+    transition: 0.5s;
+}
+
+    #perfil1:hover {
+        background: #088fca;
+        background: -moz-linear-gradient(top, #088fca 0%, #1e5799 100%);
+        background: -webkit-linear-gradient(top, #088fca 0%,#1e5799 100%);
+        background: linear-gradient(to bottom, #088fca 0%,#1e5799 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#088fca', endColorstr='#1e5799',GradientType=0 );
+        transition: 0.5s;
+        color: white;
+    }
+
+#perfil2 {
+    background: rgba(128, 128, 128, 0.59);
+    transition: 0.5s;
+}
+
+    #perfil2:hover {
+        transition: 0.5s;
+        color: white;
+        background: #f59c0c;
+        background: -moz-linear-gradient(top, #f59c0c 0%, #f07f07 100%);
+        background: -webkit-linear-gradient(top, #f59c0c 0%,#f07f07 100%);
+        background: linear-gradient(to bottom, #f59c0c 0%,#f07f07 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f59c0c', endColorstr='#f07f07',GradientType=0 );
+    }
+
+#perfil3 {
+    background: rgba(128, 128, 128, 0.59);
+    transition: 0.5s;
+}
+
+    #perfil3:hover {
+        transition: 0.5s;
+        color: white;
+        background: #f12c7b;
+        background: -moz-linear-gradient(top, #f12c7b 1%, #eb1b5c 100%);
+        background: -webkit-linear-gradient(top, #f12c7b 1%,#eb1b5c 100%);
+        background: linear-gradient(to bottom, #f12c7b 1%,#eb1b5c 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f12c7b', endColorstr='#eb1b5c',GradientType=0 );
+    }
+
+#name-group {
+    width: 450px !important;
+    float: left;
+}
+
+#paginacao {
+    width: 100%;
+    height: 50px;
+    clear: both;
+}
+
+#paginacaocont {
+    color: #075284;
+    font-size: 14px;
+    text-align: center;
+    background: white;
+    min-width: 300px;
+    max-width: 70%;
+    margin: auto;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+}
+
+.container.demo h4, .h4 {
+    font-size: 30px;
+    line-height: 1.4em;
+}
+
+
+/* Css Principal Mobile */
+
+@media screen and (max-width: 480px) {
+
+
+    #dir-egl {
+        width: 100% !important;
+        float: left;
+    }
+
+    #widgetsfooter {
+        min-height: 265px;
+        background-color: rgb(243, 243, 243);
+        background-image: url('../content/img/bg-footer-conteza.jpg');
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-size: 600px;
+        padding-top: 10px;
+        float: left;
+        width: 100%;
+        background-position-y: bottom;
+    }
+
+    #footer {
+        height: 60px;
+        background-color: #07568c;
+        background-image: none;
+    }
+
+    #resultadosws {
+        width: 290px !important;
+        margin: auto;
+    }
+
+    #paginacao {
+        width: 305px;
+        height: 40px;
+        clear: both;
+        overflow: scroll;
+        margin: auto;
+        background: white;
+        border-radius: 50px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+    }
+
+    #wdmenu3 {
+        background: rgba(243, 243, 243, 0.61);
+        box-shadow: none;
+    }
+
+    #wdmenu2 {
+        background: rgba(243, 243, 243, 0.7);
+        box-shadow: 25px 30px 45px rgba(243, 243, 243, 0.28) !important;
+    }
+
+    #paginacaocont {
+        color: #075284;
+        font-size: 14px;
+        text-align: center;
+        background: white;
+        max-width: 300px;
+        margin: auto;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 50px;
+    }
+
+    #wdmenu1 {
+        width: 100%;
+        margin-right: 30px;
+        min-width: 175px;
+    }
+
+    #wdmenu3 {
+        max-width: 320px;
+        min-width: 175px;
+        width: 275px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    #wdmenu2 {
+        max-width: 320px;
+        min-width: 175px;
+        width: 275px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    #wdmenu1 {
+        max-width: 320px;
+        min-width: 175px;
+        width: 275px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+
+    #innercontent {
+        width: 90%;
+        min-width: 320px;
+        margin: auto;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        max-width: 480px;
+        background: rgba(255, 255, 255, 0.45);
+    }
+
+    #barrabusca {
+        float: left;
+        width: 0px !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        height: 0px !important;
+        margin-top: 0;
+        line-height: 0;
+        padding: 0;
+        overflow: hidden !important;
+    }
+
+    ul.menuitem {
+        width: auto !important;
+        margin: auto;
+        height: auto !important;
+        overflow: hidden;
+    }
+}
+
+/* Css Principal Tablet */
+
+@media screen and (max-width: 1023px) {
+
+
+    #innercontent {
+        width: 90%;
+        min-width: 420px;
+        margin: auto;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        max-width: 780px;
+        background: rgba(255, 255, 255, 0.45);
+    }
+
+    #barrabusca {
+        float: left;
+        width: 0px !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        height: 0px !important;
+        margin-top: 0;
+        line-height: 0;
+        padding: 0;
+        overflow: hidden !important;
+    }
+}
+
+/* Fim Css Principal*/
+
+#searchbox {
+    width: 100%;
+    float: left;
+}
+
+/* Css Toggle - Guia Saude - a partir de 1024 */
+
+@media screen and (min-width: 1024px) {
+
+    #searchbox {
+        background: #00a27a;
+        min-height: 50px;
+        color: white;
+    }
+
+    #engbbusca {
+        width: 100%;
+        height: 50px;
+    }
+
+    p.fcbusca {
+        font-size: 21px;
+        float: left;
+        line-height: 1;
+        padding: 10px;
+        margin: 5px 0px 0px 5px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+    }
+
+    #Combosbusca {
+        height: 200px;
+        max-width: 1220px;
+        margin: auto;
+        clear: both;
+    }
+
+    button.searchboxtoggle {
+        float: right;
+        padding: 1px 7px;
+        background: rgb(255, 255, 255);
+        border-radius: 50px;
+        border: white 1px solid;
+        color: #00a27a;
+        margin: 12px 12px;
+        font-weight: 800;
+        font-size: 15px;
+    }
+
+    .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark {
+        position: absolute;
+        display: inline-block;
+        right: 15px;
+        margin-top: 5px;
+        width: 20px;
+        height: 20px;
+        background-image: url('../content/img/iconemore.png');
+    }
+
+    .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark {
+        position: absolute;
+        display: inline-block;
+        right: 15px;
+        margin-top: 5px;
+        width: 20px;
+        height: 20px;
+        background-image: url(https://cdn4.iconfinder.com/data/icons/defaulticon/icons/png/256x256/check.png);
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+        margin-top: 0px;
+    }
+
+    .hidebusca {
+        min-width: 25% !important;
+        max-width: 29% !important;
+        border: 1px solid white;
+        margin: 20px;
+        padding: 20px;
+        float: left;
+        border-radius: 10px;
+        background: rgba(151, 226, 197, 0.19);
+        height: 140px;
+    }
+
+    #logincontent {
+        float: left;
+    }
+
+    nav.navbar.navbar-default {
+        background-image: url('../content/img/bg-menu-conteza.png');
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-color: rgb(216, 216, 216) !important;
+        background-blend-mode: soft-light;
+        background-size: 365px;
+        background-position-y: -234px;
+    }
+
+    #menu .navbar {
+        position: relative;
+        min-height: 40px !important;
+        margin-bottom: 20px;
+        border: none !important;
+    }
+
+    #cards {
+        width: 22%;
+        border: 1px solid #f1f1f1;
+        height: 340px;
+        float: left;
+        margin: 1%;
+        background: white;
+        box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.12);
+        min-width: 240px;
+    }
+
+    #fotocardws {
+        width: 100%;
+        height: 150px;
+    }
+
+    #exfoto {
+        width: 150px;
+        height: 150px;
+        background: white;
+        margin: 10px auto;
+        overflow: hidden;
+    }
+
+    #paginacaocont a {
+        padding: 5px;
+    }
+
+
+    #botãocardws {
+        clear: both;
+        width: 120px;
+        margin: auto;
+    }
+
+
+    p.NomeCardWS {
+        color: #00a27a;
+        font-size: 14px;
+        width: 100%;
+        font-weight: 600;
+        margin: 5px 0px 5px 0px;
+    }
+
+    p.AtuacaoCardWS {
+        color: #00dea7;
+        font-size: 14px;
+        width: 100%;
+        font-weight: 600;
+        margin: 5px 0px 5px 0px;
+    }
+
+    p.EnderecoCardWS {
+        color: #b3b3b3;
+        font-size: 12px;
+        width: 100%;
+        font-weight: 600;
+        margin: 5px 0px 5px 20px;
+        max-height: 21px;
+        overflow: hidden;
+    }
+
+    input#btnCadastrarSenha {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        font-weight: 500 !important;
+        font-family: open sans;
+        margin-top: 20px;
+        float: right;
+        transition: 0.5s;
+        margin-left: 10px;
+    }
+
+        input#btnCadastrarSenha:hover {
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            font-weight: 500 !important;
+            font-family: open sans;
+            margin-top: 20px;
+            float: right;
+            transition: 0.5s;
+            background: #f12c7b;
+            color: white;
+        }
+
+
+    p.TelefoneCardWS {
+        color: #191919;
+        font-size: 14px;
+        width: 100%;
+        font-weight: 600;
+        margin: 5px 0px 5px 20px;
+    }
+
+    #desccardws {
+        padding: 15px;
+    }
+
+    #botãocardws {
+        clear: both;
+    }
+
+    button.cardbuttonws {
+        align-items: center;
+        text-align: center;
+        margin: auto;
+        width: 100px;
+        height: 30px;
+        background: #00a27a;
+        border: none;
+        border-radius: 50px;
+        color: white;
+        font-weight: bold;
+        transition: 0.5s;
+    }
+
+        button.cardbuttonws:hover {
+            align-items: center;
+            text-align: center;
+            margin: auto;
+            width: 100px;
+            height: 30px;
+            background: #00d29e;
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.5s;
+        }
+
+    #centrabuttoncards {
+        width: 100px;
+        margin: auto;
+    }
+}
+
+/*Guia Tablet*/
+
+@media screen and (max-width: 1023px) {
+
+
+
+    #searchbox {
+        background: #00a27a;
+        min-height: 50px;
+        color: white;
+    }
+
+    #engbbusca {
+        width: 100%;
+        height: 50px;
+    }
+
+    p.fcbusca {
+        font-size: 21px;
+        float: left;
+        line-height: 1;
+        padding: 10px;
+        margin: 5px 0px 0px 5px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+    }
+
+    #Combosbusca {
+        height: 500px !important;
+        max-width: 1220px;
+        margin: auto;
+        clear: both;
+    }
+
+    button.searchboxtoggle {
+        float: right;
+        padding: 1px 7px;
+        background: rgb(255, 255, 255);
+        border-radius: 50px;
+        border: white 1px solid;
+        color: #00a27a;
+        margin: 12px 12px;
+        font-weight: 800;
+        font-size: 15px;
+    }
+
+    .hidebusca {
+        width: 25%;
+        min-width: 320px;
+        border: 1px solid white;
+        padding: 20px;
+        float: none;
+        border-radius: 10px;
+        background: rgba(151, 226, 197, 0.19);
+        height: 140px;
+        margin: auto;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+
+    #cards {
+        width: 22%;
+        border: 1px solid #f1f1f1;
+        height: 340px;
+        float: left;
+        margin: 1%;
+        background: white;
+        box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.12);
+        min-width: 240px;
+    }
+
+    #fotocardws {
+        width: 100%;
+        height: 150px;
+    }
+
+    #exfoto {
+        width: 150px;
+        height: 150px;
+        background: gray;
+        margin: 10px auto;
+    }
+
+    p.NomeCardWS {
+        color: #00a27a;
+        font-size: 14px;
+        width: 100%;
+        font-weight: 600;
+        margin: 5px 0px 5px 0px;
+    }
+
+    p.AtuacaoCardWS {
+        color: #00dea7;
+        font-size: 14px;
+        width: 100%;
+        font-weight: 600;
+        margin: 5px 0px 5px 0px;
+    }
+
+    p.TelefoneCardWS {
+        color: #191919;
+        font-size: 14px;
+        width: 100%;
+        font-weight: 600;
+        margin: 5px 0px 5px 20px;
+    }
+
+    #desccardws {
+        padding: 15px;
+    }
+
+    #botãocardws {
+        width: 100%;
+        clear: both;
+    }
+
+    button.cardbuttonws {
+        align-items: center;
+        text-align: center;
+        margin: auto;
+        width: 100px;
+        height: 30px;
+        background: #00a27a;
+        border: none;
+        border-radius: 50px;
+        color: white;
+        font-weight: bold;
+    }
+
+    #centrabuttoncards {
+        width: 100px;
+        margin: auto;
+    }
+}
+
+/*Guia Celular*/
+
+@media screen and (max-width: 499px) {
+
+    #searchbox {
+        background: #00a27a;
+        min-height: 50px;
+        color: white;
+    }
+
+    #engbbusca {
+        width: 100%;
+        height: 50px;
+    }
+
+    p.fcbusca {
+        font-size: 21px;
+        float: left;
+        line-height: 1;
+        padding: 10px;
+        margin: 5px 0px 0px 5px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+    }
+
+    #Combosbusca {
+        height: 560px !important;
+        max-width: 1220px;
+        margin: auto;
+        clear: both;
+    }
+
+    button.searchboxtoggle {
+        float: right;
+        padding: 1px 7px;
+        background: rgb(255, 255, 255);
+        border-radius: 50px;
+        border: white 1px solid;
+        color: #00a27a;
+        margin: 12px 12px;
+        font-weight: 800;
+        font-size: 15px;
+    }
+
+    .hidebusca {
+        width: 30%;
+        max-width: 320px;
+        border: 1px solid white;
+        margin: 20px;
+        padding: 20px;
+        float: left;
+        border-radius: 10px;
+        background: rgba(151, 226, 197, 0.19);
+        height: 140px;
+    }
+
+    #cards {
+        width: 22%;
+        border: 1px solid #f1f1f1;
+        height: 340px;
+        float: left;
+        margin: 1%;
+        background: white;
+        box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.12);
+        min-width: 275px;
+    }
+
+    #fotocardws {
+        width: 100%;
+        height: 150px;
+    }
+
+    #exfoto {
+        width: 150px;
+        height: 150px;
+        background: gray;
+        margin: 10px auto;
+    }
+
+    p.NomeCardWS {
+        color: #00a27a;
+        font-size: 14px;
+        width: 100%;
+        font-weight: 600;
+        margin: 5px 0px 5px 0px;
+    }
+
+    p.AtuacaoCardWS {
+        color: #00dea7;
+        font-size: 14px;
+        width: 100%;
+        font-weight: 600;
+        margin: 5px 0px 5px 0px;
+    }
+
+    p.EnderecoCardWS {
+        color: #b3b3b3;
+        font-size: 12px;
+        width: 100%;
+        font-weight: 600;
+        margin: 5px 0px 5px 20px;
+    }
+
+    p.TelefoneCardWS {
+        color: #191919;
+        font-size: 14px;
+        width: 100%;
+        font-weight: 600;
+        margin: 5px 0px 5px 20px;
+    }
+
+    #desccardws {
+        padding: 15px;
+    }
+
+    #botãocardws {
+        width: 100%;
+        clear: both;
+    }
+
+    button.cardbuttonws {
+        align-items: center;
+        text-align: center;
+        margin: auto;
+        width: 100px;
+        height: 30px;
+        background: #00a27a;
+        border: none;
+        border-radius: 50px;
+        color: white;
+        font-weight: bold;
+    }
+
+    #centrabuttoncards {
+        width: 100px;
+        margin: auto;
+    }
+}
+
+/* Fim Css ToggleGuia Saude */
+
+
+/*Caixa de Login Início*/
+
+#insideloginbox {
+    padding: 25px;
+}
+
+h4.panel-title.gs2 {
+    background-color: #0068a2;
+    background-image: url('../content/img/iconemore.png');
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-position-y: 5px;
+    background-blend-mode: lighten;
+    height: 50px;
+}
+
+.btn-flutuar-cor {
+    transition: 0.5s;
+    background: rgb(221, 221, 221);
+    color: rgba(0, 0, 0, 0.87);
+}
+
+    .btn-flutuar-cor:hover {
+        transition: 0.5s;
+        background: #f12c7b;
+        color: white;
+    }
+
+input#btnEsqueciMinhaSenha {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 500 !important;
+    font-family: open sans;
+    margin-top: 20px;
+    float: right;
+    transition: 0.5s;
+}
+
+    input#btnEsqueciMinhaSenha:hover {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        font-weight: 500 !important;
+        font-family: open sans;
+        margin-top: 20px;
+        float: right;
+        transition: 0.5s;
+        background: #03A9F4;
+        color: white;
+    }
+
+/* Caixa de login Fim*/
+
+/* Slideshow */
+
+#slideshowws {
+    width: 100%;
+    float: left;
+}
+
+.slidesws img {
+    width: 100%;
+    max-height: 350px;
+    overflow: hidden;
+}
+
+/* Fim Slideshow */
+
+/*Resultado Busca*/
+
+d#resultadosws {
+    width: 100%;
+    min-height: 400px;
+    padding: 10px;
+    clear: both;
+}
+
+#resultadosws {
+    width: 100%;
+    max-width: 1230px !important;
+    margin: auto;
+}
+
+/* Fim Resultado Busca*/
+
+
+/* desorganizado */
+
+#seletorcidadebusca {
+    float: left;
+    width: 410px;
+}
+
+a.tt2 {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+p.seltopo {
+    float: left;
+    line-height: 32px;
+}
+
+.nav-pills > li i {
+    display: block;
+    font-size: 30px;
+    padding: 0px 10px !important;
+    float: left;
+    line-height: 27px;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+    background-color: #ce3b77 !important;
+    color: #FFFFFF;
+    box-shadow: 0 16px 26px -10px rgba(206, 59, 119, 0.5), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(206, 59, 119, 0.14) !important;
+}
+
+#engconttopo {
+    width: 55%;
+    clear: both;
+    max-height: 35px;
+    float: right;
+    min-width: 780px;
+}
+
+    #engconttopo .btn, a.btn {
+        padding: 5px 30px !important;
+        margin: 4px 10px;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    #engconttopo .btn-group, .btn-group-vertical {
+        position: relative;
+        margin: 0px 0px;
+    }
+
+    #engconttopo a.tt:hover, a.tt:focus {
+        color: #03A9F4;
+        transition: 0.5s;
+        text-decoration: none;
+        line-height: 32px;
+        margin-left: 5px;
+        font-weight: 400;
+        transition: 0.5s;
+    }
+
+    #engconttopo a.tt {
+        color: white;
+        transition: 0.5s;
+        text-decoration: none;
+        line-height: 32px;
+        margin-left: 5px;
+        font-weight: 400;
+        transition: 0.5s;
+    }
+
+a.cadastresetopows {
+    background: rgba(3, 169, 244, 0.30);
+    padding: 0px 5px 3px 5px;
+    margin-left: 5px;
+    color: white;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+    a.cadastresetopows:hover {
+        background: rgba(3, 169, 244, 0.99);
+        padding: 0px 5px 3px 5px;
+        margin-left: 5px;
+        color: white;
+        border-radius: 10px;
+        transition: 0.5s;
+    }
+
+#seletorcidadebusca button.btn.dropdown-toggle.btn-default {
+    background: white;
+    color: #4c4c4c;
+}
+
+#ctpf1 {
+    width: 50%;
+    height: 400px;
+    float: left;
+    min-width: 320px;
+    margin-top: 35px;
+}
+
+#ctpf2 {
+    width: 50%;
+    float: left;
+    min-width: 320px;
+    height: 500px;
+}
+
+#ctpf3 {
+    width: 40%;
+    height: 375px;
+    float: left;
+    min-width: 320px;
+    padding: 4% 4%;
+    border: 1px solid #00a27a;
+    margin: auto;
+    margin-right: 5%;
+    margin-left: 5%;
+    border-radius: 15px;
+}
+
+#ctpf4 {
+    width: 50%;
+    height: 400px;
+    float: left;
+    min-width: 320px;
+}
+
+
+#contentprofissionais {
+    width: 100%;
+    min-height: 600px;
+    clear: both;
+    float: left;
+}
+
+#contentleftprof {
+    float: left;
+    width: 49%;
+}
+
+#contentrightprof {
+    width: 40%;
+    float: left;
+}
+
+#picprofs {
+    width: 75%;
+    height: 400px;
+    background: white;
+    overflow: hidden;
+    margin: auto;
+    min-width: 320px;
+    max-width: 400px;
+}
+
+#totalfooter {
+    width: 100%;
+    clear: both;
+}
+
+#totaltopo {
+    width: 100%;
+    height: 170px;
+    float: left;
+    position: relative;
+    z-index: 999999;
+}
+
+#dadosprofsws {
+    border: 1px solid #00a27a;
+    border-radius: 15px;
+    min-height: 300px;
+    margin: auto;
+    width: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 25px;
+}
+
+#dadosprofsws2 {
+    border: 1px solid #0068a2;
+    border-radius: 15px;
+    min-height: 300px;
+    margin: auto;
+    width: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 25px;
+}
+
+p.especialidadesaude {
+    color: #00a27a;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+p.contatosaude {
+    color: #00a27a;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    margin-top: 0px;
+}
+
+p.esparea {
+    background: url('../content/img/ico-profissionais.png') no-repeat 0px 2px;
+    padding-left: 25px;
+}
+
+p.contatosaude2 {
+    background: url('../content/img/ico-profissionais.png') no-repeat 0px 2px;
+    padding-left: 25px;
+    font-weight: 400;
+    padding-bottom: 3px;
+}
+
+#dadosbasicosprofs {
+    width: 100%;
+    margin: 35px auto;
+    float: left;
+}
+
+#btvoucher {
+    width: 90%;
+    float: left;
+    height: 45px;
+}
+
+.btnvoucher {
+    width: 250px;
+    float: right;
+}
+
+    .btnvoucher a {
+        background: rgb(7, 86, 140) !important;
+        padding: 12px 40px;
+        font-size: 21px;
+        border-radius: 50px;
+    }
+
+
+
+#botaovoucher a {
+    color: white;
+    text-decoration: none;
+}
+
+#textoid {
+    color: #00a27a;
+    font-size: 28px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+#descriprofs {
+    font-size: 21px;
+    font-weight: bolder;
+    color: #06daa6;
+    margin-top: 0px;
+    float: left;
+    width: 100%;
+    height: 35px;
+}
+
+
+
+#boxdescprof {
+    width: 90%;
+    background: rgba(128, 128, 128, 0.28);
+    border: 1px solid #00a27a;
+    min-height: 280px;
+    margin-top: 35px;
+    padding: 20px;
+    border-radius: 10px;
+    float: left;
+}
+
+
+
+#mapsgooglescript {
+    width: 100%;
+    height: 295px;
+    background: #ececec00;
+    margin: auto;
+    border-radius: 20px;
+}
+
+p.gmaps {
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: bolder;
+    color: #00a27a;
+    margin-bottom: 20px;
+}
+
+/* css sobre*/
+
+#sobreoclubemvc {
+    max-width: 100%;
+    padding: 20px;
+    clear: both;
+}
+
+.contentssb {
+    width: 320px;
+    float: left;
+    text-align: justify;
+    padding: 25px;
+    height: 320px;
+    color: white;
+    font-weight: 400;
+}
+
+#engbtree {
+    max-width: 965px;
+    margin: auto;
+}
+
+#comof {
+    background: rgba(30,115,190,0.85);
+    color: white;
+    font-weight: 400;
+}
+
+#vantagens {
+    background: rgba(219,179,0,0.85);
+}
+
+#planos {
+    background: rgba(224,0,97,0.85);
+}
+
+#engsobre {
+    width: 100%;
+    min-height: 735px;
+    background-image: url(../content/img/sobre-o-clube-conteza.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 75%;
+    background-position-y: top;
+    float: left;
+}
+
+strong.headingws {
+    font-size: 28px;
+}
+
+#ContentSobreMvc {
+    width: 100%;
+    clear: both;
+}
+
+p.oclubews {
+    max-width: 400px;
+    margin-left: 10%;
+    margin-top: 50px;
+}
+
+#exfoto {
+    overflow: hidden;
+}
+
+#engfaca {
+    max-width: 1080px !important;
+    margin: auto;
+    height: 700px;
+    margin-top: 35px;
+}
+
+.promos {
+    float: left;
+}
+
+#promo1 {
+    width: 100%;
+    min-height: 600px;
+    background-image: url('../Images/plano1.png');
+    background-size: contain;
+    min-width: 200px;
+    background-position-y: top;
+    background-repeat: no-repeat;
+}
+
+#promo2 {
+    width: 100%;
+    min-height: 600px;
+    background-image: url('../Images/plano2.png');
+    background-size: contain;
+    min-width: 200px;
+    background-position-y: top;
+    background-repeat: no-repeat;
+}
+
+#promo3 {
+    width: 100%;
+    min-height: 600px;
+    background-image: url('../Images/plano3.png');
+    background-size: contain;
+    min-width: 200px;
+    background-position-y: top;
+    background-repeat: no-repeat;
+}
+
+#promo4 {
+    width: 100%;
+    min-height: 600px;
+    background-image: url('../Images/plano4.png');
+    background-size: contain;
+    min-width: 200px;
+    background-position-y: top;
+    background-repeat: no-repeat;
+}
+
+#titfaca h2 {
+    text-align: center;
+    max-width: 300px;
+    margin: auto;
+    border-bottom: 2px solid orange;
+    margin-top: 20px;
+}
+
+#titfaca p {
+    max-width: 565px;
+    margin: auto;
+    text-align: center;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+#ctfacaparte {
+    background: url('../content/img/bg-faca-parte.png') no-repeat top;
+    width: 100%;
+    clear: both;
+    margin-bottom: 30px;
+}
+
+#engps {
+    max-width: 270px;
+    width: 25%;
+    float: left;
+    background: white;
+    border-radius: 15px;
+    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.23);
+}
+
+button.facaparte {
+    margin: auto;
+    padding: 7px;
+    background: white;
+    border: 2px solid #005183;
+    font-weight: 600;
+    color: #005183;
+    left: 2%;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+.regulamentofaca {
+    text-align: center;
+}
+
+button.facaparte:hover {
+    margin: auto;
+    padding: 7px;
+    background: rgba(128, 128, 128, 0.26);
+    border: 2px solid #088fca;
+    font-weight: 600;
+    color: #088fca;
+    left: 2%;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+button.facaparte2 {
+    margin: auto;
+    padding: 7px;
+    background: white;
+    border: 2px solid #d7125f;
+    font-weight: 600;
+    color: #d7125f;
+    left: 2%;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+    button.facaparte2:hover {
+        margin: auto;
+        padding: 7px;
+        background: rgba(128, 128, 128, 0.26);
+        border: 2px solid #82225d;
+        font-weight: 600;
+        color: #82225d;
+        left: 2%;
+        position: relative;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        transition: 0.5s;
+    }
+
+button.facaparte3 {
+    margin: auto;
+    padding: 7px;
+    background: white;
+    border: 2px solid #d7125f;
+    font-weight: 600;
+    color: #d7125f;
+    left: 2%;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+    button.facaparte3:hover {
+        margin: auto;
+        padding: 7px;
+        background: rgba(128, 128, 128, 0.26);
+        border: 2px solid #fb0666;
+        font-weight: 600;
+        color: #fb0666;
+        left: 2%;
+        position: relative;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        transition: 0.5s;
+    }
+
+button.facaparte4 {
+    margin: auto;
+    padding: 7px;
+    background: white;
+    border: 2px solid #ff7f00;
+    font-weight: 600;
+    color: #ff7f00;
+    left: 2%;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+    button.facaparte4:hover {
+        margin: auto;
+        padding: 7px;
+        background: rgba(128, 128, 128, 0.26);
+        border: 2px solid #ffab29;
+        font-weight: 600;
+        color: #ffab29;
+        left: 2%;
+        position: relative;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        transition: 0.5s;
+    }
+
+#contentcontato {
+    padding: 20px;
+    min-height: 600px;
+}
+
+#engbcontato {
+    width: 100%;
+    background: url('../content/img/cadastro-clube-conteza.jpg');
+    float: left;
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+#totalfooter {
+    float: left;
+}
+
+.navbar {
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/*******************************
+* Does not work properly if "in" is added after "collapse".
+* Get free snippets on bootpen.com
+*******************************/
+.panel-group .panel {
+    border-radius: 0;
+    box-shadow: none;
+    border-color: #EEEEEE;
+}
+
+.panel-default > .panel-heading {
+    padding: 0;
+    border-radius: 0;
+    color: #212121;
+    background-color: #FAFAFA;
+    border-color: #EEEEEE;
+}
+
+.panel-title {
+    font-size: 14px;
+}
+
+    .panel-title > a {
+        display: block;
+        text-decoration: none;
+    }
+
+.more-less {
+    float: right;
+    color: #212121;
+}
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: #EEEEEE;
+}
+
+/* ----- v CAN BE DELETED v ----- */
+body {
+    background-color: #26a69a;
+}
+
+.demo {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.container.demo {
+    width: 100%;
+    clear: both;
+    background-image: url('../content/img/decalque-faca-parte.png');
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.18);
+    background-blend-mode: hue;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 40px 0px;
+}
+
+#paginacaocont a {
+    color: #07568c;
+    text-decoration: none;
+    padding: 2px 7px 2px 7px;
+}
+
+#botãocardws {
+    margin-left: 30%;
+}
+
+.panel-body {
+    border-top: 0px !important;
+}
+
+button.cardbuttonws a {
+    color: white;
+    transition: 0.5s;
+}
+
+    button.cardbuttonws a:hover {
+        text-decoration: none !important;
+        text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
+        transition: 0.5s;
+    }
+
+#desccardws {
+    background: url('../content/img/icons.png') no-repeat 7px 70px;
+}
+
+h4.panel-title.CM {
+    background-image: url('../content/img/decalque-comercio.png');
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-position-y: -100px;
+    border: none;
+    text-align: center !important;
+    transition: 0.5s;
+    background-blend-mode: hue;
+    background-color: rgba(244, 244, 244, 0.73);
+    height: 50px;
+    font-size: 21px;
+}
+
+h4.panel-title.SD {
+    background-image: url('../content/img/decalque-saude.png');
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-position-y: -149px;
+    border: none;
+    text-align: center !important;
+    transition: 0.5s;
+    background-blend-mode: hue;
+    background-color: rgba(244, 244, 244, 0.7);
+    height: 50px;
+    font-size: 21px;
+}
+
+h4.panel-title.PL {
+    background-image: url('../content/img/decalque-profissional.png');
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-position-y: -199px;
+    border: none;
+    text-align: center !important;
+    transition: 0.5s;
+    background-blend-mode: hue;
+    background-color: rgba(244, 244, 244, 0.7);
+    height: 50px;
+    font-size: 21px;
+}
+
+h4.panel-title.CM:hover {
+    background-image: url('../content/img/decalque-comercio.png');
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-position-y: -100px;
+    border: none;
+    text-align: center !important;
+    transition: 0.5s;
+    background-blend-mode: hue;
+    background-color: rgba(244, 244, 244, 0.3);
+    height: 50px;
+}
+
+h4.panel-title.SD:hover {
+    background-image: url('../content/img/decalque-saude.png');
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-position-y: -149px;
+    border: none;
+    text-align: center !important;
+    transition: 0.5s;
+    background-blend-mode: hue;
+    background-color: rgba(244, 244, 244, 0.3);
+    height: 50px;
+}
+
+h4.panel-title.PL:hover {
+    background-image: url('../content/img/decalque-profissional.png');
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-position-y: -199px;
+    border: none;
+    text-align: center !important;
+    transition: 0.5s;
+    background-blend-mode: hue;
+    background-color: rgba(244, 244, 244, 0.3);
+    height: 50px;
+}
+
+h4.panel-title.CM a {
+    color: #424242 !important;
+    text-decoration: none;
+    line-height: 35px;
+}
+
+    h4.panel-title.CM a:hover {
+        color: #ff9700;
+        text-decoration: none;
+        line-height: 35px;
+    }
+
+h4.panel-title.SD a {
+    color: #424242 !important;
+    text-decoration: none;
+    line-height: 35px;
+}
+
+    h4.panel-title.SD a:hover {
+        color: dodgerblue;
+        text-decoration: none;
+        line-height: 35px;
+        line-height: 35px;
+    }
+
+h4.panel-title.PL a {
+    color: #424242 !important;
+    text-decoration: none;
+    line-height: 35px;
+}
+
+    h4.panel-title.PL a:hover {
+        color: brown;
+        text-decoration: none;
+        line-height: 35px;
+    }
+
+.panel + .panel {
+    margin-top: 0px !important;
+}
+
+#botaovoucher a {
+    color: rgba(255, 255, 255, 1) !important;
+    text-decoration: none;
+}
+
+
+/* conteudo accordeon */
+
+.content-faca-parte {
+    width: 100%;
+}
+
+#engl {
+    width: 100%;
+}
+
+img.aligncenter.size-full.wp-image-615 {
+    max-height: 685px !important;
+    max-width: 640px !important;
+}
+
+#esq-egl {
+    width: 50%;
+    float: left;
+}
+
+#dir-egl {
+    width: 50%;
+    float: left;
+}
+
+.eng {
+    padding: 20px;
+    min-height: 150px;
+    background: rgba(255, 255, 255, 0.84);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.number-egl {
+    font-size: 50px;
+    float: left;
+    width: 30px;
+    height: 50px;
+    margin-left: 30px;
+    margin-top: 40px;
+    font-weight: bold;
+    color: #ff4188;
+}
+
+.texto-egl {
+    text-align: justify;
+    max-width: 80%;
+    float: left;
+    margin-left: 25px;
+}
+
+strong.egl-txt {
+    font-size: 19px;
+    color: #1e73be;
+}
+
+.eng2 {
+    padding: 20px;
+    height: 160px;
+    background: rgba(255, 255, 255, 0.84);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.eng3 {
+    padding: 20px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.84);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+#querofazerparte {
+    background: #ff4188;
+    width: 200px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.rc-anchor-normal .rc-anchor-checkbox-label {
+    width: 111px !important;
+}
+
+
+
+
+.rc-anchor-normal .rc-anchor-content {
+    height: 74px;
+    width: 165px !important;
+}
+
+.panel-body.cm {
+    background: url('../content/img/decalque-comercio.png') right -150px no-repeat;
+}
+
+.panel-body.sd {
+    background: url('../content/img/decalque-saude.png') right -199px no-repeat;
+}
+
+.panel-body.pl {
+    background: url('../content/img/decalque-profissional.png') right -248px no-repeat !important;
+}

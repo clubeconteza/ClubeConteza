@@ -1,0 +1,1265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{85FD3370-F27C-4001-BEB6-CBE0212F66D5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ContezaAdmin</RootNamespace>
+    <AssemblyName>Conteza Admin</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>ftp://clubeconteza.com.br/portal/app/prod/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>https://www.clubeconteza.com.br/app/prod/</InstallUrl>
+    <TargetCulture>pt-BR</TargetCulture>
+    <ProductName>ClubeConteza</ProductName>
+    <PublisherName>clubeconteza.com.br</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>index.htm</WebPage>
+    <ApplicationRevision>156</ApplicationRevision>
+    <ApplicationVersion>1.0.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>5C0DDE616D81796CE7D587A0086EA246B3FB98C4</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ContezaAdmin_ChaveTemporária.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocX, Version=1.0.0.22, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocX.1.0.0.22\lib\net40\DocX.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DSBarCode, Version=1.0.6292.24535, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Dlls\DSBarCode.dll</HintPath>
+    </Reference>
+    <Reference Include="ExtendedRichTextBox">
+      <HintPath>..\..\..\..\..\Dlls\ExtendedRichTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlRichTextBox">
+      <HintPath>..\..\..\..\..\..\Dlls\HtmlRichTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.4.0\lib\net40\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.4.1\lib\net40\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.4.1\lib\net40\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.4.0\lib\net40\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.4.1\lib\net40\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.4.1\lib\net40\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.4.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.4.0\lib\net40\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Diagnostics.Tracing.EventSource, Version=1.1.28.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Diagnostics.Tracing.EventSource.Redist.1.1.28\lib\net40\Microsoft.Diagnostics.Tracing.EventSource.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\Microsoft.NET\Primary Interop Assemblies\Microsoft.mshtml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.Compatibility">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.Compatibility.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Reports">
+      <HintPath>..\..\..\..\..\Dlls\Reports.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Design">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.IO.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Management">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks, Version=2.6.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.10\lib\net40\System.Threading.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Transactions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms.Ribbon35, Version=3.5.8.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\..\Dlls\System.Windows.Forms.Ribbon35.dll</HintPath>
+    </Reference>
+    <Reference Include="System.XML">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrativo\frmBancoDeDados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrativo\frmBancoDeDados.Designer.cs">
+      <DependentUpon>frmBancoDeDados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\frmEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrativo\frmEmpresa.Designer.cs">
+      <DependentUpon>frmEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\frmGrupos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrativo\frmGrupos.Designer.cs">
+      <DependentUpon>frmGrupos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\frmLojas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrativo\frmLojas.Designer.cs">
+      <DependentUpon>frmLojas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrativo\frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrativo\frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Atendimento\frmAssinatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Atendimento\frmAssinatura.Designer.cs">
+      <DependentUpon>frmAssinatura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Atendimento\frmCartoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Atendimento\frmCartoes.Designer.cs">
+      <DependentUpon>frmCartoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Atendimento\frmContezinoContrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Atendimento\frmContezinoContrato.Designer.cs">
+      <DependentUpon>frmContezinoContrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Atendimento\frmContratoAnotacoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Atendimento\frmContratoAnotacoes.Designer.cs">
+      <DependentUpon>frmContratoAnotacoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Atendimento\frmCorporativo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Atendimento\frmCorporativo.Designer.cs">
+      <DependentUpon>frmCorporativo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Atendimento\frmCorporativoExportar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Atendimento\frmCorporativoExportar.Designer.cs">
+      <DependentUpon>frmCorporativoExportar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Atendimento\frmCorporativoManuNiveis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Atendimento\frmCorporativoManuNiveis.Designer.cs">
+      <DependentUpon>frmCorporativoManuNiveis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Atendimento\frmCorporativoNovo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Atendimento\frmCorporativoNovo.Designer.cs">
+      <DependentUpon>frmCorporativoNovo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Atendimento\frmFamiliar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Atendimento\frmFamiliar.Designer.cs">
+      <DependentUpon>frmFamiliar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comercial\frmFind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\frmFind.Designer.cs">
+      <DependentUpon>frmFind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Atendimento\frmPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Atendimento\frmPagamento.Designer.cs">
+      <DependentUpon>frmPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Atendimento\frmParceiros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Atendimento\frmParceiros.Designer.cs">
+      <DependentUpon>frmParceiros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Atendimento\frmRprContratosDiariosPorCanal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Atendimento\frmRprContratosDiariosPorCanal.Designer.cs">
+      <DependentUpon>frmRprContratosDiariosPorCanal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Atendimento\frmRptCarteiraProvisoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Atendimento\frmRptCarteiraProvisoria.Designer.cs">
+      <DependentUpon>frmRptCarteiraProvisoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BarCodeBase.cs" />
+    <Compile Include="C2of5i.cs" />
+    <Compile Include="CarneContrato_LocalDataSet.cs">
+      <DependentUpon>CarneContrato_LocalDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CarneContrato_LocalDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarneContrato_LocalDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClubeContezaCorporativoListaBeneficiarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClubeContezaCorporativoListaBeneficiarios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClubeContezaRelatorios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClubeContezaRelatorios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClubeConteza_LocalDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClubeConteza_LocalDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClubeConteza_LocalDataSetMudancaContrato.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClubeConteza_LocalDataSetMudancaContrato.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClubeConteza_Relatorios.cs">
+      <DependentUpon>ClubeConteza_Relatorios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClubeConteza_Relatorios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClubeConteza_Relatorios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Comercial\frmBanner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\frmBanner.Designer.cs">
+      <DependentUpon>frmBanner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comercial\frmCampanhas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\frmCampanhas.Designer.cs">
+      <DependentUpon>frmCampanhas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comercial\frmMensalidadePremiada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\frmMensalidadePremiada.Designer.cs">
+      <DependentUpon>frmMensalidadePremiada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comercial\frmPlanos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\frmPlanos.Designer.cs">
+      <DependentUpon>frmPlanos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comercial\frmProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\frmProduto.Designer.cs">
+      <DependentUpon>frmProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comercial\frmPromocao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\frmPromocao.Designer.cs">
+      <DependentUpon>frmPromocao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comercial\frmReplace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\frmReplace.Designer.cs">
+      <DependentUpon>frmReplace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Comercial\frmsms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comercial\frmsms.Designer.cs">
+      <DependentUpon>frmsms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBClubeContezaDataSet.cs">
+      <DependentUpon>DBClubeContezaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBClubeContezaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBClubeContezaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DBClubeContezaDataSet_ContezinoTermo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBClubeContezaDataSet_ContezinoTermo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Financeiro\frmBoletos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financeiro\frmBoletos.Designer.cs">
+      <DependentUpon>frmBoletos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Financeiro\frmImpArquivoPagamentoBanco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financeiro\frmImpArquivoPagamentoBanco.Designer.cs">
+      <DependentUpon>frmImpArquivoPagamentoBanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Financeiro\FrmManutencaoParcela.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financeiro\FrmManutencaoParcela.Designer.cs">
+      <DependentUpon>FrmManutencaoParcela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Financeiro\frmrenovacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Financeiro\frmrenovacao.Designer.cs">
+      <DependentUpon>frmrenovacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrocaDeSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrocaDeSenha.Designer.cs">
+      <DependentUpon>frmTrocaDeSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inadimplentes\frmNegociacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inadimplentes\frmNegociacao.Designer.cs">
+      <DependentUpon>frmNegociacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MensagensDoSistema.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MensagensDoSistema.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ParametrosInterface.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\frmrpt0013.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\frmrpt0013.Designer.cs">
+      <DependentUpon>frmrpt0013.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\frmrpt0015.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\frmrpt0015.Designer.cs">
+      <DependentUpon>frmrpt0015.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\frmrpt0016.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\frmrpt0016.Designer.cs">
+      <DependentUpon>frmrpt0016.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\frmRPT0017.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\frmRPT0017.Designer.cs">
+      <DependentUpon>frmRPT0017.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\frmrpt0018.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\frmrpt0018.Designer.cs">
+      <DependentUpon>frmrpt0018.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\frmRpt0023.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\frmRpt0023.Designer.cs">
+      <DependentUpon>frmRpt0023.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\frmRpt0024.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\frmRpt0024.Designer.cs">
+      <DependentUpon>frmRpt0024.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\frmRpt0025.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\frmRpt0025.Designer.cs">
+      <DependentUpon>frmRpt0025.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RPT\frmRpt0026.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RPT\frmRpt0026.Designer.cs">
+      <DependentUpon>frmRpt0026.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TinyMCE.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TinyMCE.Designer.cs">
+      <DependentUpon>TinyMCE.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Administrativo\frmBancoDeDados.resx">
+      <DependentUpon>frmBancoDeDados.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrativo\frmEmpresa.resx">
+      <DependentUpon>frmEmpresa.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrativo\frmGrupos.resx">
+      <DependentUpon>frmGrupos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrativo\frmLojas.resx">
+      <DependentUpon>frmLojas.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrativo\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Atendimento\frmAssinatura.resx">
+      <DependentUpon>frmAssinatura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Atendimento\frmCartoes.resx">
+      <DependentUpon>frmCartoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Atendimento\frmContezinoContrato.resx">
+      <DependentUpon>frmContezinoContrato.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Atendimento\frmContratoAnotacoes.resx">
+      <DependentUpon>frmContratoAnotacoes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Atendimento\frmCorporativo.resx">
+      <DependentUpon>frmCorporativo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Atendimento\frmCorporativoExportar.resx">
+      <DependentUpon>frmCorporativoExportar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Atendimento\frmCorporativoManuNiveis.resx">
+      <DependentUpon>frmCorporativoManuNiveis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Atendimento\frmCorporativoNovo.resx">
+      <DependentUpon>frmCorporativoNovo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Atendimento\frmFamiliar.resx">
+      <DependentUpon>frmFamiliar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comercial\frmFind.resx">
+      <DependentUpon>frmFind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Atendimento\frmPagamento.resx">
+      <DependentUpon>frmPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Atendimento\frmParceiros.resx">
+      <DependentUpon>frmParceiros.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Atendimento\frmRprContratosDiariosPorCanal.resx">
+      <DependentUpon>frmRprContratosDiariosPorCanal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Atendimento\frmRptCarteiraProvisoria.resx">
+      <DependentUpon>frmRptCarteiraProvisoria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comercial\frmCampanhas.resx">
+      <DependentUpon>frmCampanhas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comercial\frmMensalidadePremiada.resx">
+      <DependentUpon>frmMensalidadePremiada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comercial\frmReplace.resx">
+      <DependentUpon>frmReplace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RPT0026.rdlc" />
+    <EmbeddedResource Include="RPT\RPT0027.rdlc" />
+    <EmbeddedResource Include="RPT\frmRpt0023.resx">
+      <DependentUpon>frmRpt0023.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\frmRpt0024.resx">
+      <DependentUpon>frmRpt0024.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\frmRpt0025.resx">
+      <DependentUpon>frmRpt0025.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\frmRpt0026.resx">
+      <DependentUpon>frmRpt0026.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RPT0025..rdlc" />
+    <EmbeddedResource Include="RPT\RPT0024.rdlc" />
+    <EmbeddedResource Include="RPT\RPT0023.rdlc" />
+    <EmbeddedResource Include="RPT\RPT0022.rdlc" />
+    <EmbeddedResource Include="Comercial\frmsms.resx">
+      <DependentUpon>frmsms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RPT0021.rdlc" />
+    <EmbeddedResource Include="RPT\RPT0020.rdlc" />
+    <EmbeddedResource Include="RPT\RPT0019.rdlc" />
+    <EmbeddedResource Include="Inadimplentes\frmNegociacao.resx">
+      <DependentUpon>frmNegociacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\frmrpt0018.resx">
+      <DependentUpon>frmrpt0018.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RPT0018b.rdlc" />
+    <EmbeddedResource Include="RPT\RPT0018.rdlc" />
+    <EmbeddedResource Include="RPT\RPT0017b .rdlc" />
+    <EmbeddedResource Include="RPT\RPT0017.rdlc" />
+    <EmbeddedResource Include="RPT\frmrpt0015.resx">
+      <DependentUpon>frmrpt0015.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\frmrpt0016.resx">
+      <DependentUpon>frmrpt0016.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\frmRPT0017.resx">
+      <DependentUpon>frmRPT0017.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RPT0016.rdlc" />
+    <EmbeddedResource Include="RPT\RPT0015.rdlc" />
+    <EmbeddedResource Include="RPT\RPT0014.rdlc" />
+    <EmbeddedResource Include="Financeiro\FrmManutencaoParcela.resx">
+      <DependentUpon>FrmManutencaoParcela.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\frmrpt0013.resx">
+      <DependentUpon>frmrpt0013.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RPT0012.rdlc" />
+    <EmbeddedResource Include="RPT\RPT0011.rdlc" />
+    <EmbeddedResource Include="Financeiro\frmrenovacao.resx">
+      <DependentUpon>frmrenovacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RPT0010.rdlc" />
+    <EmbeddedResource Include="frmTrocaDeSenha.resx">
+      <DependentUpon>frmTrocaDeSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RPT0009.rdlc" />
+    <EmbeddedResource Include="RPT\RPT0008.rdlc" />
+    <EmbeddedResource Include="RPT\RPT0007.rdlc" />
+    <EmbeddedResource Include="RPT\RPT0006.rdlc" />
+    <EmbeddedResource Include="RPT\RPT0005.rdlc" />
+    <EmbeddedResource Include="Financeiro\frmImpArquivoPagamentoBanco.resx">
+      <DependentUpon>frmImpArquivoPagamentoBanco.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RPT0004.rdlc" />
+    <EmbeddedResource Include="RPT\RPT0003.rdlc" />
+    <EmbeddedResource Include="RPT\RPT0002.rdlc" />
+    <EmbeddedResource Include="Comercial\frmBanner.resx">
+      <DependentUpon>frmBanner.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comercial\frmPlanos.resx">
+      <DependentUpon>frmPlanos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comercial\frmProduto.resx">
+      <DependentUpon>frmProduto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Comercial\frmPromocao.resx">
+      <DependentUpon>frmPromocao.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Financeiro\frmBoletos.resx">
+      <DependentUpon>frmBoletos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MensagensDoSistema.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MensagensDoSistema.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RPT\RPT0001.rdlc" />
+    <EmbeddedResource Include="RPT\RPT0013.rdlc" />
+    <EmbeddedResource Include="TinyMCE.resx">
+      <DependentUpon>TinyMCE.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="CarneContrato_LocalDataSet.xsc">
+      <DependentUpon>CarneContrato_LocalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CarneContrato_LocalDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CarneContrato_LocalDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CarneContrato_LocalDataSet.xss">
+      <DependentUpon>CarneContrato_LocalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ClubeContezaCorporativoListaBeneficiarios.xsc">
+      <DependentUpon>ClubeContezaCorporativoListaBeneficiarios.xsd</DependentUpon>
+    </None>
+    <None Include="ClubeContezaCorporativoListaBeneficiarios.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClubeContezaCorporativoListaBeneficiarios.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClubeContezaCorporativoListaBeneficiarios.xss">
+      <DependentUpon>ClubeContezaCorporativoListaBeneficiarios.xsd</DependentUpon>
+    </None>
+    <None Include="ClubeContezaRelatorios.xsc">
+      <DependentUpon>ClubeContezaRelatorios.xsd</DependentUpon>
+    </None>
+    <None Include="ClubeContezaRelatorios.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClubeContezaRelatorios.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClubeContezaRelatorios.xss">
+      <DependentUpon>ClubeContezaRelatorios.xsd</DependentUpon>
+    </None>
+    <None Include="ClubeConteza_LocalDataSet.xsc">
+      <DependentUpon>ClubeConteza_LocalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ClubeConteza_LocalDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClubeConteza_LocalDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClubeConteza_LocalDataSet.xss">
+      <DependentUpon>ClubeConteza_LocalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ClubeConteza_LocalDataSetMudancaContrato.xsc">
+      <DependentUpon>ClubeConteza_LocalDataSetMudancaContrato.xsd</DependentUpon>
+    </None>
+    <None Include="ClubeConteza_LocalDataSetMudancaContrato.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClubeConteza_LocalDataSetMudancaContrato.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClubeConteza_LocalDataSetMudancaContrato.xss">
+      <DependentUpon>ClubeConteza_LocalDataSetMudancaContrato.xsd</DependentUpon>
+    </None>
+    <None Include="ClubeConteza_Relatorios.xsc">
+      <DependentUpon>ClubeConteza_Relatorios.xsd</DependentUpon>
+    </None>
+    <None Include="ClubeConteza_Relatorios.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClubeConteza_Relatorios.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClubeConteza_Relatorios.xss">
+      <DependentUpon>ClubeConteza_Relatorios.xsd</DependentUpon>
+    </None>
+    <None Include="DBClubeContezaDataSet.xsc">
+      <DependentUpon>DBClubeContezaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBClubeContezaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBClubeContezaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBClubeContezaDataSet.xss">
+      <DependentUpon>DBClubeContezaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DBClubeContezaDataSet_ContezinoTermo.xsc">
+      <DependentUpon>DBClubeContezaDataSet_ContezinoTermo.xsd</DependentUpon>
+    </None>
+    <None Include="DBClubeContezaDataSet_ContezinoTermo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DBClubeContezaDataSet_ContezinoTermo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBClubeContezaDataSet_ContezinoTermo.xss">
+      <DependentUpon>DBClubeContezaDataSet_ContezinoTermo.xsd</DependentUpon>
+    </None>
+    <None Include="Gestor.chm">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\ContezaAdmin.Atendimento.frmContezinoContrato.datasource" />
+    <None Include="Properties\DataSources\ContezaAdmin.Atendimento.frmContezinos.datasource" />
+    <None Include="Properties\DataSources\ContezaAdmin.Atendimento.frmTermoDeUso.datasource" />
+    <None Include="Properties\DataSources\Negocios.ParcelaNegocios.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoConteza.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empresa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Usuarios.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Grupos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lojas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Servicos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Produtos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="Relatorios\Boleto.html" />
+    <Content Include="Relatorios\ContratoAlteracao.html" />
+    <Content Include="Resources\AssAngelaCristinaOliveiraVirmond.png" />
+    <Content Include="Resources\Associados.png" />
+    <None Include="Resources\Corporativo.png" />
+    <None Include="Resources\Cadeado.jpg" />
+    <None Include="Resources\BaixaManual.png" />
+    <None Include="Resources\Dinheiro_30_30.png" />
+    <None Include="Resources\Cartao_30_30.png" />
+    <None Include="Resources\ManuNiveis.png" />
+    <None Include="Resources\sms.png" />
+    <None Include="Resources\Filtro.png" />
+    <None Include="Resources\Aviso.png" />
+    <None Include="Resources\Feito.png" />
+    <None Include="Resources\exportar.png" />
+    <None Include="Resources\mkt.fw.png" />
+    <Content Include="Resources\premio.png" />
+    <Content Include="tinymce.html" />
+    <Content Include="tinymce\jscripts\tiny_mce\langs\en.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\license.txt" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\advhr\css\advhr.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\advhr\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\advhr\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\advhr\js\rule.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\advhr\langs\en_dlg.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\advhr\rule.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\advimage\css\advimage.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\advimage\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\advimage\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\advimage\image.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\advimage\img\sample.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\advimage\js\image.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\advimage\langs\en_dlg.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\advlink\css\advlink.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\advlink\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\advlink\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\advlink\js\advlink.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\advlink\langs\en_dlg.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\advlink\link.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\autosave\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\autosave\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\bbcode\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\bbcode\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\compat2x\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\compat2x\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\contextmenu\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\contextmenu\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\directionality\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\directionality\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\emotions\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\emotions\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\emotions\emotions.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-cool.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-cry.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-embarassed.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-foot-in-mouth.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-frown.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-innocent.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-kiss.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-laughing.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-money-mouth.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-sealed.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-smile.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-surprised.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-tongue-out.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-undecided.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-wink.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\emotions\img\smiley-yell.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\emotions\js\emotions.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\emotions\langs\en_dlg.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\example\dialog.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\example\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\example\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\example\img\example.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\example\js\dialog.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\example\langs\en.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\example\langs\en_dlg.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\fullpage\css\fullpage.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\fullpage\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\fullpage\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\fullpage\fullpage.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\fullpage\js\fullpage.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\fullpage\langs\en_dlg.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\fullscreen\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\fullscreen\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\fullscreen\fullscreen.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\iespell\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\iespell\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\inlinepopups\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\inlinepopups\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\alert.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\button.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\buttons.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\confirm.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\corners.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\horizontal.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\img\vertical.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\inlinepopups\skins\clearlooks2\window.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\inlinepopups\template.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\insertdatetime\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\insertdatetime\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\layer\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\layer\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\media\css\content.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\media\css\media.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\media\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\media\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\media\img\flash.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\media\img\flv_player.swf" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\media\img\quicktime.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\media\img\realmedia.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\media\img\shockwave.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\media\img\trans.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\media\img\windowsmedia.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\media\js\embed.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\media\js\media.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\media\langs\en_dlg.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\media\media.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\nonbreaking\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\nonbreaking\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\noneditable\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\noneditable\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\pagebreak\css\content.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\pagebreak\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\pagebreak\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\pagebreak\img\pagebreak.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\pagebreak\img\trans.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\paste\blank.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\paste\css\blank.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\paste\css\pasteword.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\paste\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\paste\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\paste\js\pastetext.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\paste\js\pasteword.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\paste\langs\en_dlg.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\paste\pastetext.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\paste\pasteword.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\preview\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\preview\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\preview\example.html" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\preview\jscripts\embed.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\preview\preview.html" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\print\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\print\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\safari\blank.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\safari\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\safari\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\save\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\save\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\searchreplace\css\searchreplace.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\searchreplace\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\searchreplace\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\searchreplace\js\searchreplace.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\searchreplace\langs\en_dlg.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\searchreplace\searchreplace.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\spellchecker\css\content.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\spellchecker\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\spellchecker\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\spellchecker\img\wline.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\style\css\props.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\style\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\style\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\style\js\props.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\style\langs\en_dlg.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\style\props.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\tabfocus\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\tabfocus\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\table\cell.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\table\css\cell.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\table\css\row.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\table\css\table.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\table\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\table\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\table\js\cell.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\table\js\merge_cells.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\table\js\row.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\table\js\table.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\table\langs\en_dlg.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\table\merge_cells.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\table\row.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\table\table.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\template\blank.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\template\css\template.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\template\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\template\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\template\js\template.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\template\langs\en_dlg.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\template\template.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\visualchars\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\visualchars\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\abbr.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\acronym.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\attributes.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\cite.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\css\attributes.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\css\popup.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\del.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\editor_plugin.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\editor_plugin_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\ins.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\js\abbr.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\js\acronym.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\js\attributes.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\js\cite.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\js\del.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\js\element_common.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\js\ins.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\plugins\xhtmlxtras\langs\en_dlg.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\about.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\anchor.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\charmap.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\color_picker.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\editor_template.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\editor_template_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\image.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\img\colorpicker.jpg" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\img\icons.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\js\about.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\js\anchor.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\js\charmap.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\js\color_picker.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\js\image.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\js\link.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\js\source_editor.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\langs\en.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\langs\en_dlg.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\link.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\skins\default\content.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\skins\default\dialog.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\skins\default\img\buttons.png" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\skins\default\img\items.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\skins\default\img\menu_arrow.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\skins\default\img\menu_check.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\skins\default\img\progress.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\skins\default\img\tabs.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\skins\default\ui.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\skins\o2k7\content.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\skins\o2k7\dialog.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg.png" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_black.png" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\skins\o2k7\img\button_bg_silver.png" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\skins\o2k7\ui.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\skins\o2k7\ui_black.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\skins\o2k7\ui_silver.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\advanced\source_editor.htm" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\simple\editor_template.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\simple\editor_template_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\simple\img\icons.gif" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\simple\langs\en.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\simple\skins\default\content.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\simple\skins\default\ui.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\simple\skins\o2k7\content.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\simple\skins\o2k7\img\button_bg.png" />
+    <Content Include="tinymce\jscripts\tiny_mce\themes\simple\skins\o2k7\ui.css" />
+    <Content Include="tinymce\jscripts\tiny_mce\tiny_mce.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tinymce\jscripts\tiny_mce\tiny_mce_popup.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\tiny_mce_src.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\utils\editable_selects.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\utils\form_utils.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\utils\mctabs.js" />
+    <Content Include="tinymce\jscripts\tiny_mce\utils\validate.js" />
+    <None Include="Resources\Importar.png" />
+    <None Include="Resources\Excluir.png" />
+    <None Include="Resources\Cartao.png" />
+    <Content Include="Resources\LogoRPT.png" />
+    <Content Include="Resources\Tela_sistema_sugestões.png" />
+    <Content Include="Resources\ícones-conteza.png" />
+    <None Include="Resources\background-sistema.png" />
+    <Content Include="Resources\Banner.png" />
+    <None Include="Resources\Modulos.png" />
+    <None Include="Resources\Filial.png" />
+    <None Include="Resources\CallCenter.png" />
+    <None Include="Resources\Boletos.png" />
+    <None Include="Resources\Incluir.png" />
+    <None Include="Resources\Pagamento.png" />
+    <None Include="Resources\Confirmar.png" />
+    <None Include="Resources\Boletos_30_30.png" />
+    <Content Include="Resources\CarneLogo_SICOOB.gif" />
+    <Content Include="Resources\favicon.ico" />
+    <Content Include="Resources\ParceirosComerciais.png" />
+    <Content Include="Resources\Promocao.png" />
+    <Content Include="Resources\Relatorio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Controller\Controller.csproj">
+      <Project>{39771683-04EF-462C-A1C8-4755EECAD393}</Project>
+      <Name>Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{1BDD9005-A10C-47E8-9960-676BB0BA7273}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocios\Negocios.csproj">
+      <Project>{93D81E91-CBCB-4BA3-986D-F4A9C5C31B3D}</Project>
+      <Name>Negocios</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

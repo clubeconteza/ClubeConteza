@@ -1,0 +1,397 @@
+﻿body {
+    background: url(http://clubeconteza.tk/wp-content/uploads/2017/05/bg.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+div#innercontent {
+    width: 80%;
+    min-width: 1024px;
+    margin: auto;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    max-width: 1440px;
+    background: rgba(255, 255, 255, 0.45);
+}
+
+body {
+    font-family: open sans !important;
+    margin: 0px;
+}
+
+div#headertopo {
+    background: #07568c !important;
+    height: 35px;
+    color: white;
+}
+
+div#headerclube {
+    height: 94px;
+    background-image: url(http://191.232.160.34/wordpress/wp-content/uploads/2017/06/bg-menu-conteza.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-color: rgba(255, 255, 255, 0.19);
+    background-blend-mode: color;
+    background-size: 365px;
+    background-position-y: -140px;
+}
+
+ul.menuitem {
+    list-style: none;
+}
+
+li.itens {
+    display: inline;
+    padding: 15px;
+    line-height: 50px;
+}
+
+div#header {
+    width: 100%;
+}
+
+div#menu {
+    height: 50px;
+    background: hsla(0, 0%, 0%, 0.10);
+    margin: auto;
+}
+
+div#welcomebox {
+    max-width: 185px;
+    margin: auto;
+    text-align: center;
+    color: #005f89;
+    margin-bottom: 35px;
+    line-height: 5px;
+}
+
+ul.menuitem {
+    width: 890px;
+    margin: auto;
+}
+
+div#logincontent {
+    width: 100%;
+    min-height: 500px;
+    padding: 50px 0px 50px 0px;
+    background: rgba(255, 255, 255, 0.10);
+}
+
+div#inner {
+    width: 100%;
+}
+
+div#footer {
+    height: 60px;
+    background-color: #07568c;
+    background-image: url(http://clubeconteza.tk/wp-content/uploads/2017/05/bg-footer-conteza.jpg);
+    background-size: 600px;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: -265px;
+    background-blend-mode: multiply;
+}
+
+div#widgetsfooter {
+    height: 265px;
+    background-color: rgb(243, 243, 243);
+    background-image: url(http://clubeconteza.tk/wp-content/uploads/2017/05/bg-footer-conteza.jpg);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-size: 600px;
+}
+
+div#logoclube {
+    width: 250px;
+    float: left;
+    padding: 20px 40px 5px 60px;
+}
+
+div#barrabusca {
+    float: left;
+    width: 570px;
+    border: 1px solid rgba(128, 128, 128, 0.46);
+    border-radius: 5px;
+    height: 28px;
+    margin-top: 30px;
+    line-height: 30px;
+    padding: 2px 0px 2px 5px;
+     
+}
+
+.menuitem li a {
+    text-decoration: none;
+    color: #616161;
+    transition: 0.5s;
+    font-size: 15px;
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+.menuitem li a:hover {
+    text-decoration: none;
+    color: #03A9F4;
+    transition: 0.5s;
+}
+
+div#loginbox {
+    width: 350px;
+    height: 300px;
+    background: white;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.16);
+    margin: auto;
+}
+
+div#selecioneseuperfil {
+    color: gray;
+    font-size: 14px;
+    width: 215px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+div#perfis {
+    width: 800px;
+    margin: auto;
+    height: 50px;
+}
+
+.perfis {
+    width: 250px;
+    height: 45px;
+    float: left;
+    margin: 5px;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-weight:600;
+}
+
+div#perfil1 {
+    background: rgba(128, 128, 128, 0.59);
+    transition: 0.5s;
+}
+
+div#perfil1:hover {
+    background: #088fca;
+    background: -moz-linear-gradient(top, #088fca 0%, #1e5799 100%);
+    background: -webkit-linear-gradient(top, #088fca 0%,#1e5799 100%);
+    background: linear-gradient(to bottom, #088fca 0%,#1e5799 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#088fca', endColorstr='#1e5799',GradientType=0 );
+    transition: 0.5s;
+    color:white;
+}
+
+div#perfil2 {
+    background: rgba(128, 128, 128, 0.59);
+    transition: 0.5s;
+}
+
+    div#perfil2:hover {
+        transition: 0.5s;
+        color: white;
+        background: #f59c0c;
+        background: -moz-linear-gradient(top, #f59c0c 0%, #f07f07 100%);
+        background: -webkit-linear-gradient(top, #f59c0c 0%,#f07f07 100%);
+        background: linear-gradient(to bottom, #f59c0c 0%,#f07f07 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f59c0c', endColorstr='#f07f07',GradientType=0 );
+    }
+
+div#perfil3 {
+    background: rgba(128, 128, 128, 0.59);
+    transition: 0.5s;
+}
+
+    div#perfil3:hover {
+        transition: 0.5s;
+        color: white;
+        background: #f12c7b;
+        background: -moz-linear-gradient(top, #f12c7b 1%, #eb1b5c 100%);
+        background: -webkit-linear-gradient(top, #f12c7b 1%,#eb1b5c 100%);
+        background: linear-gradient(to bottom, #f12c7b 1%,#eb1b5c 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f12c7b', endColorstr='#eb1b5c',GradientType=0 );
+    }
+
+input#buscar {
+    border: none;
+    background: rgba(255, 255, 255, 0);
+    width: 450px;
+    padding: 10px 10px 7px 10px;
+    margin-top: -2px;
+    margin-left: -2px;
+}
+
+button#btnBuscar {
+    float: right;
+    background: #00558f;
+    color: white;
+    padding: 10px 15px 8px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-top: -2px;
+    transition: 0.5s;
+}
+
+    button#btnBuscar:hover {
+        background: #03A9F4;
+        transition: 0.5s;
+    }
+
+div#name-group {
+    width: 450px !important;
+    float: left;
+}
+
+.wids {
+    color: #005f89;
+    font-size: 14px;
+    text-align: justify;
+    float: left;
+}
+
+div#widsobre {
+    width: 275px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+p.tituloswd {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    border-bottom: 1px solid #005f89;
+}
+
+.wids img {
+    float: left;
+    width: 70px;
+    margin-right: 15px;
+}
+
+div#wdmenu1 {
+    max-width: 200px;
+    margin-right: 30px;
+    min-width: 175px;
+}
+
+div#wdmenu2 {
+    max-width: 200px;
+    margin-right: 30px;
+    min-width: 175px;
+}
+
+div#wdmenu3 {
+    max-width: 200px;
+    min-width: 175px;
+}
+
+ul.menuwidsitens {
+    list-style: none;
+}
+
+.menuwidsitens a {
+    text-decoration: none;
+    line-height: 30px;
+    color: #005f89;
+    transition: 0.5s;
+}
+
+    .menuwidsitens a:hover {
+        text-decoration: none;
+        line-height: 30px;
+        color: #03A9F4;
+        transition: 0.5s;
+    }
+
+h2.footer {
+    font-size: 13px;
+    padding: 22px 20px 20px 45px;
+    margin: 0px !important;
+    color: white;
+}
+
+div#insideloginbox {
+    padding: 40px;
+}
+
+div#insidecpf {
+    line-height: 30px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: gray;
+}
+
+div#insidesenha {
+    line-height: 30px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: gray;
+}
+
+input#txtCPF {
+    border: 1px solid rgba(128, 128, 128, 0.39) !important;
+    border-radius: 5px;
+    height: 22px;
+    width: 265px;
+    padding: 2px 2px 2px 5px;
+}
+
+input#txtSenha {
+    border: 1px solid rgba(128, 128, 128, 0.39) !important;
+    border-radius: 5px;
+    height: 22px;
+    width: 265px;
+    padding: 2px 2px 2px 5px;
+}
+
+input#btnConfirmar {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 500 !important;
+    font-family: open sans;
+    margin-top: 20px;
+    float: left;
+    transition: 0.5s;
+}
+
+    input#btnConfirmar:hover {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        font-weight: 500 !important;
+        font-family: open sans;
+        margin-top: 20px;
+        float: left;
+        transition: 0.5s;
+        background: #f12c7b;
+        color: white;
+    }
+
+input#btnEsqueciMinhaSenha {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 500 !important;
+    font-family: open sans;
+    margin-top: 20px;
+    float: right;
+    transition: 0.5s;
+}
+
+    input#btnEsqueciMinhaSenha:hover {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        font-weight: 500 !important;
+        font-family: open sans;
+        margin-top: 20px;
+        float: right;
+        transition: 0.5s;
+        background: #03A9F4;
+        color: white;
+    }

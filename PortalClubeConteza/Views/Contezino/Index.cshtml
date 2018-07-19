@@ -1,0 +1,73 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Contezino";
+}
+
+<div id="corpo" class="corpo">
+    <h2 style="margin-left:20px;"> Minha Conta</h2>
+
+    @TempData["SucessoAlteraSenha"]
+
+    <div id="contentlog" style="background: #dedede; padding: 20px; margin: 20px; font-size: 14px; line-height: 40px;">
+        <div id="nomeintlog"><strong>Nome:</strong>  @(Session["Usuario"] ?? "Sem usuário") </div>
+        <div id="senhaintlog"><strong>Altere sua Senha:</strong> Altere sua senha @Html.ActionLink("Clicando aqui!", "AlteraSenha", "Contezino") </div>
+    </div>
+    <div id="inner">
+        <div class="row text-center">
+            <div class="col-md-8 col-md-offset-2">
+                <h4>Selecione seu perfil para entrar:</h4>
+            </div>
+            <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2">
+                <a href="javascript:void(0)" class="btn btn-primary btn-lg" style="padding: 18px 36px !important;" disabled="@(string.IsNullOrEmpty(ViewBag.LinkVouchersContezino))" onclick="carregarIframe('@ViewBag.LinkVouchersContezino')">
+                    <i class="material-icons">person</i> Contezino
+                </a>
+                <a href="javascript:void(0)" class="btn btn-warning btn-lg" style="padding: 18px 36px !important;" disabled>
+                    <i class="material-icons">business</i> Corporativo
+                </a>
+                <a href="javascript:void(0)" class="btn btn-upgrade btn-lg" style="padding: 18px 36px !important;" disabled="@(string.IsNullOrEmpty(ViewBag.LinkVouchersParceiro))" onclick="carregarIframe('@ViewBag.LinkVouchersParceiro')">
+                    <i class="material-icons">people</i> Parceiro
+                </a>
+            </div>
+        </div>
+    </div>
+    <br />
+    <iframe id="varejo" border="no" scrolling="No" marginwidth="0" marginheight="0">
+        <style>
+            .container-fluid {
+                margin-right: auto;
+                margin-left: auto;
+                padding-left: 15px;
+                padding-right: 15px;
+                max-height: 0px !important;
+                overflow: hidden !important;
+            }
+        </style>
+    </iframe>
+    <br />
+</div>
+
+@section Scripts {
+    <script type="text/javascript">
+        function carregarIframe(url) {
+            var iframe = $("#varejo");
+            if (url.length > 0) {
+                iframe.attr("src", url);
+            }
+        }
+    </script>
+
+    			<script>
+			
+			var iframe = document.getElementById("varejo").contentWindow;
+
+
+iframe.$( ".toggle_div").bind("change",
+                              function(){
+                                  
+                                  $("#varejo").css({height: iframe.$("body").outerHeight()});
+                              });
+			
+			
+			
+			</script>
+}

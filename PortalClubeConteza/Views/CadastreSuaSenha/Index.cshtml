@@ -1,0 +1,44 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Cadastre sua Senha";
+}
+
+@model PortalClubeConteza.Models.CadastraSenha
+
+@using (Html.BeginForm("GeraSenha", "CadastreSuaSenha", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div id="logincontent">
+        <div id="inner">
+            <div id="welcomebox">
+                <img src="~/Content/img/logosite.png" class="welcomeimg" /><br/>
+                <p class="welcome" style="margin-top:20px;">Cadastre sua <strong>SENHA</strong></p>
+            </div>
+
+            @Html.ValidationMessage("UsuarioInvalido")
+
+            <div id="loginbox">
+                <div id="insideloginbox">
+                    <div>
+                        <div class="form-group label-floating">
+                            @Html.LabelFor(x => x.Cpf, "Insira o seu CPF", new { @class = "control-label" })
+                            @Html.TextBoxFor(x => x.Cpf, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(x => x.Cpf)
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-group">
+                            <div class="g-recaptcha" data-sitekey="6LfsAD4UAAAAAIfTI95Z231PfhDBL3DC2XfFqnXq"></div>
+                        </div>
+                    </div>
+                    
+                    <div id="insidebotoes">
+                        <button class="btn btn-flutuar-cor" type="submit" style="float: right;">Confirmar</button>
+                    </div>
+                    <div id="DivModulos" style="background-color:red"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

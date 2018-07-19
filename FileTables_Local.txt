@@ -1,0 +1,29 @@
+exec sp_configure filestream_access_level, 2; 
+reconfigure;
+
+ALTER DATABASE ClubeConteza_Local
+ADD FILEGROUP FileStreamConteza CONTAINS FILESTREAM;
+
+
+ALTER DATABASE ClubeConteza_Local
+ADD FILE (
+            NAME = FileStream01,
+            FILENAME = 'P:\Database\SQL\FileTables\'
+         ) 
+TO FILEGROUP FileStreamConteza;
+
+ALTER DATABASE ClubeConteza_Local
+SET FILESTREAM ( DIRECTORY_NAME = 'ClubeConteza' );
+
+
+ALTER DATABASE ClubeConteza_Local
+SET FILESTREAM ( non_transacted_access = full );
+
+
+use ClubeConteza_Local
+GO
+ 
+CREATE TABLE TBL_FileTable AS FILETABLE
+GO
+------------------------
+CREATE INDEX IXClienteCPF ON Clientes (ClienteCPF)

@@ -1,0 +1,98 @@
+﻿@using PortalClubeConteza.Internationalization
+@using PortalClubeConteza.Models
+
+<div id="totaltopo">
+    <div id="headertopo">
+        <div id="engconttopo">
+            <div id="seletorcidadebusca">
+                <p class="seltopo">Selecione Sua Cidade</p>
+                <select id="done" class="selectpicker">
+                    @{ 
+                        long cidade = (Session["Cidade"] != null ? long.Parse(Session["Cidade"].ToString()) : 3437);
+                        foreach (var municipio in TempData["Municipio"] as List<Municipio>)
+                        {
+                            <option value="@municipio.Id" @Html.Raw(municipio.Id == cidade ? "selected" : "")>@municipio.Descricao</option>
+                        }
+                        TempData.Keep("Municipio");
+                    }
+                </select>
+            </div>
+            <a href="#" class="tt">Solicite uma Ligação</a>
+            @if (Session["Usuario"] != null)
+            {
+                @Html.ActionLink("Desconectar", "Logout", "Login", null, new { @class = "tt" })
+                @Html.ActionLink("Corporativo", "Index", "Corporativo", null, new { @class = "tt" })
+                @Html.ActionLink("Painel", "Index", "Contezino", null, new { @class = "cadastresetopows" })
+            }
+            else
+            {
+                @Html.ActionLink("Login", "Index", "Login", null, new { @class = "tt2" })
+                @Html.ActionLink("Corporativo", "Index", "Corporativo", null, new { @class = "tt2" })
+                @Html.ActionLink(Mensagens.CadastreSe, "Index", "Cadastre", null, new { @class = "cadastresetopows" })
+            }
+        </div>
+    </div>
+    <div id="headerclube">
+        <div id="logoclube"><img src="~/Content/img/logosite.png" /></div>
+        <div id="barrabusca">
+            <div id="searchbarnovo">
+                @using (Html.BeginForm("Resultado", "Busca", FormMethod.Get, new { id = "formulario" }))
+                {
+                    @Html.Hidden("cidade", 3437, new { id = "cidade" })
+                    @Html.Hidden("pagina", 1, new { id = "pagina" })
+                    <div id="name-group" class="form-group">
+                        <label for="buscar"></label>
+                        @Html.TextBox("buscar", null, new { @class = "form-control" })
+                    </div>
+                    <button type="submit" class="btn-success" id="btnBuscar">Buscar</button>
+                }
+            </div>
+        </div>
+    </div>
+    <div id="menu">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="example-navbar">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink(Mensagens.Home, "Index", "Home")</li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                @Mensagens.Guias
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li class="dropdown-header">Escolha seu guia</li>
+                                <li>@Html.ActionLink(Mensagens.GuiaSaude, "Index", "GuiaSaude")</li>
+                                <li>@Html.ActionLink("Guia Profissionais", "Index", "GuiaProfissionais")</li>
+                            </ul>
+                        </li>
+                        @*<li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Descontos e Promoções
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li class="dropdown-header">Descontos e Promoções</li>
+                                <li> @Html.ActionLink("Descontos e Promoções", "Index", "DescontoPromocao")</li>
+                                <li> @Html.ActionLink("Vouchers", "Index", "Vouchers")</li>
+                            </ul>
+                        </li>*@
+                        <li> @Html.ActionLink("Descontos e Promoções", "Index", "DescontoPromocao")</li>
+                        <li> @Html.ActionLink("O Clube Conteza", "Index", "ClubeConteza")</li>
+                        <li> @Html.ActionLink("Seja Um Parceiro", "Index", "SejaParceiro")</li>
+                        <li> @Html.ActionLink("Faça Parte", "Index", "FacaParte")</li>
+                         
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
