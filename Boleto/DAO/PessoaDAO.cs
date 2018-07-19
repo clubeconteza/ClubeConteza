@@ -297,7 +297,7 @@ namespace Boleto.DAO
                 sSql.Append(" dbo.TB012_Contratos   ");
                 sSql.Append(" ON   ");
                 sSql.Append(" dbo.TB013_Pessoa.TB012_id = dbo.TB012_Contratos.TB012_id  ");
-                sSql.Append(" WHERE dbo.TB012_Contratos.TB012_TipoContrato = 1 ");
+                sSql.Append(" WHERE dbo.TB012_Contratos.TB012_TipoContrato IN (1, 2) ");
                 sSql.Append("   AND dbo.TB012_Contratos.TB012_Status NOT IN (5) ");
                 sSql.Append("   AND dbo.TB013_Pessoa.TB013_Cartao =  ");
                 sSql.Append(" '");
@@ -374,7 +374,7 @@ namespace Boleto.DAO
                 sSql.Append(" dbo.TB012_Contratos   ");
                 sSql.Append(" ON   ");
                 sSql.Append(" dbo.TB013_Pessoa.TB012_id = dbo.TB012_Contratos.TB012_id  ");
-                sSql.Append(" WHERE dbo.TB012_Contratos.TB012_TipoContrato = 1 ");
+                sSql.Append(" WHERE dbo.TB012_Contratos.TB012_TipoContrato IN (1, 2) ");
                 sSql.Append("   AND dbo.TB012_Contratos.TB012_Status NOT IN (5) ");
                 sSql.Append("   AND dbo.TB013_Pessoa.TB013_CPFCNPJ = ");
                 sSql.Append(" '");
