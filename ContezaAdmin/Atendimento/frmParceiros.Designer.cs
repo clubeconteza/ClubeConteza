@@ -2833,7 +2833,7 @@
             // txtContratoTB013NomeExibicaoDetalhes
             // 
             this.txtContratoTB013NomeExibicaoDetalhes.Location = new System.Drawing.Point(579, 96);
-            this.txtContratoTB013NomeExibicaoDetalhes.MaxLength = 32;
+            this.txtContratoTB013NomeExibicaoDetalhes.MaxLength = 42;
             this.txtContratoTB013NomeExibicaoDetalhes.Name = "txtContratoTB013NomeExibicaoDetalhes";
             this.txtContratoTB013NomeExibicaoDetalhes.Size = new System.Drawing.Size(258, 20);
             this.txtContratoTB013NomeExibicaoDetalhes.TabIndex = 10;
@@ -3106,7 +3106,7 @@
             // txtContratoTB013NomeExibicao
             // 
             this.txtContratoTB013NomeExibicao.Location = new System.Drawing.Point(320, 95);
-            this.txtContratoTB013NomeExibicao.MaxLength = 32;
+            this.txtContratoTB013NomeExibicao.MaxLength = 42;
             this.txtContratoTB013NomeExibicao.Name = "txtContratoTB013NomeExibicao";
             this.txtContratoTB013NomeExibicao.Size = new System.Drawing.Size(253, 20);
             this.txtContratoTB013NomeExibicao.TabIndex = 9;
