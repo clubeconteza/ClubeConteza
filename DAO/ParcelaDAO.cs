@@ -2384,8 +2384,8 @@ namespace DAO
                     Retorno.TB037_Id                                = reader["TB037_Id"] is DBNull ? 0 : Convert.ToInt16(reader["TB037_Id"]);
                     Retorno.TB037_Comissao                          = reader["TB037_Comissao"] is DBNull ? 0 : Convert.ToDouble(reader["TB037_Comissao"]);
                     Retorno.TB015_Plano                             = reader["TB015_Plano"].ToString().TrimEnd();
-                    Retorno.TB016_LoteExportacao                    = Convert.ToInt16(reader["TB016_LoteExportacao"]); ;
-                    Retorno.TB016_Entrada                           = Convert.ToInt16(reader["TB016_Entrada"]);
+                    Retorno.TB016_LoteExportacao                    = Convert.ToInt16(reader["TB016_LoteExportacao"]);
+                    Retorno.TB016_Entrada                           = reader["TB016_Entrada"] is DBNull ? 0 : Convert.ToInt16(reader["TB016_Entrada"]);
                     Retorno.TB016_ValorAdesao                       = Convert.ToDouble(reader["TB016_ValorAdesao"]);
                     Retorno.TB016_ValorOutrosDesconto               = reader["TB016_ValorOutrosDesconto"] is DBNull ? 0 : Convert.ToDouble(reader["TB016_ValorOutrosDesconto"]);
                     Retorno.Empresa.TB001_id                        = Convert.ToInt64(reader["TB001_id"]);
