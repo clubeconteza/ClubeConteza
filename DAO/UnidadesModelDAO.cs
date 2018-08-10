@@ -55,6 +55,7 @@ namespace DAO
             try
             {
                 var comando = new SqlCommand(sql.ToString(), (SqlConnection)unidadeTrabalho.Conexao);
+                comando.CommandTimeout = 300;
                 comando.Parameters.AddWithValue("@TipoContrato", (int)ContratosTipoContrato.Corporativo);
                 comando.Parameters.AddWithValue("@Pesquisa", pesquisa);
                 comando.CommandType = CommandType.Text;
@@ -86,6 +87,7 @@ namespace DAO
             try
             {
                 var comando = new SqlCommand(sql.ToString(), (SqlConnection)unidadeTrabalho.Conexao);
+                comando.CommandTimeout = 300;
                 comando.Parameters.AddWithValue("@NomeFantasia", Unidades.NomeFantasia);
                 comando.Parameters.AddWithValue("@Documento", Unidades.Documento);
                 comando.CommandType = CommandType.Text;

@@ -43,6 +43,7 @@ namespace DAO
                 sSql.Append(" ORDER BY dbo.TB020_Unidades.TB020_NomeFantasia ");
 
                 SqlCommand command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -142,6 +143,7 @@ namespace DAO
                 sSql.Append(" , dbo.TB020_Unidades.TB020_id ");
 
                 SqlCommand command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();

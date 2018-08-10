@@ -30,6 +30,7 @@ namespace DAO
                 sSql.Append(tb001Id);
 
                 var command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 var reader = command.ExecuteReader();
@@ -74,6 +75,7 @@ namespace DAO
                 var sSql = new StringBuilder();
                 sSql.Append(" SELECT * from TB001_Empresa ");
                 var command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
                 con.Open();
                 var reader = command.ExecuteReader();
 

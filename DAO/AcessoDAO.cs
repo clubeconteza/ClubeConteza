@@ -36,6 +36,7 @@ namespace DAO
 
                 SqlConnection con = new SqlConnection(ParametrosDAO.StringConexao);
                 SqlCommand command = new SqlCommand(sSQL.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -88,6 +89,7 @@ namespace DAO
 
                 SqlConnection con = new SqlConnection(ParametrosDAO.StringConexao);
                 SqlCommand command = new SqlCommand(sSQL.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                     SqlDataAdapter da = new SqlDataAdapter(sSQL.ToString(), con);

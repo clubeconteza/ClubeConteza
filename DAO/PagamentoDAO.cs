@@ -27,6 +27,7 @@ namespace DAO
                 sSQL.Append(TB025_DocumentoBanco);
 
                 SqlCommand command = new SqlCommand(sSQL.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -318,6 +319,7 @@ namespace DAO
                 using (SqlConnection connection = new SqlConnection(ParametrosDAO.StringConexao))
                 {
                     SqlCommand command = new SqlCommand();
+                    command.CommandTimeout = 300;
                     command.Connection = connection;
                     command.CommandText = "SP_U_TB013_GerarCartaoMassa";
                     command.CommandType = CommandType.StoredProcedure;
@@ -373,6 +375,7 @@ namespace DAO
                 sSQL.Append("ORDER BY dbo.TB016_Parcela.TB016_id, dbo.TB025_Pagamentos.TB025_NossoNumero");
 
                 SqlCommand command = new SqlCommand(sSQL.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -480,6 +483,7 @@ namespace DAO
                 sSQL.Append("  , dbo.TB025_Pagamentos.TB025_NossoNumero ");
 
                 SqlCommand command = new SqlCommand(sSQL.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();

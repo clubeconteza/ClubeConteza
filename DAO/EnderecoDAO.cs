@@ -241,6 +241,7 @@ namespace DAO
                 sSql.Append(tb006Id);
 
                 var command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 var reader = command.ExecuteReader();
@@ -269,6 +270,7 @@ namespace DAO
                 sSql.Append(" WHERE TB006_id = ");
                 sSql.Append(tb006Id);
                 var command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 var reader = command.ExecuteReader();
@@ -299,6 +301,7 @@ namespace DAO
                 sSql.Append(" WHERE TB005_Id = ");
                 sSql.Append(tb005Id);
                 var command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 var reader = command.ExecuteReader();
@@ -341,6 +344,7 @@ namespace DAO
                 sSql.Append(" ORDER BY dbo.TB005_Estado.TB005_Sigla, dbo.TB006_Municipio.TB006_Municipio ");
 
                 var command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 var reader = command.ExecuteReader();
@@ -391,6 +395,7 @@ namespace DAO
                 sSql.Append(" dbo.TB005_Estado.TB005_Estado ");
 
                 var command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 var reader = command.ExecuteReader();
@@ -446,6 +451,7 @@ namespace DAO
                 sSql.Append(" ,dbo.TB006_Municipio.TB006_Municipio ");
 
                 var command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 var reader = command.ExecuteReader();

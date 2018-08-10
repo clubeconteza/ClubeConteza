@@ -119,6 +119,7 @@ namespace DAO
 
                 var con = new SqlConnection(ParametrosDAO.StringConexao);
                 var command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 var reader = command.ExecuteReader();
@@ -187,6 +188,7 @@ namespace DAO
                 sSql.Append(" ORDER BY dbo.TB001_Empresa.TB001_NomeFantasia, dbo.TB002_PontosDeVenda.TB002_Ponto ");
 
                 var command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 var reader = command.ExecuteReader();
@@ -246,6 +248,7 @@ namespace DAO
 
                 var con = new SqlConnection(ParametrosDAO.StringConexao);
                 var command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 var reader = command.ExecuteReader();
@@ -409,6 +412,7 @@ namespace DAO
                 sSql.Append(tb002Id);
                 sSql.Append(" ORDER BY dbo.TB010_Perfil.TB010_Perfil, dbo.TB011_APPUsuarios.TB011_NomeExibicao ");
                 var command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 var reader = command.ExecuteReader();

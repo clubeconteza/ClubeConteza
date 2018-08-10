@@ -28,6 +28,7 @@ namespace DAO
                     con.Open();
 
                     SqlCommand command = new SqlCommand(insertSql, con);
+                    command.CommandTimeout = 300;
                     command.Parameters.AddWithValue("@TB012_id", Unidade.TB012_id);
                     command.Parameters.AddWithValue("@TB020_Matriz", Unidade.TB020_Matriz);
                     command.Parameters.AddWithValue("@TB020_RazaoSocial", Unidade.TB020_RazaoSocial);
@@ -94,6 +95,7 @@ namespace DAO
                 sSQL.Append(TB012_id);
 
                 SqlCommand command = new SqlCommand(sSQL.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -135,6 +137,7 @@ namespace DAO
                 sSQL.Append(" ORDER BY TB020_Matriz");
 
                 SqlCommand command = new SqlCommand(sSQL.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -179,6 +182,7 @@ namespace DAO
                 sSQL.Append(TB020_id);
 
                 SqlCommand command = new SqlCommand(sSQL.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -236,6 +240,7 @@ namespace DAO
 
                 conexaoSQLServer.Open();
                 sqlcmd = new SqlCommand();
+                sqlcmd.CommandTimeout = 300;
                 sqlcmd.Connection = conexaoSQLServer;
                 StringBuilder sSQL = new StringBuilder();
                 sSQL.Append("update TB020_Unidades set ");
@@ -306,6 +311,7 @@ namespace DAO
 
                 conexaoSQLServer.Open();
                 sqlcmd = new SqlCommand();
+                sqlcmd.CommandTimeout = 300;
                 sqlcmd.Connection = conexaoSQLServer;
                 StringBuilder sSQL = new StringBuilder();
                 sSQL.Append("update TB020_Unidades set ");
@@ -382,6 +388,7 @@ namespace DAO
                 sSQL.Append(TB020_id);
 
                 SqlCommand command = new SqlCommand(sSQL.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -413,6 +420,7 @@ namespace DAO
                     con.Open();
 
                     SqlCommand command = new SqlCommand(update, con);
+                    command.CommandTimeout = 300;
                     command.Parameters.AddWithValue("@TB020_id", TB020_id);
 
                     command.Parameters.AddWithValue("@TB020_Desconto", Desconto);
@@ -454,6 +462,7 @@ namespace DAO
                 sSQL.Append(TB012_TipoContrato);
 
                 SqlCommand command = new SqlCommand(sSQL.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -488,6 +497,7 @@ namespace DAO
                 sSQL.Append("'");
 
                 SqlCommand command = new SqlCommand(sSQL.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -516,6 +526,7 @@ namespace DAO
 
                 conexaoSQLServer.Open();
                 sqlcmd = new SqlCommand();
+                sqlcmd.CommandTimeout = 300;
                 sqlcmd.Connection = conexaoSQLServer;
                 StringBuilder sSQL = new StringBuilder();
                 sSQL.Append("update TB020_Unidades set ");

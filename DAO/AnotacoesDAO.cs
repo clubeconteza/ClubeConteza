@@ -28,6 +28,7 @@ namespace DAO
                     con.Open();
 
                     var command = new SqlCommand(insertSql, con);
+                    command.CommandTimeout = 300;
 
                     command.Parameters.AddWithValue("@TB012_id", anotacao.Tb012Id);
                     command.Parameters.AddWithValue("@TB011_Id", anotacao.Tb011Id);
@@ -89,6 +90,7 @@ namespace DAO
 
                 sSql.Append(" ORDER BY dbo.TB026_ContratoAnotacoes.TB026_id DESC ");             
                 var command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -142,6 +144,7 @@ namespace DAO
                 sSql.Append(tb026Id);
 
                 var command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 var reader = command.ExecuteReader();

@@ -81,6 +81,7 @@ namespace DAO
 
                 SqlConnection con = new SqlConnection(ParametrosDAO.StringConexao);
                 SqlCommand command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -192,6 +193,7 @@ namespace DAO
                 sSql.Append("FROM dbo.TB_VS ");
      
                 SqlCommand command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -236,6 +238,7 @@ namespace DAO
                 sSql.Append(tb008Id);
 
                 var command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 var reader = command.ExecuteReader();
@@ -279,6 +282,7 @@ namespace DAO
                 sSql.Append("'");
                 
                 var command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 var reader = command.ExecuteReader();
@@ -313,6 +317,7 @@ namespace DAO
                     myConnection.Open();
 
                     var myCommand = new SqlCommand(updateSql, myConnection);
+                    myCommand.CommandTimeout = 300;
 
                     myCommand.ExecuteScalar();
                     myConnection.Close();

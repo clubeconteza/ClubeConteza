@@ -33,6 +33,7 @@ namespace DAO
             try
             {
                 var comando = new SqlCommand(sql.ToString(), (SqlConnection)unidadeTrabalho.Conexao);
+                comando.CommandTimeout = 300;
                 comando.Parameters.AddWithValue("@Pais", idPais);
                 comando.CommandType = CommandType.Text;
 

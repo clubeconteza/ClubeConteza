@@ -46,6 +46,7 @@ namespace DAO
                 sSql.Append(" ORDER BY TB039_id ");
 
                 SqlCommand command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -112,6 +113,7 @@ namespace DAO
                 sSql.Append(" , dbo.TB039_Mensagem.TB039_id  ");
 
                 SqlCommand command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -167,6 +169,7 @@ namespace DAO
 
 
                 SqlCommand command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -245,6 +248,7 @@ namespace DAO
 
                     string insert = sSql.ToString() + sSqlI.ToString();
                     var command = new SqlCommand(insert, con);
+                    command.CommandTimeout = 300;
 
 
                     command.ExecuteReader();

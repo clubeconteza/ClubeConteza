@@ -63,6 +63,7 @@ namespace ContezaAdmin.Administrativo
 
                     using (SqlCommand cmd = new SqlCommand(InsertTSql, conn))
                     {
+                        cmd.CommandTimeout = 300;
                         cmd.Parameters.Add("@PhotoId", SqlDbType.Int).Value = photoId;
                         cmd.Parameters.Add("@Description", SqlDbType.VarChar).Value = desc;
                         using (SqlDataReader rdr = cmd.ExecuteReader())
