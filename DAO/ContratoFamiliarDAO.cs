@@ -463,6 +463,7 @@ namespace DAO
                 sSql.Append(tb012Id);
 
                 var command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 var reader = command.ExecuteReader();
@@ -503,6 +504,7 @@ namespace DAO
                     {
                         con.Open();
                         SqlCommand myCommand = new SqlCommand(sSql.ToString(), con);
+                        myCommand.CommandTimeout = 300;
                         myCommand.ExecuteScalar();
                         con.Close();
                     }

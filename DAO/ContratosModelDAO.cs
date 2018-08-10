@@ -35,6 +35,7 @@ namespace DAO
             try
             {
                 var comando = new SqlCommand(sql.ToString(), (SqlConnection)unidadeTrabalho.Conexao);
+                comando.CommandTimeout = 300;
                 comando.Parameters.AddWithValue("@Inicio", Contratos.Inicio);
                 comando.Parameters.AddWithValue("@Fim", Contratos.Fim);
                 comando.Parameters.AddWithValue("@NumeroDaSorte", Contratos.NumeroDaSorte);

@@ -22,6 +22,7 @@ namespace DAO
                     con.Open();
 
                     SqlCommand command = new SqlCommand(insertSql, con);
+                    command.CommandTimeout = 300;
 
                     command.Parameters.AddWithValue("@TB002_id", contrato.PontoDeVenda.TB002_id);
                     command.Parameters.AddWithValue("@TB013_id", contrato.Titular.TB013_id); //Titular do Contrato
@@ -97,6 +98,7 @@ namespace DAO
                 sSql.Append("  AND dbo.TB020_Unidades.TB020_Matriz = 1");
 
                 SqlCommand command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -187,6 +189,7 @@ namespace DAO
                 {
                     con.Open();
                     var myCommand = new SqlCommand(sSql.ToString(), con);
+                    myCommand.CommandTimeout = 300;
                     myCommand.ExecuteScalar();
                     con.Close();
                 }
@@ -228,6 +231,7 @@ namespace DAO
                 sSql.Append(tb012Id);
 
                 var command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 var reader = command.ExecuteReader();

@@ -32,6 +32,7 @@ namespace DAO
                 sSQL.Append(TB011_Id);
 
                 SqlCommand command = new SqlCommand(sSQL.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -72,6 +73,7 @@ namespace DAO
                 sSql.Append(TB036_Id);
 
                 var command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 var reader = command.ExecuteReader();

@@ -28,6 +28,7 @@ namespace DAO
                     con.Open();
 
                     var command = new SqlCommand(insertSql, con);
+                    command.CommandTimeout = 300;
 
                     command.Parameters.AddWithValue("@TB002_id", contrato.PontoDeVenda.TB002_id);
                     command.Parameters.AddWithValue("@TB013_id", contrato.Titular.TB013_id); //Titular do Contrato
@@ -85,6 +86,7 @@ namespace DAO
                 sSql.Append(tb012Id);
 
                 SqlCommand command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -168,6 +170,7 @@ namespace DAO
 
 
                 SqlCommand command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -226,6 +229,7 @@ namespace DAO
                 sSql.Append(vId);
 
                 SqlCommand command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -287,6 +291,7 @@ namespace DAO
                 {
                     con.Open();
                     SqlCommand myCommand = new SqlCommand(sSql.ToString(), con);
+                    myCommand.CommandTimeout = 300;
                     myCommand.ExecuteScalar();
                     con.Close();
                 }
@@ -324,6 +329,7 @@ namespace DAO
                 {
                     con.Open();
                     SqlCommand myCommand = new SqlCommand(sSql.ToString(), con);
+                    myCommand.CommandTimeout = 300;
                     myCommand.ExecuteScalar();
                     con.Close();
                 }
@@ -366,6 +372,7 @@ namespace DAO
                 {
                     con.Open();
                     SqlCommand myCommand = new SqlCommand(sSql.ToString(), con);
+                    myCommand.CommandTimeout = 300;
                     myCommand.ExecuteScalar();
                     con.Close();
                 }
@@ -399,6 +406,7 @@ namespace DAO
                 {
                     con.Open();
                     SqlCommand myCommand = new SqlCommand(sSql.ToString(), con);
+                    myCommand.CommandTimeout = 300;
                     myCommand.ExecuteScalar();
                     con.Close();
                 }
@@ -426,6 +434,7 @@ namespace DAO
                 {
                     con.Open();
                     SqlCommand myCommand = new SqlCommand(sSql.ToString(), con);
+                    myCommand.CommandTimeout = 300;
                     myCommand.ExecuteScalar();
                     con.Close();
                 }
@@ -448,6 +457,7 @@ namespace DAO
                 StringBuilder sSql = new StringBuilder();
                 sSql.Append("select coalesce(TB012_CodCartao, TB012_id) as TB012_CodCartao from TB012_Contratos");
                 SqlCommand command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -494,6 +504,7 @@ namespace DAO
 
 
                 SqlCommand command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -586,6 +597,7 @@ namespace DAO
                 sSql.Append(tb020Matriz);
 
                 SqlCommand command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -692,6 +704,7 @@ namespace DAO
                 {
                     con.Open();
                     SqlCommand myCommand = new SqlCommand(sSql.ToString(), con);
+                    myCommand.CommandTimeout = 300;
                     myCommand.ExecuteScalar();
                     con.Close();
                 }
@@ -719,6 +732,7 @@ namespace DAO
                 {
                     con.Open();
                     SqlCommand myCommand = new SqlCommand(sSql.ToString(), con);
+                    myCommand.CommandTimeout = 300;
                     myCommand.ExecuteScalar();
                     con.Close();
                 }
@@ -751,6 +765,7 @@ namespace DAO
                     con.Open();
 
                     var command = new SqlCommand(insertSql, con);
+                    command.CommandTimeout = 300;
 
                     command.Parameters.AddWithValue("@TB002_id", contrato.PontoDeVenda.TB002_id);
                     command.Parameters.AddWithValue("@TB012_Corporativo", contrato.TB012_Corporativo);
@@ -799,6 +814,7 @@ namespace DAO
                 sSql.Append(tb012Id);
 
                 var command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 var reader = command.ExecuteReader();
@@ -837,6 +853,7 @@ namespace DAO
                 {
                     con.Open();
                     SqlCommand myCommand = new SqlCommand(sSql.ToString(), con);
+                    myCommand.CommandTimeout = 300;
                     myCommand.ExecuteScalar();
                     con.Close();
                 }
@@ -870,6 +887,7 @@ namespace DAO
                 {
                     con.Open();
                     SqlCommand myCommand = new SqlCommand(sSql.ToString(), con);
+                    myCommand.CommandTimeout = 300;
                     myCommand.ExecuteScalar();
                     con.Close();
                 }
@@ -927,6 +945,7 @@ namespace DAO
                 sSqlAtivos.Append(" ORDER BY dbo.TB012_Contratos.TB012_Inicio ");
                
                 SqlCommand command = new SqlCommand(sSqlAtivos.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -1002,6 +1021,7 @@ namespace DAO
                 sSqlVencidos.Append(" ORDER BY dbo.TB012_Contratos.TB012_Inicio ");
 
                 command = new SqlCommand(sSqlVencidos.ToString(), con);
+                command.CommandTimeout = 300;
                 con.Open();
                 reader = command.ExecuteReader();
                 while (reader.Read())
@@ -1075,6 +1095,7 @@ namespace DAO
                 {
                     con.Open();
                     SqlCommand myCommand = new SqlCommand(sSql.ToString(), con);
+                    myCommand.CommandTimeout = 300;
                     myCommand.ExecuteScalar();
                     con.Close();
                 }
@@ -1116,6 +1137,7 @@ namespace DAO
                 sSql.Append(" ORDER BY dbo.TB012_Contratos.TB012_id, dbo.TB006_Municipio.TB006_id, dbo.TB006_Municipio.TB006_Lote ");
 
                 var command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 var reader = command.ExecuteReader();
@@ -1260,6 +1282,7 @@ namespace DAO
                 sSql.Append(tb012Id);
 
                 SqlCommand command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -1289,6 +1312,7 @@ namespace DAO
                 sSql.Append(tb012Id);
 
                 SqlCommand command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -1320,6 +1344,7 @@ namespace DAO
                 sSql.Append(tb012Id);
 
                 SqlCommand command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 command.ExecuteReader();
@@ -1357,6 +1382,7 @@ namespace DAO
                 sSql.Append(" dbo.TB012_Contratos.TB012_Status = 1 ");
 
                 SqlCommand command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 command.ExecuteReader();
@@ -1387,6 +1413,7 @@ namespace DAO
                 sSql.Append(numero);
 
                 var command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 var reader = command.ExecuteReader();
@@ -1431,6 +1458,7 @@ namespace DAO
                 sSql.Append(" ORDER BY dbo.TB011_APPUsuarios.TB011_NomeCompleto, dbo.TB012_Contratos.TB012_id ");
 
                 var command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 var reader = command.ExecuteReader();
@@ -1538,6 +1566,7 @@ namespace DAO
                 {
                     con.Open();
                     var myCommand = new SqlCommand(sSql.ToString(), con);
+                    myCommand.CommandTimeout = 300;
                     myCommand.ExecuteScalar();
                     con.Close();
                 }
@@ -1577,6 +1606,7 @@ namespace DAO
                 {
                     con.Open();
                     var myCommand = new SqlCommand(sSql.ToString(), con);
+                    myCommand.CommandTimeout = 300;
                     myCommand.ExecuteScalar();
                     con.Close();
                 }
@@ -1611,6 +1641,7 @@ namespace DAO
                 {
                     con.Open();
                     var myCommand = new SqlCommand(sSql.ToString(), con);
+                    myCommand.CommandTimeout = 300;
                     myCommand.ExecuteScalar();
                     con.Close();
                 }

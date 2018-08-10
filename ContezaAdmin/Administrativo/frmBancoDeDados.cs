@@ -66,6 +66,7 @@ namespace ContezaAdmin.Administrativo
 
                     SqlConnection con = new SqlConnection(StringConexao);
                     SqlCommand command = new SqlCommand(sSQL.ToString(), con);
+                    command.CommandTimeout = 300;
 
                     con.Open();
                     SqlDataReader reader = command.ExecuteReader();

@@ -49,6 +49,7 @@ namespace DAO
                 sSQL.Append("'");
 
                 SqlCommand command = new SqlCommand(sSQL.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();        
@@ -97,6 +98,7 @@ namespace DAO
                 
 
                 SqlCommand command = new SqlCommand(sSQL.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -257,6 +259,7 @@ namespace DAO
                 sSQL.Append(max);
 
                 SqlCommand command = new SqlCommand(sSQL.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -343,6 +346,7 @@ namespace DAO
                 {
                     con.Open();
                     SqlCommand myCommand = new SqlCommand(sSql.ToString(), con);
+                    myCommand.CommandTimeout = 300;
                     myCommand.ExecuteScalar();
                     con.Close();
                 }
@@ -359,6 +363,7 @@ namespace DAO
                 {
                     con.Open();
                     SqlCommand myCommand = new SqlCommand(sSqlContenplado.ToString(), con);
+                    myCommand.CommandTimeout = 300;
                     myCommand.ExecuteScalar();
                     con.Close();
                 }
@@ -430,6 +435,7 @@ namespace DAO
                 sSQL.Append(contrato);
 
                 SqlCommand command = new SqlCommand(sSQL.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -470,6 +476,7 @@ namespace DAO
                 {
                     con.Open();
                     SqlCommand myCommand = new SqlCommand(consumo, con);
+                    myCommand.CommandTimeout = 300;
                     myCommand.ExecuteScalar();
                     con.Close();
                 }
@@ -490,6 +497,7 @@ namespace DAO
                 {
                     con.Open();
                     SqlCommand myCommand = new SqlCommand("update TB012_Contratos set TB012_Sorteado = 0", con);
+                    myCommand.CommandTimeout = 300;
                     myCommand.ExecuteScalar();
                     con.Close();
                 }

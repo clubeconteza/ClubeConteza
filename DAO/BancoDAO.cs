@@ -15,6 +15,7 @@ namespace DAO
                 using (SqlConnection connection = new SqlConnection(ParametrosDAO.StringConexao))
                 {
                     SqlCommand command = new SqlCommand();
+                    command.CommandTimeout = 300;
                     command.Connection = connection;
                     command.CommandText = "SP_S_TB018_BancosBoleto";
                     command.CommandType = CommandType.StoredProcedure;

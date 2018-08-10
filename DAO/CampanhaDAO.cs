@@ -41,6 +41,7 @@ namespace DAO
                 sSql.Append(" dbo.TB041_Campanhas.TB041_AlteradoPor = AlteradoPor.TB011_Id ");
 
                 SqlCommand command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -87,6 +88,7 @@ namespace DAO
                 sSql.Append(TB041_id);
 
                 SqlCommand command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -162,6 +164,7 @@ namespace DAO
                     {
                         myConnection.Open();
                         SqlCommand myCommand = new SqlCommand(sSql.ToString(), myConnection);
+                        myCommand.CommandTimeout = 300;
                         myCommand.ExecuteScalar();
                         myConnection.Close();
                     }

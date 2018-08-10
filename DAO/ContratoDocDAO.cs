@@ -29,6 +29,7 @@ namespace DAO
                 sSQL.Append(TB029_Tipo);
 
                 SqlCommand command = new SqlCommand(sSQL.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -68,6 +69,7 @@ namespace DAO
                     con.Open();
 
                     SqlCommand command1 = new SqlCommand(update, con);
+                    command1.CommandTimeout = 300;
                     command1.Parameters.AddWithValue("@TB012_id", Documento.TB012_id);
                     command1.ExecuteScalar();
                     con.Close();
@@ -79,6 +81,7 @@ namespace DAO
                     con.Open();
 
                     SqlCommand command = new SqlCommand(insertSql, con);
+                    command.CommandTimeout = 300;
                     command.Parameters.AddWithValue("@TB029_Tipo", Convert.ToInt16(Documento.TB029_TipoS));
                     command.Parameters.AddWithValue("@TB012_id", Documento.TB012_id);
                     command.Parameters.AddWithValue("@TB029_DocImpressao", Documento.TB029_DocImpressao);
@@ -110,6 +113,7 @@ namespace DAO
                 sSQL.Append(Doc.TB029_Id);
 
                 SqlCommand command = new SqlCommand(sSQL.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -142,6 +146,7 @@ namespace DAO
                 sSQL.Append(TB012_id);
                 sSQL.Append(" ORDER BY TB012_VSContrato, TB029_Tipo, TB029_Id ");
                 SqlCommand command = new SqlCommand(sSQL.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();

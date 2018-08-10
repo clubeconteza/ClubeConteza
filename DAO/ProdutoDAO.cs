@@ -52,6 +52,7 @@ namespace DAO
                 sSQL.Append("dbo.TB014_Produtos.TB014_Status = 1 ");//Somente Produtos com status de Ativos
 
                 SqlCommand command = new SqlCommand(sSQL.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -102,6 +103,7 @@ namespace DAO
                 sSQL.Append( TB014_id);
 
                 SqlCommand command = new SqlCommand(sSQL.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -146,6 +148,7 @@ namespace DAO
                 sSQL.Append(TB016_id);
 
                 SqlCommand command = new SqlCommand(sSQL.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -203,6 +206,7 @@ namespace DAO
                 sSQL.Append(" TB014_Produto ");
 
                 SqlCommand command = new SqlCommand(sSQL.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 SqlDataReader reader = command.ExecuteReader();

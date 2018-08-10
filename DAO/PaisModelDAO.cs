@@ -32,6 +32,7 @@ namespace DAO
             try
             {
                 var comando = new SqlCommand(sql.ToString(), (SqlConnection)unidadeTrabalho.Conexao);
+                comando.CommandTimeout = 300;
                 comando.CommandType = CommandType.Text;
 
                 var ds = new DataSet();

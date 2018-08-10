@@ -308,6 +308,7 @@ namespace DAO
                 sSql.Append(tb015Id);
 
                 var command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 var reader = command.ExecuteReader();
@@ -363,6 +364,7 @@ namespace DAO
                 sProdutosDoPlano.Append(tb015Id);
 
                 command = new SqlCommand(sProdutosDoPlano.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 reader = command.ExecuteReader();
@@ -467,6 +469,7 @@ namespace DAO
                 sSql.Append(" SELECT TB015_id, TB015_Plano, TB015_Contezinos, TB015_Parceiros, TB015_Corporativo FROM dbo.TB015_Planos ORDER BY TB015_Contezinos DESC, TB015_Parceiros DESC, TB015_Corporativo DESC, TB015_Plano ");
 
                 SqlCommand command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 var reader = command.ExecuteReader();
@@ -504,6 +507,7 @@ namespace DAO
                 sSql.Append(" SELECT TB015_id, TB015_Plano, TB015_Corporativo, TB015_Status FROM dbo.TB015_Planos WHERE TB015_Corporativo = 1  AND(TB015_Status = 1)");
 
                 var command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 var reader = command.ExecuteReader();
@@ -546,6 +550,7 @@ namespace DAO
                 sSql.Append(tb015Id);
 
                 var command = new SqlCommand(sSql.ToString(), con);
+                command.CommandTimeout = 300;
 
                 con.Open();
                 var reader = command.ExecuteReader();
