@@ -141,7 +141,7 @@ namespace ContezaAdmin.Administrativo
 
         private void mnuListaFechar_Click(object sender, EventArgs e)
         {
-            Close();
+            Hide();
         }
 
         private void dgwLista_CellClick(object sender, DataGridViewCellEventArgs e)
