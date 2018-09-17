@@ -62,6 +62,8 @@ namespace PortalClubeConteza.Controllers
                 var mail = new MailMessage();
                 mail.From = new MailAddress("gerenciadorclubeconteza@clubeconteza.com.br", "Clube Conteza (Gerenciador)");
                 mail.To.Add(new MailAddress("gerenciageral@clubeconteza.com.br"));
+                mail.To.Add(new MailAddress("financeiro02@clubeconteza.com.br"));
+                mail.Bcc.Add(new MailAddress("dev01@clubeconteza.com.br"));
                 mail.Subject = "Cadastre-se: Plano " + associacao.Tipo;
                 mail.IsBodyHtml = true;
                 mail.Body = html.ToString();
