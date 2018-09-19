@@ -1121,7 +1121,7 @@ namespace ContezaAdmin.Atendimento
                     filtro.TB004_Cep = Convert.ToInt32(mskContratoCEP.Text.Replace("-", "").Replace(" ", ""));
                     DataSet CEP = Endereco_N.Cep(filtro);
 
-                    if (Convert.ToInt64(CEP.Tables[0].Rows[0]["TB004_id"].ToString()) > 0)
+                    if (CEP.Tables[0].Rows.Count > 0 && Convert.ToInt64(CEP.Tables[0].Rows[0]["TB004_id"].ToString()) > 0)
                     {
                         txtContratoTB013Logradouro.Text = CEP.Tables[0].Rows[0]["TB004_Logradouro"].ToString();
                         txtContratoTB013Bairro.Text = CEP.Tables[0].Rows[0]["TB004_Bairro"].ToString();
@@ -1155,7 +1155,7 @@ namespace ContezaAdmin.Atendimento
                     filtro.TB004_Cep = Convert.ToInt32(mskTitularTB004Cep.Text.Replace("-", "").Replace(" ", ""));
                     DataSet CEP = Endereco_N.Cep(filtro);
 
-                    if (Convert.ToInt64(CEP.Tables[0].Rows[0]["TB004_id"].ToString()) > 0)
+                    if (CEP.Tables[0].Rows.Count > 0 && Convert.ToInt64(CEP.Tables[0].Rows[0]["TB004_id"].ToString()) > 0)
                     {
                         txtTitularEndereco.Text = CEP.Tables[0].Rows[0]["TB004_Logradouro"].ToString();
                         txtTitularBairro.Text = CEP.Tables[0].Rows[0]["TB004_Bairro"].ToString();
