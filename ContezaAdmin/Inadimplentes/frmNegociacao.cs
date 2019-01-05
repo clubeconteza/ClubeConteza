@@ -2197,7 +2197,7 @@ namespace ContezaAdmin.Inadimpentes
             label51.Text = (Convert.ToDouble(label74.Text.Replace("R$", "").Replace(".", ",")) + Convert.ToDouble(label76.Text.Replace("R$", "").Replace(".", ",")) + Convert.ToDouble(label81.Text.Replace("R$", "").Replace(".", ","))).ToString("C2").Replace(",", ".").ToString(CultureInfo.InvariantCulture);
             lblTotalDescontos.Text = (Convert.ToDouble(label74.Text.Replace("R$", "").Replace(".", ",")) + Convert.ToDouble(label76.Text.Replace("R$", "").Replace(".", ","))).ToString("C2").Replace(",", ".").ToString(CultureInfo.InvariantCulture);
             label29.Text = (Convert.ToDouble(label27.Text.Replace("R$", "").Replace(".", ","))- Convert.ToDouble(label82.Text.Replace("R$", "").Replace(".", ","))).ToString("C2").Replace(",", ".").ToString(CultureInfo.InvariantCulture);
-            label30.Text = (Convert.ToDouble(label47.Text.Replace("R$", "").Replace(".", ",")) - Convert.ToDouble(label51.Text.Replace("R$", "").Replace(".", ","))).ToString("C2").Replace(",", ".").ToString(CultureInfo.InvariantCulture);
+            label30.Text = (Convert.ToDouble(label47.Text.Replace("R$", "").Replace(".", label47.Text.Contains(",") ? "" : ",")) - Convert.ToDouble(label51.Text.Replace("R$", "").Replace(".", ","))).ToString("C2").Replace(",", ".").ToString(CultureInfo.InvariantCulture);
             label40.Text = (Convert.ToDouble(label29.Text.Replace("R$", "").Replace(".", ","))+ Convert.ToDouble(label30.Text.Replace("R$", "").Replace(".", ","))).ToString("C2").Replace(",", ".").ToString(CultureInfo.InvariantCulture);
         }
     }
